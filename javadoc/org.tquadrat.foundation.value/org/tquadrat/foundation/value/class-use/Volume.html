@@ -80,16 +80,35 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Returns the <code>Volume</code> instance for the given unit symbol.</div>
 </div>
-<div class="col-first even-row-color"><code>static <a href="../Volume.html" title="enum class in org.tquadrat.foundation.value">Volume</a></code></div>
-<div class="col-second even-row-color"><span class="type-name-label">Volume.</span><code><a href="../Volume.html#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-first even-row-color"><code>protected <a href="../Volume.html" title="enum class in org.tquadrat.foundation.value">Volume</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">VolumeValueStringConverter.</span><code><a href="../VolumeValueStringConverter.html#unitFromSymbol(java.lang.String)" class="member-name-link">unitFromSymbol</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Determines the unit instance from the given unit symbol.</div>
+</div>
+<div class="col-first odd-row-color"><code>static <a href="../Volume.html" title="enum class in org.tquadrat.foundation.value">Volume</a></code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">Volume.</span><code><a href="../Volume.html#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </div>
-<div class="col-first odd-row-color"><code>static <a href="../Volume.html" title="enum class in org.tquadrat.foundation.value">Volume</a>[]</code></div>
-<div class="col-second odd-row-color"><span class="type-name-label">Volume.</span><code><a href="../Volume.html#values()" class="member-name-link">values</a>()</code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static <a href="../Volume.html" title="enum class in org.tquadrat.foundation.value">Volume</a>[]</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">Volume.</span><code><a href="../Volume.html#values()" class="member-name-link">values</a>()</code></div>
+<div class="col-last even-row-color">
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
+</div>
+</div>
+<div class="caption"><span>Methods in <a href="../package-summary.html">org.tquadrat.foundation.value</a> with parameters of type <a href="../Volume.html" title="enum class in org.tquadrat.foundation.value">Volume</a></span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>protected final <a href="../VolumeValue.html" title="class in org.tquadrat.foundation.value">VolumeValue</a></code></div>
+<div class="col-second even-row-color"><span class="type-name-label">VolumeValueStringConverter.</span><code><a href="../VolumeValueStringConverter.html#createValue(java.math.BigDecimal,org.tquadrat.foundation.value.Volume)" class="member-name-link">createValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;number,
+ <a href="../Volume.html" title="enum class in org.tquadrat.foundation.value">Volume</a>&nbsp;dimension)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Creates an instance of
+  <a href="../api/DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api"><code>DimensionedValue</code></a>
+  from the given arguments.</div>
 </div>
 </div>
 <div class="caption"><span>Constructors in <a href="../package-summary.html">org.tquadrat.foundation.value</a> with parameters of type <a href="../Volume.html" title="enum class in org.tquadrat.foundation.value">Volume</a></span></div>

@@ -5,3 +5,4 @@ org.tquadrat.foundation.value.MassValueStringConverter
 org.tquadrat.foundation.value.PressureValueStringConverter
 org.tquadrat.foundation.value.SpeedValueStringConverter
 org.tquadrat.foundation.value.TimeValueStringConverter
+org.tquadrat.foundation.value.VolumeValueStringConverter
