@@ -30,7 +30,7 @@ import org.tquadrat.foundation.value.TimeValueStringConverter;
  *  @provides   org.tquadrat.foundation.lang.StringConverter    Implementations
  *      of String converters.
  *
- *  @version $Id: module-info.java 829 2021-01-05 09:08:51Z tquadrat $
+ *  @version $Id: module-info.java 984 2022-01-13 00:46:27Z tquadrat $
  *
  *  @todo task.list
  */
@@ -39,7 +39,7 @@ module org.tquadrat.foundation.value
 {
     requires java.base;
     requires transitive org.tquadrat.foundation.base;
-    requires org.tquadrat.foundation.util;
+    requires transitive org.tquadrat.foundation.util;
 
     //---* Common Use *--------------------------------------------------------
     exports org.tquadrat.foundation.value.api;
