@@ -38,7 +38,6 @@ import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.exception.EmptyArgumentException;
 import org.tquadrat.foundation.exception.NullArgumentException;
 import org.tquadrat.foundation.lang.StringConverter;
-import com.sun.jdi.Value;
 
 /**
  *  Tests for the classes
