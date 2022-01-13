@@ -97,6 +97,7 @@ public final class DataSizeValue extends ValueBase<DataSize, DataSizeValue>
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final DataSizeValue clone()
     {

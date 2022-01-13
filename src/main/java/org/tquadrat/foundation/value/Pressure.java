@@ -59,7 +59,14 @@ public enum Pressure implements Dimension
      *  {@link #PASCAL},
      *  but a different unit.
      */
-    NEWTON_PER_SQUAREMETER( PASCAL.factor(), "N/m^2" ),
+    NEWTON_PER_SQUAREMETER( PASCAL.factor(), "N/m^2" )
+    {
+        /**
+         *  {@inheritDoc}
+         */
+        @Override
+        public final String unitSymbolForPrinting() { return "N/m²"; }
+    },
 
     /**
      *  A hekto Pascal.
@@ -123,7 +130,14 @@ public enum Pressure implements Dimension
      *  {@link #MEGA_PASCAL},
      *  but a different unit.
      */
-    NEWTON_PER_SQUAREMILLIMETER( MEGA_PASCAL.factor(), "N/mm^2" );
+    NEWTON_PER_SQUAREMILLIMETER( MEGA_PASCAL.factor(), "N/mm^2" )
+    {
+        /**
+         *  {@inheritDoc}
+         */
+        @Override
+        public final String unitSymbolForPrinting() { return "N/mm²"; }
+    };
 
         /*------------*\
     ====** Attributes **=======================================================

@@ -153,7 +153,7 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 <div class="col-last even-row-color">
 <div class="block">An implementation of
   <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link"><code>TemporalUnit</code></a>,
-  base on the settings for the <code>Time</code> instance.</div>
+  based on the settings for the <code>Time</code> instance.</div>
 </div>
 </div>
 <div class="inherited-list">
@@ -315,19 +315,13 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#baseUnit()" class="member-name-link">baseUnit</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the base unit.<br>
-  <br>E.g. for length, the base unit would be Meter (m), for mass, it is
-  Kilogram (kg), and so on.</div>
+<div class="block">Returns the base unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#factor()" class="member-name-link">factor</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the factor that is used to convert a value from this unit
-  to the base unit.<br>
-  <br>For length, if you have to convert a
-  Centimeter value to Meter, you will divide that by 100 or multiply it
-  with a <i>factor</i> of 0.01.<br>
-  <br>For the base unit, the factor is 1.0.</div>
+<div class="block">Returns the factor that is used to convert a value from
+  this unit to the base unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static final <a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#forUnit(java.lang.String)" class="member-name-link">forUnit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</code></div>
@@ -371,10 +365,8 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unitSymbol()" class="member-name-link">unitSymbol</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the unit symbol for the dimension as a single line string.<br>
-  <br>For a length, this would be &quot;m&quot;, for a speed
-  &quot;km/h&quot;, and for an acceleration, it could be
-  &quot;m/(s^2)&quot;.</div>
+<div class="block">Returns the unit symbol for the dimension as a single line
+  string.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
@@ -398,7 +390,7 @@ the order they are declared.</div>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.tquadrat.foundation.value.api.Dimension">Methods inherited from interface&nbsp;org.tquadrat.foundation.value.api.<a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></h3>
-<code><a href="api/Dimension.html#equals(java.lang.Object)">equals</a>, <a href="api/Dimension.html#getPrecision()">getPrecision</a>, <a href="api/Dimension.html#name()">name</a>, <a href="api/Dimension.html#toString()">toString</a></code></div>
+<code><a href="api/Dimension.html#equals(java.lang.Object)">equals</a>, <a href="api/Dimension.html#getPrecision()">getPrecision</a>, <a href="api/Dimension.html#name()">name</a>, <a href="api/Dimension.html#toString()">toString</a>, <a href="api/Dimension.html#unitSymbolForPrinting()">unitSymbolForPrinting</a></code></div>
 </section>
 </li>
 </ul>
@@ -462,28 +454,28 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="DAY">
 <h3>DAY</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-100">DAY</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-107">DAY</a></span></div>
 <div class="block">A day.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="WEEK">
 <h3>WEEK</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-105">WEEK</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-112">WEEK</a></span></div>
 <div class="block">A week (7 days).</div>
 </section>
 </li>
 <li>
 <section class="detail" id="FORTNIGHT">
 <h3>FORTNIGHT</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-110">FORTNIGHT</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-117">FORTNIGHT</a></span></div>
 <div class="block">A fortnight (2 weeks or 14 days).</div>
 </section>
 </li>
 <li>
 <section class="detail" id="BANK_MONTH">
 <h3>BANK_MONTH</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-129">BANK_MONTH</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-136">BANK_MONTH</a></span></div>
 <div class="block"><p>A bank month.</p>
   <p>This has a fixed length of exact 30 days.</p></div>
 </section>
@@ -491,7 +483,7 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="MONTH">
 <h3>MONTH</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-149">MONTH</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-156">MONTH</a></span></div>
 <div class="block"><p>A month.</p>
   <p>This is the average month, calculated using the average year with
   365.2425 days divided by 12.</p></div>
@@ -500,7 +492,7 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="BANK_YEAR">
 <h3>BANK_YEAR</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-155">BANK_YEAR</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-162">BANK_YEAR</a></span></div>
 <div class="block"><p>A bank year.</p>
   <p>This has a fixed length of exact 360 days.</p></div>
 </section>
@@ -508,7 +500,7 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="YEAR">
 <h3>YEAR</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-175">YEAR</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-182">YEAR</a></span></div>
 <div class="block">A tropical year, according to SI.</div>
 <dl class="notes">
 <dt>See Also:</dt>
@@ -523,7 +515,7 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="SIMPLE_YEAR">
 <h3>SIMPLE_YEAR</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-196">SIMPLE_YEAR</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-203">SIMPLE_YEAR</a></span></div>
 <div class="block"><p>A year.</p>
   <p>This is calculated as the average year with 365.2425 days.</p></div>
 <dl class="notes">
@@ -539,7 +531,7 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="DECADE">
 <h3>DECADE</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-204">DECADE</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-211">DECADE</a></span></div>
 <div class="block"><p>A decade.</p>
   <p>This is calculated as ten average years with 365.2425 days each.</p></div>
 <dl class="notes">
@@ -555,7 +547,7 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="CENTURY">
 <h3>CENTURY</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-213">CENTURY</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-220">CENTURY</a></span></div>
 <div class="block"><p>A century.</p>
   <p>This is calculated as one hundred average years with 365.2425 days
   each.</p></div>
@@ -580,28 +572,28 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="m_Factor">
 <h3>m_Factor</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-320">m_Factor</a></span></div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-327">m_Factor</a></span></div>
 <div class="block">The factor.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="m_UnitSymbol">
 <h3>m_UnitSymbol</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-325">m_UnitSymbol</a></span></div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-332">m_UnitSymbol</a></span></div>
 <div class="block">The unit symbol.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="m_TemporalUnit">
 <h3>m_TemporalUnit</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link">TemporalUnit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-330">m_TemporalUnit</a></span></div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link">TemporalUnit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-337">m_TemporalUnit</a></span></div>
 <div class="block">The time unit as used by the <code>java.time</code> package.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="m_TimeUnit">
 <h3>m_TimeUnit</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-335">m_TimeUnit</a></span></div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-342">m_TimeUnit</a></span></div>
 <div class="block">The time unit as used by the <code>java.util.concurrent</code> package.</div>
 </section>
 </li>
@@ -616,7 +608,7 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="&lt;init&gt;(java.math.BigDecimal,java.lang.String,java.util.concurrent.TimeUnit,java.time.temporal.TemporalUnit)">
 <h3>Time</h3>
-<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-350">Time</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;factor,
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-357">Time</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;factor,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;timeUnit,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link">TemporalUnit</a>&nbsp;temporalUnit)</span></div>
@@ -674,7 +666,7 @@ not permitted.)</div>
 <li>
 <section class="detail" id="asTemporalUnit()">
 <h3>asTemporalUnit</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link">TemporalUnit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-367">asTemporalUnit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link">TemporalUnit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-374">asTemporalUnit</a></span>()</div>
 <div class="block">Returns this instance of <code>Time</code> as an instance of
   <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link"><code>TemporalUnit</code></a>.</div>
 <dl class="notes">
@@ -686,10 +678,10 @@ not permitted.)</div>
 <li>
 <section class="detail" id="baseUnit()">
 <h3>baseUnit</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-373">baseUnit</a></span>()</div>
-<div class="block">Returns the base unit.<br>
-  <br>E.g. for length, the base unit would be Meter (m), for mass, it is
-  Kilogram (kg), and so on.</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-380">baseUnit</a></span>()</div>
+<div class="block"><p>Returns the base unit.</p>
+  <p>E.g. for length, the base unit would be Meter (m), for mass, it is
+  Kilogram (kg), and so on.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#baseUnit()">baseUnit</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>
@@ -701,13 +693,13 @@ not permitted.)</div>
 <li>
 <section class="detail" id="factor()">
 <h3>factor</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-380">factor</a></span>()</div>
-<div class="block">Returns the factor that is used to convert a value from this unit
-  to the base unit.<br>
-  <br>For length, if you have to convert a
-  Centimeter value to Meter, you will divide that by 100 or multiply it
-  with a <i>factor</i> of 0.01.<br>
-  <br>For the base unit, the factor is 1.0.</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-387">factor</a></span>()</div>
+<div class="block"><p>Returns the factor that is used to convert a value from
+  this unit to the base unit.</p>
+  <p>For length, if you have to convert a Centimeter value to Meter, you
+  will divide that by 100 or multiply it with a <i>factor</i> of
+  0.01.</p>
+  <p>For the base unit, the factor is 1.0.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#factor()">factor</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>
@@ -725,7 +717,7 @@ not permitted.)</div>
 <li>
 <section class="detail" id="forUnit(java.time.temporal.ChronoUnit)">
 <h3>forUnit</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-391">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/ChronoUnit.html" title="class or interface in java.time.temporal" class="external-link">ChronoUnit</a>&nbsp;unit)</span>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-398">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/ChronoUnit.html" title="class or interface in java.time.temporal" class="external-link">ChronoUnit</a>&nbsp;unit)</span>
                           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
 <div class="block">Returns the <code>Time</code> instance for the given instance of
   <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/ChronoUnit.html" title="class or interface in java.time.temporal" class="external-link"><code>ChronoUnit</code></a>.</div>
@@ -742,7 +734,7 @@ not permitted.)</div>
 <li>
 <section class="detail" id="forUnit(java.time.temporal.TemporalUnit)">
 <h3>forUnit</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-412">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link">TemporalUnit</a>&nbsp;unit)</span>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-419">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link">TemporalUnit</a>&nbsp;unit)</span>
                           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
 <div class="block">Returns the <code>Time</code> instance for the given instance of
   <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link"><code>TemporalUnit</code></a>.</div>
@@ -759,7 +751,7 @@ not permitted.)</div>
 <li>
 <section class="detail" id="forUnit(java.util.concurrent.TimeUnit)">
 <h3>forUnit</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-433">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;unit)</span>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-440">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;unit)</span>
                           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
 <div class="block">Returns the <code>Time</code> instance for the given instance of
   <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link"><code>TimeUnit</code></a>.</div>
@@ -776,7 +768,7 @@ not permitted.)</div>
 <li>
 <section class="detail" id="forUnit(java.lang.String)">
 <h3>forUnit</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-453">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</span>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-460">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</span>
                           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
 <div class="block">Returns the <code>Time</code> instance for the given unit.</div>
 <dl class="notes">
@@ -792,7 +784,7 @@ not permitted.)</div>
 <li>
 <section class="detail" id="getTemporalUnit()">
 <h3>getTemporalUnit</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link">TemporalUnit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-476">getTemporalUnit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link">TemporalUnit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-483">getTemporalUnit</a></span>()</div>
 <div class="block">Returns the correspondent
   <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/TemporalUnit.html" title="class or interface in java.time.temporal" class="external-link"><code>TemporalUnit</code></a>
   for this instance, as used by the <code>java.time</code>
@@ -808,7 +800,7 @@ not permitted.)</div>
 <li>
 <section class="detail" id="getTimeUnit()">
 <h3>getTimeUnit</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-489">getTimeUnit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-496">getTimeUnit</a></span>()</div>
 <div class="block">Returns the correspondent
   <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link"><code>TimeUnit</code></a>
   for this instance, as used by the <code>java.util.concurrent</code>
@@ -824,11 +816,12 @@ not permitted.)</div>
 <li>
 <section class="detail" id="unitSymbol()">
 <h3>unitSymbol</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-495">unitSymbol</a></span>()</div>
-<div class="block">Returns the unit symbol for the dimension as a single line string.<br>
-  <br>For a length, this would be &quot;m&quot;, for a speed
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Time.html#line-502">unitSymbol</a></span>()</div>
+<div class="block"><p>Returns the unit symbol for the dimension as a single line
+  string.</p>
+  <p>For a length, this would be &quot;m&quot;, for a speed
   &quot;km/h&quot;, and for an acceleration, it could be
-  &quot;m/(s^2)&quot;.</div>
+  &quot;m/(s^2)&quot;.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#unitSymbol()">unitSymbol</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>

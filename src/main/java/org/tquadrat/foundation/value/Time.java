@@ -92,7 +92,14 @@ public enum Time implements Dimension
     /**
      *  Half a day.
      */
-    HALF_DAY( new BigDecimal( "43200.0" ), "½d", null, ChronoUnit.HALF_DAYS ),
+    HALF_DAY( new BigDecimal( "43200.0" ), "d/2", null, ChronoUnit.HALF_DAYS )
+    {
+        /**
+         *  {@inheritDoc}
+         */
+        @Override
+        public final String unitSymbolForPrinting() { return "½d"; }
+    },
 
     /**
      *  A day.
@@ -218,7 +225,7 @@ public enum Time implements Dimension
     /**
      *  An implementation of
      *  {@link TemporalUnit},
-     *  base on the settings for the {@code Time} instance.
+     *  based on the settings for the {@code Time} instance.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
      *  @version $Id: Time.java 880 2021-02-27 10:47:40Z tquadrat $

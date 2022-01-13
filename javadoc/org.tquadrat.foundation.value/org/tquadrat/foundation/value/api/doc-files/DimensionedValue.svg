@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='949.000'
-     height='967.000'>
+     height='989.000'>
     <defs>
         <style><![CDATA[
             line
@@ -118,7 +118,7 @@
         </marker>
         <clipPath id='ID000001'>
             <rect class='focusClass'
-                  height='326.000'
+                  height='348.000'
                   width='784.000'
                   x='0.000'
                   y='8.000'/>
@@ -130,7 +130,7 @@
                     <rect x='0.000'
                           y='8.000'
                           width='784.000'
-                          height='326.000'
+                          height='348.000'
                           class='focusClass'/>
                     <line x1='0.000'
                           y1='36.000'
@@ -206,9 +206,13 @@
                     <text x='5.000'
                           y='308.000'>&#x2A22; toString(locale:java.util.Locale,width:int,precision:int):java.lang.String</text>
                     <text x='5.000'
-                          y='319.000'>&#x2A22; toString(width:int,precision:int):java.lang.String</text>
+                          y='319.000'>&#x2A22; toString(locale:java.util.Locale,width:int,precision:int,useNiceUnit:boolean):java.lang.String</text>
                     <text x='5.000'
-                          y='330.000'>&#x2A22; value():java.math.BigDecimal</text>
+                          y='330.000'>&#x2A22; toString(width:int,precision:int):java.lang.String</text>
+                    <text x='5.000'
+                          y='341.000'>&#x2A22; toString(locale:java.util.Locale,format:java.lang.String,useNiceUnit:boolean):java.lang.String</text>
+                    <text x='5.000'
+                          y='352.000'>&#x2A22; value():java.math.BigDecimal</text>
                 </g>
                 <g transform='translate(759.000 0.000)'>
                     <rect x='0.000'
@@ -479,7 +483,7 @@
         </symbol>
     </defs>
     <path class='implementation'
-          d='M462.000,637.000 L462.000,529.000'
+          d='M462.000,659.000 L462.000,551.000'
           marker-end='url(#implementation)'/>
     <path class='inheritance'
           d='M387.000,203.000 c0.000,-101.000,-324.000,0.000,-324.000,-101.000 v-15'
@@ -509,6 +513,6 @@
          y='195.000'
          xlink:href='#org.tquadrat.foundation.value.api.DimensionedValue'/>
     <use x='319.000'
-         y='629.000'
+         y='651.000'
          xlink:href='#org.tquadrat.foundation.value.api.ValueBase'/>
 </svg>

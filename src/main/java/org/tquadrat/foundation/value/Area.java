@@ -47,15 +47,29 @@ public enum Area implements Dimension
     /**
      *  A square millimeter.
      */
-    SQUARE_MILLIMETER( new BigDecimal( "0.000001" ), "mm^2" ),
+    SQUARE_MILLIMETER( new BigDecimal( "0.000001" ), "mm^2" )
+    {
+        /**
+         *  {@inheritDoc}
+         */
+        @Override
+        public final String unitSymbolForPrinting() { return "mm²"; }
+    },
 
     /**
      *  A square centimeter.
      */
-    SQUARE_CENTIMETER( new BigDecimal( "0.0001" ), "cm^2",1 ),
+    SQUARE_CENTIMETER( new BigDecimal( "0.0001" ), "cm^2",1 )
+    {
+        /**
+         *  {@inheritDoc}
+         */
+        @Override
+        public final String unitSymbolForPrinting() { return "cm²"; }
+    },
 
     /**
-     *  An square inch.
+     *  A square inch.
      */
     SQUARE_INCH( new BigDecimal( "0.00064516" ), "sqin" ),
 
@@ -69,12 +83,26 @@ public enum Area implements Dimension
      *  A square yard (9
      *  {@linkplain #SQUARE_FOOT square feet}).
      */
-    SQUARE_YARD( new BigDecimal( "0.83612736" ), "yd^2" ),
+    SQUARE_YARD( new BigDecimal( "0.83612736" ), "yd^2" )
+    {
+        /**
+         *  {@inheritDoc}
+         */
+        @Override
+        public final String unitSymbolForPrinting() { return "yd²"; }
+    },
 
     /**
      *  A square_meter.
      */
-    SQUARE_METER( BigDecimal.ONE, "m^2", 1 ),
+    SQUARE_METER( BigDecimal.ONE, "m^2", 1 )
+    {
+        /**
+         *  {@inheritDoc}
+         */
+        @Override
+        public final String unitSymbolForPrinting() { return "m²"; }
+    },
 
     /**
      *  An Ar (a unit for areas, used in the EU and Switzerland). It is 100
@@ -92,6 +120,7 @@ public enum Area implements Dimension
      *  {@linkplain #HEKTAR ha}.
      */
     MORGEN( new BigDecimal( "2500" ), "Mg" ),
+
     /**
      *  An acre.
      */
@@ -108,7 +137,14 @@ public enum Area implements Dimension
     /**
      *  A square kilometer.
      */
-    SQUARE_KILOMETER( new BigDecimal( "1000000.0" ), "km^2", 3 ),
+    SQUARE_KILOMETER( new BigDecimal( "1000000.0" ), "km^2", 3 )
+    {
+        /**
+         *  {@inheritDoc}
+         */
+        @Override
+        public final String unitSymbolForPrinting() { return "km²"; }
+    },
 
     /**
      *  A square mile (1760 yard).
@@ -137,7 +173,7 @@ public enum Area implements Dimension
     ====** Constructors **=====================================================
         \*--------------*/
     /**
-     *  Creates a new {@code Length} instance, with a default precision of zero
+     *  Creates a new {@code Area} instance, with a default precision of zero
      *  mantissa digits.
      *
      *  @param  factor  The factor.
@@ -146,10 +182,10 @@ public enum Area implements Dimension
     private Area( final BigDecimal factor, final String unitSymbol )
     {
         this( factor, unitSymbol, 0 );
-    }   //  Length()
+    }   //  Area()
 
     /**
-     *  Creates a new {@code Length} instance.
+     *  Creates a new {@code Area} instance.
      *
      *  @param  factor  The factor.
      *  @param  unitSymbol    The unit symbol String.
@@ -160,7 +196,7 @@ public enum Area implements Dimension
         m_Factor = factor.stripTrailingZeros();
         m_UnitSymbol = unitSymbol;
         m_Precision = precision;
-    }   //  Length()
+    }   //  Area()
 
         /*---------*\
     ====** Methods **==========================================================
@@ -179,7 +215,7 @@ public enum Area implements Dimension
     public final BigDecimal factor() { return m_Factor; }
 
     /**
-     *  Returns the {@code Length} instance for the given unit symbol.
+     *  Returns the {@code Area} instance for the given unit symbol.
      *
      *  @param  unitSymbol  The unit symbol.
      *  @return The respective instance.
@@ -210,7 +246,7 @@ public enum Area implements Dimension
     @Override
     public final String unitSymbol() { return m_UnitSymbol; }
 }
-//  enum Length
+//  enum Area
 
 /*
  *  End of File

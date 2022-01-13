@@ -100,6 +100,7 @@ public final class LengthValue extends ValueBase<Length,LengthValue>
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final LengthValue clone()
     {

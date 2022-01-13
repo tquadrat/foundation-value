@@ -97,6 +97,7 @@ public final class MassValue extends ValueBase<Mass,MassValue>
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final MassValue clone()
     {

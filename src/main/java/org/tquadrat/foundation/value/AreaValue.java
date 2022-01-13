@@ -104,6 +104,7 @@ public final class AreaValue extends ValueBase<Area, AreaValue>
      *  @param  length  The length.
      *  @param  width   The width.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public AreaValue( final Area dimension, final LengthValue length, final LengthValue width )
     {
         super( SQUARE_METER, requireNonNullArgument( length, "length" ).baseValue().multiply( requireNonNullArgument( width, "width" ).baseValue() ) );
@@ -116,6 +117,7 @@ public final class AreaValue extends ValueBase<Area, AreaValue>
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final AreaValue clone()
     {

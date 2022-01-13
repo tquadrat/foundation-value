@@ -272,19 +272,13 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#baseUnit()" class="member-name-link">baseUnit</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the base unit.<br>
-  <br>E.g. for length, the base unit would be Meter (m), for mass, it is
-  Kilogram (kg), and so on.</div>
+<div class="block">Returns the base unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#factor()" class="member-name-link">factor</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the factor that is used to convert a value from this unit
-  to the base unit.<br>
-  <br>For length, if you have to convert a
-  Centimeter value to Meter, you will divide that by 100 or multiply it
-  with a <i>factor</i> of 0.01.<br>
-  <br>For the base unit, the factor is 1.0.</div>
+<div class="block">Returns the factor that is used to convert a value from
+  this unit to the base unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static final <a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#forUnit(java.lang.String)" class="member-name-link">forUnit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</code></div>
@@ -294,10 +288,8 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unitSymbol()" class="member-name-link">unitSymbol</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the unit symbol for the dimension as a single line string.<br>
-  <br>For a length, this would be &quot;m&quot;, for a speed
-  &quot;km/h&quot;, and for an acceleration, it could be
-  &quot;m/(s^2)&quot;.</div>
+<div class="block">Returns the unit symbol for the dimension as a single line
+  string.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
@@ -321,7 +313,7 @@ the order they are declared.</div>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.tquadrat.foundation.value.api.Dimension">Methods inherited from interface&nbsp;org.tquadrat.foundation.value.api.<a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></h3>
-<code><a href="api/Dimension.html#equals(java.lang.Object)">equals</a>, <a href="api/Dimension.html#getPrecision()">getPrecision</a>, <a href="api/Dimension.html#name()">name</a>, <a href="api/Dimension.html#toString()">toString</a></code></div>
+<code><a href="api/Dimension.html#equals(java.lang.Object)">equals</a>, <a href="api/Dimension.html#getPrecision()">getPrecision</a>, <a href="api/Dimension.html#name()">name</a>, <a href="api/Dimension.html#toString()">toString</a>, <a href="api/Dimension.html#unitSymbolForPrinting()">unitSymbolForPrinting</a></code></div>
 </section>
 </li>
 </ul>
@@ -359,14 +351,14 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="HEKTO_PASCAL">
 <h3>HEKTO_PASCAL</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-67">HEKTO_PASCAL</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-74">HEKTO_PASCAL</a></span></div>
 <div class="block">A hekto Pascal.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="MILLI_BAR">
 <h3>MILLI_BAR</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-73">MILLI_BAR</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-80">MILLI_BAR</a></span></div>
 <div class="block">A milli bar; same as
   <a href="#HEKTO_PASCAL"><code>HEKTO_PASCAL</code></a>.</div>
 </section>
@@ -374,14 +366,14 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="TORR">
 <h3>TORR</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-78">TORR</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-85">TORR</a></span></div>
 <div class="block">A Torr.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="MILLIMETER_OF_MERCURY">
 <h3>MILLIMETER_OF_MERCURY</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-84">MILLIMETER_OF_MERCURY</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-91">MILLIMETER_OF_MERCURY</a></span></div>
 <div class="block">A mm of Mercury; same as
   <a href="#TORR"><code>TORR</code></a>.</div>
 </section>
@@ -389,56 +381,56 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="INCH_OF_MERCURY">
 <h3>INCH_OF_MERCURY</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-89">INCH_OF_MERCURY</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-96">INCH_OF_MERCURY</a></span></div>
 <div class="block">An inch of Mercury.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="KILO_PASCAL">
 <h3>KILO_PASCAL</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-94">KILO_PASCAL</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-101">KILO_PASCAL</a></span></div>
 <div class="block">A kilo Pascal.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="PSI">
 <h3>PSI</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-99">PSI</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-106">PSI</a></span></div>
 <div class="block">A psi.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="AT">
 <h3>AT</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-104">AT</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-111">AT</a></span></div>
 <div class="block">A technical <i>atmosphere</i> (at).</div>
 </section>
 </li>
 <li>
 <section class="detail" id="BAR">
 <h3>BAR</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-109">BAR</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-116">BAR</a></span></div>
 <div class="block">A <i>bar</i>.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="ATM">
 <h3>ATM</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-114">ATM</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-121">ATM</a></span></div>
 <div class="block">A physical <i>atmosphere</i> (atm).</div>
 </section>
 </li>
 <li>
 <section class="detail" id="MEGA_PASCAL">
 <h3>MEGA_PASCAL</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-119">MEGA_PASCAL</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-126">MEGA_PASCAL</a></span></div>
 <div class="block">A mega Pascal.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="NEWTON_PER_SQUAREMILLIMETER">
 <h3>NEWTON_PER_SQUAREMILLIMETER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-126">NEWTON_PER_SQUAREMILLIMETER</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-133">NEWTON_PER_SQUAREMILLIMETER</a></span></div>
 <div class="block">Same as
   <a href="#MEGA_PASCAL"><code>MEGA_PASCAL</code></a>,
   but a different unit.</div>
@@ -455,14 +447,14 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="m_Factor">
 <h3>m_Factor</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-134">m_Factor</a></span></div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-148">m_Factor</a></span></div>
 <div class="block">The factor.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="m_UnitSymbol">
 <h3>m_UnitSymbol</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-139">m_UnitSymbol</a></span></div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-153">m_UnitSymbol</a></span></div>
 <div class="block">The unit string.</div>
 </section>
 </li>
@@ -477,7 +469,7 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="&lt;init&gt;(java.math.BigDecimal,java.lang.String)">
 <h3>Pressure</h3>
-<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-150">Pressure</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;factor,
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-164">Pressure</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;factor,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</span></div>
 <div class="block">Creates a new <code>Pressure</code> instance.</div>
 <dl class="notes">
@@ -529,10 +521,10 @@ not permitted.)</div>
 <li>
 <section class="detail" id="baseUnit()">
 <h3>baseUnit</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-162">baseUnit</a></span>()</div>
-<div class="block">Returns the base unit.<br>
-  <br>E.g. for length, the base unit would be Meter (m), for mass, it is
-  Kilogram (kg), and so on.</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-176">baseUnit</a></span>()</div>
+<div class="block"><p>Returns the base unit.</p>
+  <p>E.g. for length, the base unit would be Meter (m), for mass, it is
+  Kilogram (kg), and so on.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#baseUnit()">baseUnit</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>
@@ -544,13 +536,13 @@ not permitted.)</div>
 <li>
 <section class="detail" id="factor()">
 <h3>factor</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-169">factor</a></span>()</div>
-<div class="block">Returns the factor that is used to convert a value from this unit
-  to the base unit.<br>
-  <br>For length, if you have to convert a
-  Centimeter value to Meter, you will divide that by 100 or multiply it
-  with a <i>factor</i> of 0.01.<br>
-  <br>For the base unit, the factor is 1.0.</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-183">factor</a></span>()</div>
+<div class="block"><p>Returns the factor that is used to convert a value from
+  this unit to the base unit.</p>
+  <p>For length, if you have to convert a Centimeter value to Meter, you
+  will divide that by 100 or multiply it with a <i>factor</i> of
+  0.01.</p>
+  <p>For the base unit, the factor is 1.0.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#factor()">factor</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>
@@ -568,7 +560,7 @@ not permitted.)</div>
 <li>
 <section class="detail" id="forUnit(java.lang.String)">
 <h3>forUnit</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-179">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</span>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-193">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</span>
                               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
 <div class="block">Returns the <code>Pressure</code> instance for the given unit.</div>
 <dl class="notes">
@@ -584,11 +576,12 @@ not permitted.)</div>
 <li>
 <section class="detail" id="unitSymbol()">
 <h3>unitSymbol</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-195">unitSymbol</a></span>()</div>
-<div class="block">Returns the unit symbol for the dimension as a single line string.<br>
-  <br>For a length, this would be &quot;m&quot;, for a speed
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-209">unitSymbol</a></span>()</div>
+<div class="block"><p>Returns the unit symbol for the dimension as a single line
+  string.</p>
+  <p>For a length, this would be &quot;m&quot;, for a speed
   &quot;km/h&quot;, and for an acceleration, it could be
-  &quot;m/(s^2)&quot;.</div>
+  &quot;m/(s^2)&quot;.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#unitSymbol()">unitSymbol</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>

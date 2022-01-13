@@ -97,6 +97,7 @@ public final class PressureValue extends ValueBase<Pressure,PressureValue>
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final PressureValue clone()
     {

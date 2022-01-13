@@ -100,6 +100,7 @@ public final class SpeedValue extends ValueBase<Speed,SpeedValue>
      *  @param  distance    The travelled distance.
      *  @param  time    The time for travelling the given distance.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public SpeedValue( final Speed dimension, final LengthValue distance, final TimeValue time )
     {
         super( dimension, requireNonNullArgument( distance, "distance" ).baseValue().divide( requireNonNullArgument( time, "time" ).baseValue(), DECIMAL128 ) );
@@ -111,6 +112,7 @@ public final class SpeedValue extends ValueBase<Speed,SpeedValue>
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final SpeedValue clone()
     {

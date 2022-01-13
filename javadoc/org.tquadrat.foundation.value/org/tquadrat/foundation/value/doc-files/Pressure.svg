@@ -250,8 +250,8 @@
         </symbol>
         <clipPath id='ID000003'>
             <rect class='otherClass'
-                  height='128.000'
-                  width='226.000'
+                  height='139.000'
+                  width='262.000'
                   x='0.000'
                   y='0.000'/>
         </clipPath>
@@ -260,23 +260,23 @@
                 <g clip-path='url(#ID000003)'>
                     <rect x='0.000'
                           y='0.000'
-                          width='226.000'
-                          height='128.000'
+                          width='262.000'
+                          height='139.000'
                           class='otherClass'/>
                     <line x1='0.000'
                           y1='28.000'
-                          x2='226.000'
+                          x2='262.000'
                           y2='28.000'
                           class='separator'/>
-                    <text x='86.600'
+                    <text x='104.600'
                           y='13.000'
                           class='stereotype'>&#xAB;Interface&#xBB;</text>
-                    <text x='86.000'
+                    <text x='104.000'
                           y='24.000'
                           class='abstract'>Dimension</text>
                     <line x1='0.000'
                           y1='45.000'
-                          x2='226.000'
+                          x2='262.000'
                           y2='45.000'
                           class='separator'/>
                     <text y='41.000'
@@ -301,6 +301,8 @@
                     <text x='5.000'
                           y='124.000'
                           class='abstract'>+ unitSymbol():java.lang.String</text>
+                    <text x='5.000'
+                          y='135.000'>&#x2A22; unitSymbolForPrinting():java.lang.String</text>
                 </g>
             </g>
         </symbol>
@@ -504,7 +506,7 @@
           d='M578.500,588.000 c0.000,-85.000,-289.250,0.000,-289.250,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='implementation'
-          d='M628.500,588.000 c0.000,-148.000,276.750,0.000,276.750,-148.000 v-15'
+          d='M628.500,588.000 c0.000,-137.000,276.750,0.000,276.750,-137.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='inheritance'
           d='M214.250,305.000 c0.000,-93.000,-67.250,0.000,-67.250,-93.000 v-15'
@@ -536,7 +538,7 @@
     <use x='80.250'
          y='297.000'
          xlink:href='#java.lang.Enum'/>
-    <use x='792.250'
+    <use x='774.250'
          y='297.000'
          xlink:href='#org.tquadrat.foundation.value.api.Dimension'/>
     <use x='367.500'

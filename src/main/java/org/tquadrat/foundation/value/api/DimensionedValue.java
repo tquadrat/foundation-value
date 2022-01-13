@@ -22,6 +22,7 @@ import static java.util.FormattableFlags.LEFT_JUSTIFY;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.isNull;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
+import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
 import static org.tquadrat.foundation.util.StringUtils.format;
 import static org.tquadrat.foundation.util.StringUtils.padRight;
 
@@ -32,6 +33,7 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.Formattable;
 import java.util.Formatter;
+import java.util.IllegalFormatException;
 import java.util.Locale;
 
 import org.apiguardian.api.API;
@@ -97,9 +99,9 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
     }   //  baseUnit()
 
     /**
-     *  Returns the base value (this value, converted to the base
-     *  unit).<br>
-     *  <br>According to the result, this is the same as calling
+     *  <p>{@summary Returns the base value (this value, converted to the base
+      *  unit).}</p>
+     *  <p>According to the result, this is the same as calling</p>
      *  <pre><code>convert( baseUnit() );</code></pre>.
      *
      *  @return The numerical value as for the base unit.
@@ -118,9 +120,9 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
     public DimensionedValue<D> clone();
 
     /**
-     *  {@inheritDoc}<br>
-     *  <br>The comparison is made based on the
-     *  {@link #baseValue()}.
+     *  {@inheritDoc}
+     *  <p>The comparison is made based on the
+     *  {@link #baseValue()}.</p>
      */
     @Override
     public default int compareTo( final DimensionedValue<D> other )
@@ -434,28 +436,30 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
     }   // sum()
 
     /**
-     *  Returns the String representation for the this value; usually, this is
-     *  in the format
+     *  <p>{@summary Returns the String representation for this value};
+     *  usually, this is in the format</p>
      *  <pre><code>&lt;<i>numerical value</i>&gt;&nbsp;&lt;<i>unit symbol</i>&gt;</code></pre>
-     *  like &quot;{@code 4.5 m}&quot;. The precision for the mantissa is
+     *  <p>like &quot;{@code 4.5 m}&quot;.</p>
+     *  <p>The precision for the mantissa is
      *  provided by the
-     *  {@linkplain Dimension#getPrecision() unit}.
-     *  If more control over the output format is required, see
-     *  {@link #toString(int, int)}.
+     *  {@linkplain Dimension#getPrecision() unit}.</p>
+     *  <p>If more control over the output format is required, see
+     *  {@link #toString(int, int)}.</p>
      */
     @Override
     public String toString();
 
     /**
-     *  Provides a String representation of this value, in the format
+     *  <p>{@summary Provides a String representation of this value}, in the
+     *  format</p>
      *  <pre><code>&lt;<i>numerical value</i>&gt;&nbsp;&lt;<i>unit symbol</i>&gt;</code></pre>
-     *  for the given
+     *  <p>for the given
      *  {@link Locale}
      *  that determines the decimal separator, like &quot;{@code 4.5 m}&quot;
-     *  vs. &quot;{@code 4,5 m}&quot;.<br>
-     *  <br>The precision is applied to the numerical part only. The width
+     *  vs. &quot;{@code 4,5 m}&quot;.</p>
+     *  <p>The precision is applied to the numerical part only. The width
      *  includes the
-     *  {@linkplain Dimension#unitSymbol() unit symbol}, too.
+     *  {@linkplain Dimension#unitSymbol() unit symbol}, too.</p>
      *
      *  @param  locale  The locale to use.
      *  @param  width   The minimum number of characters to be written to the
@@ -471,29 +475,67 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
      */
     public default String toString( final Locale locale, final int width, final int precision )
     {
-        final var effectiveWidth = width - getUnit().unitSymbol().length() - 1;
-
-        final var format = new StringBuilder( "%" );
-        if( effectiveWidth > 0 ) format.append( effectiveWidth );
-        if( precision >= 0 ) format.append( "." ).append( precision );
-        format.append( "f %s" );
-
-        final var retValue = format( requireNonNullArgument( locale, "locale" ), format.toString(), value(), getUnit().unitSymbol() );
+        final var retValue = toString( locale, width, precision, false );
 
         //---* Done *----------------------------------------------------------
         return retValue;
     }   //  toString()
 
     /**
-     *  Provides a String representation of this value, in the format
+     *  <p>{@summary Provides a String representation of this value}, in the
+     *  format</p>
      *  <pre><code>&lt;<i>numerical value</i>&gt;&nbsp;&lt;<i>unit symbol</i>&gt;</code></pre>
-     *  and for the
+     *  <p>for the given
+     *  {@link Locale}
+     *  that determines the decimal separator, like &quot;{@code 4.5 m}&quot;
+     *  vs. &quot;{@code 4,5 m}&quot;.</p>
+     *  <p>The precision is applied to the numerical part only. The width
+     *  includes the
+     *  {@linkplain Dimension#unitSymbol() unit symbol}, too.</p>
+     *
+     *  @param  locale  The locale to use.
+     *  @param  width   The minimum number of characters to be written to the
+     *      output. If the length of the converted value is less than the width
+     *      then the output will be padded by '&nbsp;' until the total number
+     *      of characters equals width. The padding is at the beginning, as
+     *      numerical values are usually right justified. If {@code width} is
+     *      -1 then there is no minimum.
+     *  @param  precision – The number of digits for the mantissa of the value.
+     *      If {@code precision} is -1 then there is no explicit limit on the
+     *      size of the mantissa.
+     *  @param  useNiceUnit {@code true} if the method
+     *      {@link Dimension#unitSymbolForPrinting() unitSymbolForPrinting()}
+     *      should be used to retrieve the unit symbol, {@code false} if the
+     *      usual one is sufficient.
+     *  @return The String representation for this value.
+     */
+    public default String toString( final Locale locale, final int width, final int precision, final boolean useNiceUnit )
+    {
+        final var unitSymbol = useNiceUnit ? getUnit().unitSymbolForPrinting() : getUnit().unitSymbol();
+        final var effectiveWidth = width - unitSymbol.length() - 1;
+
+        final var format = new StringBuilder( "%" );
+        if( effectiveWidth > 0 ) format.append( effectiveWidth );
+        if( precision >= 0 ) format.append( "." ).append( precision );
+        format.append( "f %s" );
+
+        final var retValue = format( requireNonNullArgument( locale, "locale" ), format.toString(), value(), unitSymbol );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  toString()
+
+    /**
+     *  <p>{@summary Provides a String representation of this value}, in the
+     *  format</p>
+     *  <pre><code>&lt;<i>numerical value</i>&gt;&nbsp;&lt;<i>unit symbol</i>&gt;</code></pre>
+     *  <p>and for the
      *  {@linkplain Locale#getDefault() default Locale},
      *  like &quot;{@code 4.5 m}&quot;, where the Locale determines the decimal
-     *  separator.<br>
-     *  <br>The precision is applied to the numerical part only. The width
+     *  separator.</p>
+     *  <p>The precision is applied to the numerical part only. The width
      *  includes the
-     *  {@linkplain Dimension#unitSymbol() unit symbol}, too.
+     *  {@linkplain Dimension#unitSymbol() unit symbol}, too.</p>
      *
      *  @param  width   The minimum number of characters to be written to the
      *      output. If the length of the converted value is less than the width
@@ -509,6 +551,36 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
     public default String toString( final int width, final int precision )
     {
         final var retValue = toString( Locale.getDefault(), width, precision );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  toString()
+
+    /**
+     *  <p>{@summary Provides a String representation of this value}, in the
+     *  format that is defined by the provided format String.</p>
+     *  <p>That format String must contain exactly one '%f' tag and one '%s'
+     *  tag; the first takes the numerical value, the second the unit.</p>
+     *  <p>The provided
+     *  {@link Locale}
+     *  determines the decimal separator and the optional thousands
+     *  separator.</p>
+     *
+     *  @param  locale  The locale to use.
+     *  @param  format  The format String.
+     *  @param  useNiceUnit {@code true} if the method
+     *      {@link Dimension#unitSymbolForPrinting() unitSymbolForPrinting()}
+     *      should be used to retrieve the unit symbol, {@code false} if the
+     *      usual one is sufficient.
+     *  @return The String representation for this value.
+     *  @throws IllegalFormatException  The provided format String is invalid.
+     *
+     *  @see java.util.Formatter
+     */
+    public default String toString( final Locale locale, final String format, final boolean useNiceUnit ) throws IllegalFormatException
+    {
+        final var unitSymbol = useNiceUnit ? getUnit().unitSymbolForPrinting() : getUnit().unitSymbol();
+        final var retValue = format( requireNonNullArgument( locale, "locale" ), requireNotEmptyArgument( format, "format" ), value(), unitSymbol );
 
         //---* Done *----------------------------------------------------------
         return retValue;

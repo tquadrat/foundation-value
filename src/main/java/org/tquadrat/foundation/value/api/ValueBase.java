@@ -127,7 +127,6 @@ public abstract class ValueBase<D extends Dimension, I extends DimensionedValue<
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "CloneReturnsClassType" )
     @Override
     public I clone()
     {
@@ -153,7 +152,6 @@ public abstract class ValueBase<D extends Dimension, I extends DimensionedValue<
     @Override
     public final I copy()
     {
-        @SuppressWarnings( "unchecked" )
         final var retValue = clone();
 
         //---* Done *----------------------------------------------------------
@@ -166,7 +164,6 @@ public abstract class ValueBase<D extends Dimension, I extends DimensionedValue<
     @Override
     public final I copy( final D unit )
     {
-        @SuppressWarnings( "unchecked" )
         final var retValue = copy();
         retValue.setUnit( unit ); // Does the null check ...
 
@@ -177,7 +174,6 @@ public abstract class ValueBase<D extends Dimension, I extends DimensionedValue<
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "preview" )
     @Override
     public final boolean equals( final Object obj )
     {
@@ -215,6 +211,7 @@ public abstract class ValueBase<D extends Dimension, I extends DimensionedValue<
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "GrazieInspection" )
     @Override
     public final String toString() { return format( ROOT, "%s %s", convert( m_Unit ).toString(), m_Unit.unitSymbol() ); }
 }

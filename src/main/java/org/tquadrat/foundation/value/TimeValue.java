@@ -152,6 +152,7 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final TimeValue clone()
     {
@@ -176,7 +177,7 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
 
             final var buffer = new StringBuilder();
 
-            final Time [] times = { YEAR, WEEK, DAY, HOUR, MINUTE };
+            final var times = new Time[] {YEAR, WEEK, DAY, HOUR, MINUTE};
             var result = new BigDecimal [2];
             result [1] = baseValue();
             for( final var t : times )

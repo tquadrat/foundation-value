@@ -276,19 +276,13 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="Mass.html" title="enum class in org.tquadrat.foundation.value">Mass</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#baseUnit()" class="member-name-link">baseUnit</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the base unit.<br>
-  <br>E.g. for length, the base unit would be Meter (m), for mass, it is
-  Kilogram (kg), and so on.</div>
+<div class="block">Returns the base unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#factor()" class="member-name-link">factor</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the factor that is used to convert a value from this unit
-  to the base unit.<br>
-  <br>For length, if you have to convert a
-  Centimeter value to Meter, you will divide that by 100 or multiply it
-  with a <i>factor</i> of 0.01.<br>
-  <br>For the base unit, the factor is 1.0.</div>
+<div class="block">Returns the factor that is used to convert a value from
+  this unit to the base unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static final <a href="Mass.html" title="enum class in org.tquadrat.foundation.value">Mass</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#forUnit(java.lang.String)" class="member-name-link">forUnit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</code></div>
@@ -304,10 +298,8 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unitSymbol()" class="member-name-link">unitSymbol</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the unit symbol for the dimension as a single line string.<br>
-  <br>For a length, this would be &quot;m&quot;, for a speed
-  &quot;km/h&quot;, and for an acceleration, it could be
-  &quot;m/(s^2)&quot;.</div>
+<div class="block">Returns the unit symbol for the dimension as a single line
+  string.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Mass.html" title="enum class in org.tquadrat.foundation.value">Mass</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
@@ -331,7 +323,7 @@ the order they are declared.</div>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.tquadrat.foundation.value.api.Dimension">Methods inherited from interface&nbsp;org.tquadrat.foundation.value.api.<a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></h3>
-<code><a href="api/Dimension.html#equals(java.lang.Object)">equals</a>, <a href="api/Dimension.html#name()">name</a>, <a href="api/Dimension.html#toString()">toString</a></code></div>
+<code><a href="api/Dimension.html#equals(java.lang.Object)">equals</a>, <a href="api/Dimension.html#name()">name</a>, <a href="api/Dimension.html#toString()">toString</a>, <a href="api/Dimension.html#unitSymbolForPrinting()">unitSymbolForPrinting</a></code></div>
 </section>
 </li>
 </ul>
@@ -546,9 +538,9 @@ not permitted.)</div>
 <section class="detail" id="baseUnit()">
 <h3>baseUnit</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Mass.html" title="enum class in org.tquadrat.foundation.value">Mass</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Mass.html#line-171">baseUnit</a></span>()</div>
-<div class="block">Returns the base unit.<br>
-  <br>E.g. for length, the base unit would be Meter (m), for mass, it is
-  Kilogram (kg), and so on.</div>
+<div class="block"><p>Returns the base unit.</p>
+  <p>E.g. for length, the base unit would be Meter (m), for mass, it is
+  Kilogram (kg), and so on.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#baseUnit()">baseUnit</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>
@@ -561,12 +553,12 @@ not permitted.)</div>
 <section class="detail" id="factor()">
 <h3>factor</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Mass.html#line-178">factor</a></span>()</div>
-<div class="block">Returns the factor that is used to convert a value from this unit
-  to the base unit.<br>
-  <br>For length, if you have to convert a
-  Centimeter value to Meter, you will divide that by 100 or multiply it
-  with a <i>factor</i> of 0.01.<br>
-  <br>For the base unit, the factor is 1.0.</div>
+<div class="block"><p>Returns the factor that is used to convert a value from
+  this unit to the base unit.</p>
+  <p>For length, if you have to convert a Centimeter value to Meter, you
+  will divide that by 100 or multiply it with a <i>factor</i> of
+  0.01.</p>
+  <p>For the base unit, the factor is 1.0.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#factor()">factor</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>
@@ -615,10 +607,11 @@ not permitted.)</div>
 <section class="detail" id="unitSymbol()">
 <h3>unitSymbol</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Mass.html#line-210">unitSymbol</a></span>()</div>
-<div class="block">Returns the unit symbol for the dimension as a single line string.<br>
-  <br>For a length, this would be &quot;m&quot;, for a speed
+<div class="block"><p>Returns the unit symbol for the dimension as a single line
+  string.</p>
+  <p>For a length, this would be &quot;m&quot;, for a speed
   &quot;km/h&quot;, and for an acceleration, it could be
-  &quot;m/(s^2)&quot;.</div>
+  &quot;m/(s^2)&quot;.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#unitSymbol()">unitSymbol</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>

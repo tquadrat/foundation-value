@@ -176,7 +176,7 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 </div>
 <div class="col-first even-row-color"><code><a href="#SQUARE_INCH" class="member-name-link">SQUARE_INCH</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">An square inch.</div>
+<div class="block">A square inch.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="#SQUARE_KILOMETER" class="member-name-link">SQUARE_KILOMETER</a></code></div>
 <div class="col-last odd-row-color">
@@ -245,7 +245,7 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.math.BigDecimal,java.lang.String)" class="member-name-link">Area</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;factor,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Creates a new <code>Length</code> instance, with a default precision of zero
+<div class="block">Creates a new <code>Area</code> instance, with a default precision of zero
   mantissa digits.</div>
 </div>
 <div class="col-first odd-row-color"><code>private </code></div>
@@ -253,7 +253,7 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol,
  int&nbsp;precision)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Creates a new <code>Length</code> instance.</div>
+<div class="block">Creates a new <code>Area</code> instance.</div>
 </div>
 </div>
 </section>
@@ -272,24 +272,18 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#baseUnit()" class="member-name-link">baseUnit</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the base unit.<br>
-  <br>E.g. for length, the base unit would be Meter (m), for mass, it is
-  Kilogram (kg), and so on.</div>
+<div class="block">Returns the base unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#factor()" class="member-name-link">factor</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the factor that is used to convert a value from this unit
-  to the base unit.<br>
-  <br>For length, if you have to convert a
-  Centimeter value to Meter, you will divide that by 100 or multiply it
-  with a <i>factor</i> of 0.01.<br>
-  <br>For the base unit, the factor is 1.0.</div>
+<div class="block">Returns the factor that is used to convert a value from
+  this unit to the base unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static final <a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#forUnit(java.lang.String)" class="member-name-link">forUnit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Returns the <code>Length</code> instance for the given unit symbol.</div>
+<div class="block">Returns the <code>Area</code> instance for the given unit symbol.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrecision()" class="member-name-link">getPrecision</a>()</code></div>
@@ -300,10 +294,8 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unitSymbol()" class="member-name-link">unitSymbol</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the unit symbol for the dimension as a single line string.<br>
-  <br>For a length, this would be &quot;m&quot;, for a speed
-  &quot;km/h&quot;, and for an acceleration, it could be
-  &quot;m/(s^2)&quot;.</div>
+<div class="block">Returns the unit symbol for the dimension as a single line
+  string.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
@@ -327,7 +319,7 @@ the order they are declared.</div>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.tquadrat.foundation.value.api.Dimension">Methods inherited from interface&nbsp;org.tquadrat.foundation.value.api.<a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></h3>
-<code><a href="api/Dimension.html#equals(java.lang.Object)">equals</a>, <a href="api/Dimension.html#name()">name</a>, <a href="api/Dimension.html#toString()">toString</a></code></div>
+<code><a href="api/Dimension.html#equals(java.lang.Object)">equals</a>, <a href="api/Dimension.html#name()">name</a>, <a href="api/Dimension.html#toString()">toString</a>, <a href="api/Dimension.html#unitSymbolForPrinting()">unitSymbolForPrinting</a></code></div>
 </section>
 </li>
 </ul>
@@ -349,21 +341,21 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="SQUARE_CENTIMETER">
 <h3>SQUARE_CENTIMETER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-55">SQUARE_CENTIMETER</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-62">SQUARE_CENTIMETER</a></span></div>
 <div class="block">A square centimeter.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="SQUARE_INCH">
 <h3>SQUARE_INCH</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-60">SQUARE_INCH</a></span></div>
-<div class="block">An square inch.</div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-74">SQUARE_INCH</a></span></div>
+<div class="block">A square inch.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="SQUARE_FOOT">
 <h3>SQUARE_FOOT</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-66">SQUARE_FOOT</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-80">SQUARE_FOOT</a></span></div>
 <div class="block">A square foot (144
   <a href="#SQUARE_INCH">square inch</a>).</div>
 </section>
@@ -371,7 +363,7 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="SQUARE_YARD">
 <h3>SQUARE_YARD</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-72">SQUARE_YARD</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-86">SQUARE_YARD</a></span></div>
 <div class="block">A square yard (9
   <a href="#SQUARE_FOOT">square feet</a>).</div>
 </section>
@@ -379,14 +371,14 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="SQUARE_METER">
 <h3>SQUARE_METER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-77">SQUARE_METER</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-98">SQUARE_METER</a></span></div>
 <div class="block">A square_meter.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="AR">
 <h3>AR</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-83">AR</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-111">AR</a></span></div>
 <div class="block">An Ar (a unit for areas, used in the EU and Switzerland). It is 100
   <a href="#SQUARE_METER">square meter</a>.</div>
 </section>
@@ -394,7 +386,7 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="MORGEN">
 <h3>MORGEN</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-94">MORGEN</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-122">MORGEN</a></span></div>
 <div class="block">A %quot;Morgen&quot;, an ancient unit for areas that was used in
   Germany (and is still used sometimes). It is 25
   <a href="#AR">ar</a>,
@@ -407,14 +399,14 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="ACRE">
 <h3>ACRE</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-98">ACRE</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-127">ACRE</a></span></div>
 <div class="block">An acre.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="HEKTAR">
 <h3>HEKTAR</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-106">HEKTAR</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-135">HEKTAR</a></span></div>
 <div class="block">A hektar (a unit for areas, used in the EU and Switzerland). It is 100
   <a href="#AR">a</a>
   or 10000
@@ -424,14 +416,14 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="SQUARE_KILOMETER">
 <h3>SQUARE_KILOMETER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-111">SQUARE_KILOMETER</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-140">SQUARE_KILOMETER</a></span></div>
 <div class="block">A square kilometer.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="SQUARE_MILE">
 <h3>SQUARE_MILE</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-116">SQUARE_MILE</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-152">SQUARE_MILE</a></span></div>
 <div class="block">A square mile (1760 yard).</div>
 </section>
 </li>
@@ -446,21 +438,21 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="m_Factor">
 <h3>m_Factor</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-124">m_Factor</a></span></div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-160">m_Factor</a></span></div>
 <div class="block">The factor.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="m_Precision">
 <h3>m_Precision</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-129">m_Precision</a></span></div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-165">m_Precision</a></span></div>
 <div class="block">The default precision.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="m_UnitSymbol">
 <h3>m_UnitSymbol</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-134">m_UnitSymbol</a></span></div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-170">m_UnitSymbol</a></span></div>
 <div class="block">The unit string.</div>
 </section>
 </li>
@@ -475,9 +467,9 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="&lt;init&gt;(java.math.BigDecimal,java.lang.String)">
 <h3>Area</h3>
-<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-146">Area</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;factor,
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-182">Area</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;factor,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</span></div>
-<div class="block">Creates a new <code>Length</code> instance, with a default precision of zero
+<div class="block">Creates a new <code>Area</code> instance, with a default precision of zero
   mantissa digits.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -489,10 +481,10 @@ the order they are declared.</div>
 <li>
 <section class="detail" id="&lt;init&gt;(java.math.BigDecimal,java.lang.String,int)">
 <h3>Area</h3>
-<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-158">Area</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;factor,
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-194">Area</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;factor,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol,
  int&nbsp;precision)</span></div>
-<div class="block">Creates a new <code>Length</code> instance.</div>
+<div class="block">Creates a new <code>Area</code> instance.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>factor</code> - The factor.</dd>
@@ -543,10 +535,10 @@ not permitted.)</div>
 <li>
 <section class="detail" id="baseUnit()">
 <h3>baseUnit</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-171">baseUnit</a></span>()</div>
-<div class="block">Returns the base unit.<br>
-  <br>E.g. for length, the base unit would be Meter (m), for mass, it is
-  Kilogram (kg), and so on.</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-207">baseUnit</a></span>()</div>
+<div class="block"><p>Returns the base unit.</p>
+  <p>E.g. for length, the base unit would be Meter (m), for mass, it is
+  Kilogram (kg), and so on.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#baseUnit()">baseUnit</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>
@@ -558,13 +550,13 @@ not permitted.)</div>
 <li>
 <section class="detail" id="factor()">
 <h3>factor</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-178">factor</a></span>()</div>
-<div class="block">Returns the factor that is used to convert a value from this unit
-  to the base unit.<br>
-  <br>For length, if you have to convert a
-  Centimeter value to Meter, you will divide that by 100 or multiply it
-  with a <i>factor</i> of 0.01.<br>
-  <br>For the base unit, the factor is 1.0.</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-214">factor</a></span>()</div>
+<div class="block"><p>Returns the factor that is used to convert a value from
+  this unit to the base unit.</p>
+  <p>For length, if you have to convert a Centimeter value to Meter, you
+  will divide that by 100 or multiply it with a <i>factor</i> of
+  0.01.</p>
+  <p>For the base unit, the factor is 1.0.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#factor()">factor</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>
@@ -582,9 +574,9 @@ not permitted.)</div>
 <li>
 <section class="detail" id="forUnit(java.lang.String)">
 <h3>forUnit</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-188">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</span>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-224">forUnit</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unitSymbol)</span>
                           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
-<div class="block">Returns the <code>Length</code> instance for the given unit symbol.</div>
+<div class="block">Returns the <code>Area</code> instance for the given unit symbol.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>unitSymbol</code> - The unit symbol.</dd>
@@ -598,7 +590,7 @@ not permitted.)</div>
 <li>
 <section class="detail" id="getPrecision()">
 <h3>getPrecision</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-204">getPrecision</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-240">getPrecision</a></span>()</div>
 <div class="block">Returns the default precision for this unit that is used when the
   respective value is converted to a String.</div>
 <dl class="notes">
@@ -612,11 +604,12 @@ not permitted.)</div>
 <li>
 <section class="detail" id="unitSymbol()">
 <h3>unitSymbol</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-210">unitSymbol</a></span>()</div>
-<div class="block">Returns the unit symbol for the dimension as a single line string.<br>
-  <br>For a length, this would be &quot;m&quot;, for a speed
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Area.html#line-246">unitSymbol</a></span>()</div>
+<div class="block"><p>Returns the unit symbol for the dimension as a single line
+  string.</p>
+  <p>For a length, this would be &quot;m&quot;, for a speed
   &quot;km/h&quot;, and for an acceleration, it could be
-  &quot;m/(s^2)&quot;.</div>
+  &quot;m/(s^2)&quot;.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="api/Dimension.html#unitSymbol()">unitSymbol</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>

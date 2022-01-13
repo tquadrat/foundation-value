@@ -26,19 +26,19 @@ import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
 
 /**
- *  The implementations of this interface are used to give (numerical) values a
- *  dimension and a measuring unit. So {@code 3.1415} is just a number, but it
- *  could also stand for a length ({@code 3.1415&nbsp;m}), a time
- *  ({@code 3.1415&nbsp;s}) or even the fuel consumption of a car
- *  ({@code 3.1415&nbsp;l/100&nbsp;km}). Depending on the dimension, different
- *  values could be equal:
+ *  <p>{@summary The implementations of this interface are used to give
+ *  (numerical) values a dimension and a measuring unit.} So {@code 3.1415} is
+ *  just a number, but it could also stand for a length
+ *  ({@code 3.1415&nbsp;m}), a time ({@code 3.1415&nbsp;s}) or even the fuel
+ *  consumption of a car ({@code 3.1415&nbsp;l/100&nbsp;km}). Depending on the
+ *  dimension, different values could be equal:</p>
  *  <pre><code>1.0&nbsp;m == 100.0&nbsp;cm</code></pre>
- *  and should be treated as such.<br>
- *  <br>This interface should be implemented as
- *  {@link java.lang.Enum enum}s, where the enum values are the units,
- *  and as such they should provide a method to retrieve an {@code enum} value
- *  (a unit) by the respective
- *  {@linkplain #unitSymbol() symbole}.
+ *  <p>and should be treated as such.</p>
+ *  <p>This interface should be implemented as
+ *  {@link java.lang.Enum enum}s,
+ *  where the enum values are the units, and as such they should provide a
+ *  method to retrieve an {@code enum} value (a unit) by the respective
+ *  {@linkplain #unitSymbol() symbol}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  *  @version $Id: Dimension.java 820 2020-12-29 20:34:22Z tquadrat $
@@ -62,9 +62,9 @@ public interface Dimension extends Serializable
     ====** Methods **==========================================================
         \*---------*/
     /**
-     *  Returns the base unit.<br>
-     *  <br>E.g. for length, the base unit would be Meter (m), for mass, it is
-     *  Kilogram (kg), and so on.
+     *  <p>{@summary Returns the base unit.}</p>
+     *  <p>E.g. for length, the base unit would be Meter (m), for mass, it is
+     *  Kilogram (kg), and so on.</p>
      *
      *  @param  <D> The implementing class for the interface.
      *  @return The base unit.
@@ -72,11 +72,11 @@ public interface Dimension extends Serializable
     public <D extends Dimension> D baseUnit();
 
     /**
-     *  {@inheritDoc}<br>
-     *  <br>Dimensions are equal when they are identical; therefore they
+     *  {@inheritDoc}
+     *  <p>Dimensions are equal when they are identical; therefore they
      *  should be implemented as <i>Multitons</i> (constants of the
      *  implementing class, without the option to create additional instances
-     *  on runtime).
+     *  on runtime).</p>
      *
      *  @see Object#equals(Object)
      */
@@ -84,12 +84,12 @@ public interface Dimension extends Serializable
     public boolean equals( Object o );
 
     /**
-     *  Returns the factor that is used to convert a value from this unit
-     *  to the base unit.<br>
-     *  <br>For length, if you have to convert a
-     *  Centimeter value to Meter, you will divide that by 100 or multiply it
-     *  with a <i>factor</i> of 0.01.<br>
-     *  <br>For the base unit, the factor is 1.0.
+     *  <p>{@summary Returns the factor that is used to convert a value from
+     *  this unit to the base unit.}</p>
+     *  <p>For length, if you have to convert a Centimeter value to Meter, you
+     *  will divide that by 100 or multiply it with a <i>factor</i> of
+     *  0.01.</p>
+     *  <p>For the base unit, the factor is 1.0.</p>
      *
      *  @return The factor.
      *
@@ -124,14 +124,28 @@ public interface Dimension extends Serializable
     public String toString();
 
     /**
-     *  Returns the unit symbol for the dimension as a single line string.<br>
-     *  <br>For a length, this would be &quot;m&quot;, for a speed
+     *  <p>{@summary Returns the unit symbol for the dimension as a single line
+     *  string.}</p>
+     *  <p>For a length, this would be &quot;m&quot;, for a speed
      *  &quot;km/h&quot;, and for an acceleration, it could be
-     *  &quot;m/(s^2)&quot;.
+     *  &quot;m/(s^2)&quot;.</p>
      *
      *  @return The unit.
      */
     public String unitSymbol();
+
+    /**
+     *  <p>{@summary Returns the unit symbol for the dimension still as a
+     *  single line string, but with special characters.}</p>
+     *  <p>For a length, this would still be &quot;m&quot;, for a speed
+     *  &quot;km/h&quot;, but for an acceleration, it would be
+     *  &quot;m/s²&quot;.</p>
+     *  <p>For most dimensions, this is the same as the return value of
+     *  {@link #unitSymbol()}.</p>
+     *
+     *  @return The unit beautified for printing.
+     */
+    public default String unitSymbolForPrinting() { return unitSymbol(); }
 }
 //  interface Dimension
 

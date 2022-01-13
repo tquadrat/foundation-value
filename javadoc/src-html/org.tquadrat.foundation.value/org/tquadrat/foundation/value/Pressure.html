@@ -72,147 +72,161 @@
 <span class="source-line-no">059</span><span id="line-59">     *  {@link #PASCAL},</span>
 <span class="source-line-no">060</span><span id="line-60">     *  but a different unit.</span>
 <span class="source-line-no">061</span><span id="line-61">     */</span>
-<span class="source-line-no">062</span><span id="line-62">    NEWTON_PER_SQUAREMETER( PASCAL.factor(), "N/m^2" ),</span>
-<span class="source-line-no">063</span><span id="line-63"></span>
-<span class="source-line-no">064</span><span id="line-64">    /**</span>
-<span class="source-line-no">065</span><span id="line-65">     *  A hekto Pascal.</span>
-<span class="source-line-no">066</span><span id="line-66">     */</span>
-<span class="source-line-no">067</span><span id="line-67">    HEKTO_PASCAL( new BigDecimal( "100" ), "hPa" ),</span>
-<span class="source-line-no">068</span><span id="line-68"></span>
-<span class="source-line-no">069</span><span id="line-69">    /**</span>
-<span class="source-line-no">070</span><span id="line-70">     *  A milli bar; same as</span>
-<span class="source-line-no">071</span><span id="line-71">     *  {@link #HEKTO_PASCAL}.</span>
-<span class="source-line-no">072</span><span id="line-72">     */</span>
-<span class="source-line-no">073</span><span id="line-73">    MILLI_BAR( HEKTO_PASCAL.factor(), "mbar" ),</span>
-<span class="source-line-no">074</span><span id="line-74"></span>
-<span class="source-line-no">075</span><span id="line-75">    /**</span>
-<span class="source-line-no">076</span><span id="line-76">     *  A Torr.</span>
-<span class="source-line-no">077</span><span id="line-77">     */</span>
-<span class="source-line-no">078</span><span id="line-78">    TORR( new BigDecimal( "133.322368421" ), "Torr" ),</span>
-<span class="source-line-no">079</span><span id="line-79"></span>
-<span class="source-line-no">080</span><span id="line-80">    /**</span>
-<span class="source-line-no">081</span><span id="line-81">     *  A mm of Mercury; same as</span>
-<span class="source-line-no">082</span><span id="line-82">     *  {@link #TORR}.</span>
-<span class="source-line-no">083</span><span id="line-83">     */</span>
-<span class="source-line-no">084</span><span id="line-84">    MILLIMETER_OF_MERCURY( TORR.factor(), "mmHg" ),</span>
-<span class="source-line-no">085</span><span id="line-85"></span>
-<span class="source-line-no">086</span><span id="line-86">    /**</span>
-<span class="source-line-no">087</span><span id="line-87">     *  An inch of Mercury.</span>
-<span class="source-line-no">088</span><span id="line-88">     */</span>
-<span class="source-line-no">089</span><span id="line-89">    INCH_OF_MERCURY( new BigDecimal( "3386.3881578" ), "inHg" ),</span>
-<span class="source-line-no">090</span><span id="line-90"></span>
-<span class="source-line-no">091</span><span id="line-91">    /**</span>
-<span class="source-line-no">092</span><span id="line-92">     *  A kilo Pascal.</span>
-<span class="source-line-no">093</span><span id="line-93">     */</span>
-<span class="source-line-no">094</span><span id="line-94">    KILO_PASCAL( new BigDecimal( "1000" ), "kPa" ),</span>
-<span class="source-line-no">095</span><span id="line-95"></span>
-<span class="source-line-no">096</span><span id="line-96">    /**</span>
-<span class="source-line-no">097</span><span id="line-97">     *  A psi.</span>
-<span class="source-line-no">098</span><span id="line-98">     */</span>
-<span class="source-line-no">099</span><span id="line-99">    PSI( new BigDecimal( "6894.757293178" ), "psi" ),</span>
-<span class="source-line-no">100</span><span id="line-100"></span>
-<span class="source-line-no">101</span><span id="line-101">    /**</span>
-<span class="source-line-no">102</span><span id="line-102">     *  A technical &lt;i&gt;atmosphere&lt;/i&gt; (at).</span>
-<span class="source-line-no">103</span><span id="line-103">     */</span>
-<span class="source-line-no">104</span><span id="line-104">    AT( new BigDecimal( "98066.5" ), "at" ),</span>
-<span class="source-line-no">105</span><span id="line-105"></span>
-<span class="source-line-no">106</span><span id="line-106">    /**</span>
-<span class="source-line-no">107</span><span id="line-107">     *  A &lt;i&gt;bar&lt;/i&gt;.</span>
-<span class="source-line-no">108</span><span id="line-108">     */</span>
-<span class="source-line-no">109</span><span id="line-109">    BAR( new BigDecimal( "100.000" ), "bar" ),</span>
-<span class="source-line-no">110</span><span id="line-110"></span>
-<span class="source-line-no">111</span><span id="line-111">    /**</span>
-<span class="source-line-no">112</span><span id="line-112">     *  A physical &lt;i&gt;atmosphere&lt;/i&gt; (atm).</span>
-<span class="source-line-no">113</span><span id="line-113">     */</span>
-<span class="source-line-no">114</span><span id="line-114">    ATM( new BigDecimal( "101325.2738" ), "atm" ),</span>
-<span class="source-line-no">115</span><span id="line-115"></span>
-<span class="source-line-no">116</span><span id="line-116">    /**</span>
-<span class="source-line-no">117</span><span id="line-117">     *  A mega Pascal.</span>
-<span class="source-line-no">118</span><span id="line-118">     */</span>
-<span class="source-line-no">119</span><span id="line-119">    MEGA_PASCAL( new BigDecimal( "1000000" ), "MPa" ),</span>
-<span class="source-line-no">120</span><span id="line-120"></span>
-<span class="source-line-no">121</span><span id="line-121">    /**</span>
-<span class="source-line-no">122</span><span id="line-122">     *  Same as</span>
-<span class="source-line-no">123</span><span id="line-123">     *  {@link #MEGA_PASCAL},</span>
-<span class="source-line-no">124</span><span id="line-124">     *  but a different unit.</span>
+<span class="source-line-no">062</span><span id="line-62">    NEWTON_PER_SQUAREMETER( PASCAL.factor(), "N/m^2" )</span>
+<span class="source-line-no">063</span><span id="line-63">    {</span>
+<span class="source-line-no">064</span><span id="line-64">        /**</span>
+<span class="source-line-no">065</span><span id="line-65">         *  {@inheritDoc}</span>
+<span class="source-line-no">066</span><span id="line-66">         */</span>
+<span class="source-line-no">067</span><span id="line-67">        @Override</span>
+<span class="source-line-no">068</span><span id="line-68">        public final String unitSymbolForPrinting() { return "N/m²"; }</span>
+<span class="source-line-no">069</span><span id="line-69">    },</span>
+<span class="source-line-no">070</span><span id="line-70"></span>
+<span class="source-line-no">071</span><span id="line-71">    /**</span>
+<span class="source-line-no">072</span><span id="line-72">     *  A hekto Pascal.</span>
+<span class="source-line-no">073</span><span id="line-73">     */</span>
+<span class="source-line-no">074</span><span id="line-74">    HEKTO_PASCAL( new BigDecimal( "100" ), "hPa" ),</span>
+<span class="source-line-no">075</span><span id="line-75"></span>
+<span class="source-line-no">076</span><span id="line-76">    /**</span>
+<span class="source-line-no">077</span><span id="line-77">     *  A milli bar; same as</span>
+<span class="source-line-no">078</span><span id="line-78">     *  {@link #HEKTO_PASCAL}.</span>
+<span class="source-line-no">079</span><span id="line-79">     */</span>
+<span class="source-line-no">080</span><span id="line-80">    MILLI_BAR( HEKTO_PASCAL.factor(), "mbar" ),</span>
+<span class="source-line-no">081</span><span id="line-81"></span>
+<span class="source-line-no">082</span><span id="line-82">    /**</span>
+<span class="source-line-no">083</span><span id="line-83">     *  A Torr.</span>
+<span class="source-line-no">084</span><span id="line-84">     */</span>
+<span class="source-line-no">085</span><span id="line-85">    TORR( new BigDecimal( "133.322368421" ), "Torr" ),</span>
+<span class="source-line-no">086</span><span id="line-86"></span>
+<span class="source-line-no">087</span><span id="line-87">    /**</span>
+<span class="source-line-no">088</span><span id="line-88">     *  A mm of Mercury; same as</span>
+<span class="source-line-no">089</span><span id="line-89">     *  {@link #TORR}.</span>
+<span class="source-line-no">090</span><span id="line-90">     */</span>
+<span class="source-line-no">091</span><span id="line-91">    MILLIMETER_OF_MERCURY( TORR.factor(), "mmHg" ),</span>
+<span class="source-line-no">092</span><span id="line-92"></span>
+<span class="source-line-no">093</span><span id="line-93">    /**</span>
+<span class="source-line-no">094</span><span id="line-94">     *  An inch of Mercury.</span>
+<span class="source-line-no">095</span><span id="line-95">     */</span>
+<span class="source-line-no">096</span><span id="line-96">    INCH_OF_MERCURY( new BigDecimal( "3386.3881578" ), "inHg" ),</span>
+<span class="source-line-no">097</span><span id="line-97"></span>
+<span class="source-line-no">098</span><span id="line-98">    /**</span>
+<span class="source-line-no">099</span><span id="line-99">     *  A kilo Pascal.</span>
+<span class="source-line-no">100</span><span id="line-100">     */</span>
+<span class="source-line-no">101</span><span id="line-101">    KILO_PASCAL( new BigDecimal( "1000" ), "kPa" ),</span>
+<span class="source-line-no">102</span><span id="line-102"></span>
+<span class="source-line-no">103</span><span id="line-103">    /**</span>
+<span class="source-line-no">104</span><span id="line-104">     *  A psi.</span>
+<span class="source-line-no">105</span><span id="line-105">     */</span>
+<span class="source-line-no">106</span><span id="line-106">    PSI( new BigDecimal( "6894.757293178" ), "psi" ),</span>
+<span class="source-line-no">107</span><span id="line-107"></span>
+<span class="source-line-no">108</span><span id="line-108">    /**</span>
+<span class="source-line-no">109</span><span id="line-109">     *  A technical &lt;i&gt;atmosphere&lt;/i&gt; (at).</span>
+<span class="source-line-no">110</span><span id="line-110">     */</span>
+<span class="source-line-no">111</span><span id="line-111">    AT( new BigDecimal( "98066.5" ), "at" ),</span>
+<span class="source-line-no">112</span><span id="line-112"></span>
+<span class="source-line-no">113</span><span id="line-113">    /**</span>
+<span class="source-line-no">114</span><span id="line-114">     *  A &lt;i&gt;bar&lt;/i&gt;.</span>
+<span class="source-line-no">115</span><span id="line-115">     */</span>
+<span class="source-line-no">116</span><span id="line-116">    BAR( new BigDecimal( "100.000" ), "bar" ),</span>
+<span class="source-line-no">117</span><span id="line-117"></span>
+<span class="source-line-no">118</span><span id="line-118">    /**</span>
+<span class="source-line-no">119</span><span id="line-119">     *  A physical &lt;i&gt;atmosphere&lt;/i&gt; (atm).</span>
+<span class="source-line-no">120</span><span id="line-120">     */</span>
+<span class="source-line-no">121</span><span id="line-121">    ATM( new BigDecimal( "101325.2738" ), "atm" ),</span>
+<span class="source-line-no">122</span><span id="line-122"></span>
+<span class="source-line-no">123</span><span id="line-123">    /**</span>
+<span class="source-line-no">124</span><span id="line-124">     *  A mega Pascal.</span>
 <span class="source-line-no">125</span><span id="line-125">     */</span>
-<span class="source-line-no">126</span><span id="line-126">    NEWTON_PER_SQUAREMILLIMETER( MEGA_PASCAL.factor(), "N/mm^2" );</span>
+<span class="source-line-no">126</span><span id="line-126">    MEGA_PASCAL( new BigDecimal( "1000000" ), "MPa" ),</span>
 <span class="source-line-no">127</span><span id="line-127"></span>
-<span class="source-line-no">128</span><span id="line-128">        /*------------*\</span>
-<span class="source-line-no">129</span><span id="line-129">    ====** Attributes **=======================================================</span>
-<span class="source-line-no">130</span><span id="line-130">        \*------------*/</span>
-<span class="source-line-no">131</span><span id="line-131">    /**</span>
-<span class="source-line-no">132</span><span id="line-132">     *  The factor.</span>
-<span class="source-line-no">133</span><span id="line-133">     */</span>
-<span class="source-line-no">134</span><span id="line-134">    private final BigDecimal m_Factor;</span>
-<span class="source-line-no">135</span><span id="line-135"></span>
-<span class="source-line-no">136</span><span id="line-136">    /**</span>
-<span class="source-line-no">137</span><span id="line-137">     *  The unit string.</span>
-<span class="source-line-no">138</span><span id="line-138">     */</span>
-<span class="source-line-no">139</span><span id="line-139">    private final String m_UnitSymbol;</span>
-<span class="source-line-no">140</span><span id="line-140"></span>
-<span class="source-line-no">141</span><span id="line-141">        /*--------------*\</span>
-<span class="source-line-no">142</span><span id="line-142">    ====** Constructors **=====================================================</span>
-<span class="source-line-no">143</span><span id="line-143">        \*--------------*/</span>
-<span class="source-line-no">144</span><span id="line-144">    /**</span>
-<span class="source-line-no">145</span><span id="line-145">     *  Creates a new {@code Pressure} instance.</span>
-<span class="source-line-no">146</span><span id="line-146">     *</span>
-<span class="source-line-no">147</span><span id="line-147">     *  @param  factor  The factor.</span>
-<span class="source-line-no">148</span><span id="line-148">     *  @param  unitSymbol    The unit string.</span>
-<span class="source-line-no">149</span><span id="line-149">     */</span>
-<span class="source-line-no">150</span><span id="line-150">    private Pressure( final BigDecimal factor, final String unitSymbol )</span>
-<span class="source-line-no">151</span><span id="line-151">    {</span>
-<span class="source-line-no">152</span><span id="line-152">        m_Factor = factor.stripTrailingZeros();</span>
-<span class="source-line-no">153</span><span id="line-153">        m_UnitSymbol = unitSymbol;</span>
-<span class="source-line-no">154</span><span id="line-154">    }   //  Pressure()</span>
-<span class="source-line-no">155</span><span id="line-155"></span>
-<span class="source-line-no">156</span><span id="line-156">        /*---------*\</span>
-<span class="source-line-no">157</span><span id="line-157">    ====** Methods **==========================================================</span>
-<span class="source-line-no">158</span><span id="line-158">        \*---------*/</span>
-<span class="source-line-no">159</span><span id="line-159">    /**</span>
-<span class="source-line-no">160</span><span id="line-160">     *  {@inheritDoc}</span>
-<span class="source-line-no">161</span><span id="line-161">     */</span>
-<span class="source-line-no">162</span><span id="line-162">    @Override</span>
-<span class="source-line-no">163</span><span id="line-163">    @SuppressWarnings( "unchecked" )</span>
-<span class="source-line-no">164</span><span id="line-164">    public final Pressure baseUnit() { return PASCAL; }</span>
-<span class="source-line-no">165</span><span id="line-165"></span>
-<span class="source-line-no">166</span><span id="line-166">    /**</span>
-<span class="source-line-no">167</span><span id="line-167">     *  {@inheritDoc}</span>
-<span class="source-line-no">168</span><span id="line-168">     */</span>
-<span class="source-line-no">169</span><span id="line-169">    @Override</span>
-<span class="source-line-no">170</span><span id="line-170">    public final BigDecimal factor() { return m_Factor; }</span>
-<span class="source-line-no">171</span><span id="line-171"></span>
-<span class="source-line-no">172</span><span id="line-172">    /**</span>
-<span class="source-line-no">173</span><span id="line-173">     *  Returns the {@code Pressure} instance for the given unit.</span>
-<span class="source-line-no">174</span><span id="line-174">     *</span>
-<span class="source-line-no">175</span><span id="line-175">     *  @param  unitSymbol    The unit symbol.</span>
-<span class="source-line-no">176</span><span id="line-176">     *  @return The respective instance.</span>
-<span class="source-line-no">177</span><span id="line-177">     *  @throws IllegalArgumentException    The given unit is unknown.</span>
-<span class="source-line-no">178</span><span id="line-178">     */</span>
-<span class="source-line-no">179</span><span id="line-179">    public static final Pressure forUnit( final String unitSymbol ) throws IllegalArgumentException</span>
-<span class="source-line-no">180</span><span id="line-180">    {</span>
-<span class="source-line-no">181</span><span id="line-181">        requireNotEmptyArgument( unitSymbol, "unitSymbol" );</span>
-<span class="source-line-no">182</span><span id="line-182"></span>
-<span class="source-line-no">183</span><span id="line-183">        final var retValue = stream( values() )</span>
-<span class="source-line-no">184</span><span id="line-184">            .filter( v -&gt; v.unitSymbol().equals( unitSymbol ) )</span>
-<span class="source-line-no">185</span><span id="line-185">            .findFirst()</span>
-<span class="source-line-no">186</span><span id="line-186">            .orElseThrow( () -&gt; new IllegalArgumentException( format( MSG_UnknownUnit, unitSymbol ) ) );</span>
-<span class="source-line-no">187</span><span id="line-187"></span>
-<span class="source-line-no">188</span><span id="line-188">        //---* Done *----------------------------------------------------------</span>
-<span class="source-line-no">189</span><span id="line-189">        return retValue;</span>
-<span class="source-line-no">190</span><span id="line-190">    }   //  forUnit()</span>
-<span class="source-line-no">191</span><span id="line-191"></span>
-<span class="source-line-no">192</span><span id="line-192">    /**</span>
-<span class="source-line-no">193</span><span id="line-193">     *  {@inheritDoc}</span>
-<span class="source-line-no">194</span><span id="line-194">     */</span>
-<span class="source-line-no">195</span><span id="line-195">    @Override</span>
-<span class="source-line-no">196</span><span id="line-196">    public final String unitSymbol() { return m_UnitSymbol; }</span>
-<span class="source-line-no">197</span><span id="line-197">}</span>
-<span class="source-line-no">198</span><span id="line-198">//  enum Pressure</span>
-<span class="source-line-no">199</span><span id="line-199"></span>
-<span class="source-line-no">200</span><span id="line-200">/*</span>
-<span class="source-line-no">201</span><span id="line-201"> *  End of File</span>
-<span class="source-line-no">202</span><span id="line-202"> */</span>
+<span class="source-line-no">128</span><span id="line-128">    /**</span>
+<span class="source-line-no">129</span><span id="line-129">     *  Same as</span>
+<span class="source-line-no">130</span><span id="line-130">     *  {@link #MEGA_PASCAL},</span>
+<span class="source-line-no">131</span><span id="line-131">     *  but a different unit.</span>
+<span class="source-line-no">132</span><span id="line-132">     */</span>
+<span class="source-line-no">133</span><span id="line-133">    NEWTON_PER_SQUAREMILLIMETER( MEGA_PASCAL.factor(), "N/mm^2" )</span>
+<span class="source-line-no">134</span><span id="line-134">    {</span>
+<span class="source-line-no">135</span><span id="line-135">        /**</span>
+<span class="source-line-no">136</span><span id="line-136">         *  {@inheritDoc}</span>
+<span class="source-line-no">137</span><span id="line-137">         */</span>
+<span class="source-line-no">138</span><span id="line-138">        @Override</span>
+<span class="source-line-no">139</span><span id="line-139">        public final String unitSymbolForPrinting() { return "N/mm²"; }</span>
+<span class="source-line-no">140</span><span id="line-140">    };</span>
+<span class="source-line-no">141</span><span id="line-141"></span>
+<span class="source-line-no">142</span><span id="line-142">        /*------------*\</span>
+<span class="source-line-no">143</span><span id="line-143">    ====** Attributes **=======================================================</span>
+<span class="source-line-no">144</span><span id="line-144">        \*------------*/</span>
+<span class="source-line-no">145</span><span id="line-145">    /**</span>
+<span class="source-line-no">146</span><span id="line-146">     *  The factor.</span>
+<span class="source-line-no">147</span><span id="line-147">     */</span>
+<span class="source-line-no">148</span><span id="line-148">    private final BigDecimal m_Factor;</span>
+<span class="source-line-no">149</span><span id="line-149"></span>
+<span class="source-line-no">150</span><span id="line-150">    /**</span>
+<span class="source-line-no">151</span><span id="line-151">     *  The unit string.</span>
+<span class="source-line-no">152</span><span id="line-152">     */</span>
+<span class="source-line-no">153</span><span id="line-153">    private final String m_UnitSymbol;</span>
+<span class="source-line-no">154</span><span id="line-154"></span>
+<span class="source-line-no">155</span><span id="line-155">        /*--------------*\</span>
+<span class="source-line-no">156</span><span id="line-156">    ====** Constructors **=====================================================</span>
+<span class="source-line-no">157</span><span id="line-157">        \*--------------*/</span>
+<span class="source-line-no">158</span><span id="line-158">    /**</span>
+<span class="source-line-no">159</span><span id="line-159">     *  Creates a new {@code Pressure} instance.</span>
+<span class="source-line-no">160</span><span id="line-160">     *</span>
+<span class="source-line-no">161</span><span id="line-161">     *  @param  factor  The factor.</span>
+<span class="source-line-no">162</span><span id="line-162">     *  @param  unitSymbol    The unit string.</span>
+<span class="source-line-no">163</span><span id="line-163">     */</span>
+<span class="source-line-no">164</span><span id="line-164">    private Pressure( final BigDecimal factor, final String unitSymbol )</span>
+<span class="source-line-no">165</span><span id="line-165">    {</span>
+<span class="source-line-no">166</span><span id="line-166">        m_Factor = factor.stripTrailingZeros();</span>
+<span class="source-line-no">167</span><span id="line-167">        m_UnitSymbol = unitSymbol;</span>
+<span class="source-line-no">168</span><span id="line-168">    }   //  Pressure()</span>
+<span class="source-line-no">169</span><span id="line-169"></span>
+<span class="source-line-no">170</span><span id="line-170">        /*---------*\</span>
+<span class="source-line-no">171</span><span id="line-171">    ====** Methods **==========================================================</span>
+<span class="source-line-no">172</span><span id="line-172">        \*---------*/</span>
+<span class="source-line-no">173</span><span id="line-173">    /**</span>
+<span class="source-line-no">174</span><span id="line-174">     *  {@inheritDoc}</span>
+<span class="source-line-no">175</span><span id="line-175">     */</span>
+<span class="source-line-no">176</span><span id="line-176">    @Override</span>
+<span class="source-line-no">177</span><span id="line-177">    @SuppressWarnings( "unchecked" )</span>
+<span class="source-line-no">178</span><span id="line-178">    public final Pressure baseUnit() { return PASCAL; }</span>
+<span class="source-line-no">179</span><span id="line-179"></span>
+<span class="source-line-no">180</span><span id="line-180">    /**</span>
+<span class="source-line-no">181</span><span id="line-181">     *  {@inheritDoc}</span>
+<span class="source-line-no">182</span><span id="line-182">     */</span>
+<span class="source-line-no">183</span><span id="line-183">    @Override</span>
+<span class="source-line-no">184</span><span id="line-184">    public final BigDecimal factor() { return m_Factor; }</span>
+<span class="source-line-no">185</span><span id="line-185"></span>
+<span class="source-line-no">186</span><span id="line-186">    /**</span>
+<span class="source-line-no">187</span><span id="line-187">     *  Returns the {@code Pressure} instance for the given unit.</span>
+<span class="source-line-no">188</span><span id="line-188">     *</span>
+<span class="source-line-no">189</span><span id="line-189">     *  @param  unitSymbol    The unit symbol.</span>
+<span class="source-line-no">190</span><span id="line-190">     *  @return The respective instance.</span>
+<span class="source-line-no">191</span><span id="line-191">     *  @throws IllegalArgumentException    The given unit is unknown.</span>
+<span class="source-line-no">192</span><span id="line-192">     */</span>
+<span class="source-line-no">193</span><span id="line-193">    public static final Pressure forUnit( final String unitSymbol ) throws IllegalArgumentException</span>
+<span class="source-line-no">194</span><span id="line-194">    {</span>
+<span class="source-line-no">195</span><span id="line-195">        requireNotEmptyArgument( unitSymbol, "unitSymbol" );</span>
+<span class="source-line-no">196</span><span id="line-196"></span>
+<span class="source-line-no">197</span><span id="line-197">        final var retValue = stream( values() )</span>
+<span class="source-line-no">198</span><span id="line-198">            .filter( v -&gt; v.unitSymbol().equals( unitSymbol ) )</span>
+<span class="source-line-no">199</span><span id="line-199">            .findFirst()</span>
+<span class="source-line-no">200</span><span id="line-200">            .orElseThrow( () -&gt; new IllegalArgumentException( format( MSG_UnknownUnit, unitSymbol ) ) );</span>
+<span class="source-line-no">201</span><span id="line-201"></span>
+<span class="source-line-no">202</span><span id="line-202">        //---* Done *----------------------------------------------------------</span>
+<span class="source-line-no">203</span><span id="line-203">        return retValue;</span>
+<span class="source-line-no">204</span><span id="line-204">    }   //  forUnit()</span>
+<span class="source-line-no">205</span><span id="line-205"></span>
+<span class="source-line-no">206</span><span id="line-206">    /**</span>
+<span class="source-line-no">207</span><span id="line-207">     *  {@inheritDoc}</span>
+<span class="source-line-no">208</span><span id="line-208">     */</span>
+<span class="source-line-no">209</span><span id="line-209">    @Override</span>
+<span class="source-line-no">210</span><span id="line-210">    public final String unitSymbol() { return m_UnitSymbol; }</span>
+<span class="source-line-no">211</span><span id="line-211">}</span>
+<span class="source-line-no">212</span><span id="line-212">//  enum Pressure</span>
+<span class="source-line-no">213</span><span id="line-213"></span>
+<span class="source-line-no">214</span><span id="line-214">/*</span>
+<span class="source-line-no">215</span><span id="line-215"> *  End of File</span>
+<span class="source-line-no">216</span><span id="line-216"> */</span>
 
 
 
