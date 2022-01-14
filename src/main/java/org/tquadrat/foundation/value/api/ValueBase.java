@@ -37,7 +37,7 @@ import org.tquadrat.foundation.exception.UnexpectedExceptionError;
  *  that is intended as the base for concrete implementations of value types.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: ValueBase.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: ValueBase.java 989 2022-01-13 19:09:58Z tquadrat $
  *  @since 0.0.4
  *
  *  @param  <D> The dimension.
@@ -45,7 +45,7 @@ import org.tquadrat.foundation.exception.UnexpectedExceptionError;
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: ValueBase.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: ValueBase.java 989 2022-01-13 19:09:58Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public abstract class ValueBase<D extends Dimension, I extends DimensionedValue<D>> implements DimensionedValue<D>
 {

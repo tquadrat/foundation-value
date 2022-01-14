@@ -32,12 +32,12 @@ import org.tquadrat.foundation.value.api.Dimension;
  *  The various instances of area &hellip;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Area.java 829 2021-01-05 09:08:51Z tquadrat $
+ *  @version $Id: Area.java 989 2022-01-13 19:09:58Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Area.java 829 2021-01-05 09:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Area.java 989 2022-01-13 19:09:58Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Area implements Dimension
 {

@@ -32,12 +32,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for areas.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AreaValue.java 880 2021-02-27 10:47:40Z tquadrat $
+ *  @version $Id: VolumeValue.java 989 2022-01-13 19:09:58Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: AreaValue.java 880 2021-02-27 10:47:40Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: VolumeValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class VolumeValue extends ValueBase<Volume, VolumeValue>
 {

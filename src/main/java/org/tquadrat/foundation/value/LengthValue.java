@@ -30,12 +30,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for lengths.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: LengthValue.java 880 2021-02-27 10:47:40Z tquadrat $
+ *  @version $Id: LengthValue.java 989 2022-01-13 19:09:58Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: LengthValue.java 880 2021-02-27 10:47:40Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: LengthValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class LengthValue extends ValueBase<Length,LengthValue>
 {

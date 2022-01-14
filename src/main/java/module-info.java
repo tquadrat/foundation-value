@@ -23,6 +23,7 @@ import org.tquadrat.foundation.value.MassValueStringConverter;
 import org.tquadrat.foundation.value.PressureValueStringConverter;
 import org.tquadrat.foundation.value.SpeedValueStringConverter;
 import org.tquadrat.foundation.value.TimeValueStringConverter;
+import org.tquadrat.foundation.value.VolumeValueStringConverter;
 
 /**
  *  The module for the definition of value classes for the Foundation Library.
@@ -38,7 +39,6 @@ import org.tquadrat.foundation.value.TimeValueStringConverter;
 module org.tquadrat.foundation.value
 {
     requires java.base;
-    requires transitive org.tquadrat.foundation.base;
     requires transitive org.tquadrat.foundation.util;
 
     //---* Common Use *--------------------------------------------------------
@@ -52,7 +52,8 @@ module org.tquadrat.foundation.value
         MassValueStringConverter,
         PressureValueStringConverter,
         SpeedValueStringConverter,
-        TimeValueStringConverter;
+        TimeValueStringConverter,
+        VolumeValueStringConverter;
 }
 
 /*

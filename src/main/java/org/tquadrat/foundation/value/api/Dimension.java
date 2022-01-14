@@ -41,12 +41,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  {@linkplain #unitSymbol() symbol}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Dimension.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: Dimension.java 989 2022-01-13 19:09:58Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Dimension.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Dimension.java 989 2022-01-13 19:09:58Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public interface Dimension extends Serializable
 {

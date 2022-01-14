@@ -30,12 +30,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for weights and masses.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: MassValue.java 880 2021-02-27 10:47:40Z tquadrat $
+ *  @version $Id: MassValue.java 989 2022-01-13 19:09:58Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: MassValue.java 880 2021-02-27 10:47:40Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: MassValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class MassValue extends ValueBase<Mass,MassValue>
 {

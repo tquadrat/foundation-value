@@ -1,4 +1,4 @@
-This libraries defines numbers with units as *values*.
+This library defines numbers with units as *values*.
 
 ### Documentation
 
