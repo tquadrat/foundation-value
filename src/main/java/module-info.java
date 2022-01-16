@@ -31,7 +31,7 @@ import org.tquadrat.foundation.value.VolumeValueStringConverter;
  *  @provides   org.tquadrat.foundation.lang.StringConverter    Implementations
  *      of String converters.
  *
- *  @version $Id: module-info.java 984 2022-01-13 00:46:27Z tquadrat $
+ *  @version $Id: module-info.java 990 2022-01-14 23:34:24Z tquadrat $
  *
  *  @todo task.list
  */
