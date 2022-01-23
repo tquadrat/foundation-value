@@ -74,6 +74,7 @@ public class AreaValueStringConverter extends DimensionedValueStringConverter<Ar
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final AreaValue createValue( final BigDecimal number, final Area dimension )
     {
@@ -89,6 +90,7 @@ public class AreaValueStringConverter extends DimensionedValueStringConverter<Ar
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public static final AreaValueStringConverter provider() { return INSTANCE; }
 
     /**

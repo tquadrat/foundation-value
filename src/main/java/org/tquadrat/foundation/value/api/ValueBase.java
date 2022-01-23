@@ -85,7 +85,8 @@ public abstract class ValueBase<D extends Dimension, I extends DimensionedValue<
     {
         requireNonNullArgument( value, "value" );
         setUnit( unit );
-        m_Value = (unit == unit.baseUnit() ? value : value.multiply( unit.factor(), MATH_CONTEXT )).abs().stripTrailingZeros();
+        final var conversion = unit.toBase();
+        m_Value = validate( conversion.apply( value ) ).abs().stripTrailingZeros();
     }   //  ValueBase()
 
     /**

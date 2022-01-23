@@ -36,7 +36,7 @@ import java.util.concurrent.TimeUnit;
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.lang.CommonConstants;
-import org.tquadrat.foundation.value.api.Dimension;
+import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
 
 /**
  *  <p>{@summary The various instances of time periods &hellip;}</p>
@@ -54,7 +54,7 @@ import org.tquadrat.foundation.value.api.Dimension;
  */
 @ClassVersion( sourceVersion = "$Id: Time.java 989 2022-01-13 19:09:58Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
-public enum Time implements Dimension
+public enum Time implements DimensionWithLinearConversion
 {
         /*------------------*\
     ====** Enum Declaration **=================================================

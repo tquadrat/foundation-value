@@ -16,7 +16,11 @@
 <script type="text/javascript" src="../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="module-declaration-page">
-<script type="text/javascript">var pathtoroot = "../";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -86,17 +90,27 @@ loadScripts(document, 'script');</script>
 <!-- ============ PACKAGES SUMMARY =========== -->
 <h2>Packages</h2>
 <div id="package-summary-table">
-<div class="caption"><span>Exports</span></div>
-<div class="summary-table two-column-summary">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="package-summary-table-tab0" role="tab" aria-selected="true" aria-controls="package-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('package-summary-table', 'package-summary-table', 3)" class="active-table-tab">All Packages</button><button id="package-summary-table-tab1" role="tab" aria-selected="false" aria-controls="package-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('package-summary-table', 'package-summary-table-tab1', 3)" class="table-tab">Exports</button><button id="package-summary-table-tab3" role="tab" aria-selected="false" aria-controls="package-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('package-summary-table', 'package-summary-table-tab3', 3)" class="table-tab">Concealed</button></div>
+<div id="package-summary-table.tabpanel" role="tabpanel">
+<div class="summary-table three-column-summary" aria-labelledby="package-summary-table-tab0">
 <div class="table-header col-first">Package</div>
+<div class="table-header col-second">Exported To Modules</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color package-summary-table package-summary-table-tab1"><a href="org/tquadrat/foundation/value/package-summary.html">org.tquadrat.foundation.value</a></div>
+<div class="col-second even-row-color package-summary-table package-summary-table-tab1">All Modules</div>
 <div class="col-last even-row-color package-summary-table package-summary-table-tab1">
 <div class="block">Various implementations for value types.</div>
 </div>
 <div class="col-first odd-row-color package-summary-table package-summary-table-tab1"><a href="org/tquadrat/foundation/value/api/package-summary.html">org.tquadrat.foundation.value.api</a></div>
+<div class="col-second odd-row-color package-summary-table package-summary-table-tab1">All Modules</div>
 <div class="col-last odd-row-color package-summary-table package-summary-table-tab1">
 <div class="block">The definition of the value class API.</div>
+</div>
+<div class="col-first even-row-color package-summary-table package-summary-table-tab3"><a href="org/tquadrat/foundation/value/internal/package-summary.html">org.tquadrat.foundation.value.internal</a></div>
+<div class="col-second even-row-color package-summary-table package-summary-table-tab3">None</div>
+<div class="col-last even-row-color package-summary-table package-summary-table-tab3">
+<div class="block">Internal tools for the value module.</div>
+</div>
 </div>
 </div>
 </div>
@@ -112,8 +126,10 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color"><a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/package-summary.html">org.apiguardian.api</a></div>
 <div class="col-first odd-row-color">org.tquadrat.foundation.base</div>
 <div class="col-last odd-row-color"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/package-summary.html">org.tquadrat.foundation.annotation</a> <a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/exception/package-summary.html">org.tquadrat.foundation.exception</a> <a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/function/package-summary.html">org.tquadrat.foundation.function</a> <a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/function/tce/package-summary.html">org.tquadrat.foundation.function.tce</a> <a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/lang/package-summary.html">org.tquadrat.foundation.lang</a> <a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/lang/internal/package-summary.html">org.tquadrat.foundation.lang.internal</a> <a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/stream/package-summary.html">org.tquadrat.foundation.stream</a></div>
-<div class="col-first even-row-color">org.tquadrat.foundation.util</div>
-<div class="col-last even-row-color"><a href="https://tquadrat.github.io/foundation-util/javadoc/org.tquadrat.foundation.util/org/tquadrat/foundation/util/package-summary.html">org.tquadrat.foundation.util</a> <a href="https://tquadrat.github.io/foundation-util/javadoc/org.tquadrat.foundation.util/org/tquadrat/foundation/util/stringconverter/package-summary.html">org.tquadrat.foundation.util.stringconverter</a></div>
+<div class="col-first even-row-color">org.tquadrat.foundation.i18n</div>
+<div class="col-last even-row-color"><a href="https://tquadrat.github.io/foundation-i18n/javadoc/org.tquadrat.foundation.i18n/org/tquadrat/foundation/i18n/package-summary.html">org.tquadrat.foundation.i18n</a></div>
+<div class="col-first odd-row-color">org.tquadrat.foundation.util</div>
+<div class="col-last odd-row-color"><a href="https://tquadrat.github.io/foundation-util/javadoc/org.tquadrat.foundation.util/org/tquadrat/foundation/util/package-summary.html">org.tquadrat.foundation.util</a> <a href="https://tquadrat.github.io/foundation-util/javadoc/org.tquadrat.foundation.util/org/tquadrat/foundation/util/stringconverter/package-summary.html">org.tquadrat.foundation.util.stringconverter</a></div>
 </div>
 </section>
 </li>
@@ -129,9 +145,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"> </div>
 <div class="col-second even-row-color">java.base</div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color">transitive</div>
-<div class="col-second odd-row-color">org.tquadrat.foundation.util</div>
+<div class="col-first odd-row-color"> </div>
+<div class="col-second odd-row-color">org.tquadrat.foundation.i18n</div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color">transitive</div>
+<div class="col-second even-row-color">org.tquadrat.foundation.util</div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="caption"><span>Indirect Requires</span></div>
 <div class="details-table three-column-summary">
@@ -162,7 +181,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Implementations
       of String converters.</div>
-<br>(<span class="implementation-label">Implementation(s):</span>&nbsp;<a href="org/tquadrat/foundation/value/AreaValueStringConverter.html" title="class in org.tquadrat.foundation.value">AreaValueStringConverter</a>, <a href="org/tquadrat/foundation/value/DataSizeValueStringConverter.html" title="class in org.tquadrat.foundation.value">DataSizeValueStringConverter</a>, <a href="org/tquadrat/foundation/value/LengthValueStringConverter.html" title="class in org.tquadrat.foundation.value">LengthValueStringConverter</a>, <a href="org/tquadrat/foundation/value/MassValueStringConverter.html" title="class in org.tquadrat.foundation.value">MassValueStringConverter</a>, <a href="org/tquadrat/foundation/value/PressureValueStringConverter.html" title="class in org.tquadrat.foundation.value">PressureValueStringConverter</a>, <a href="org/tquadrat/foundation/value/SpeedValueStringConverter.html" title="class in org.tquadrat.foundation.value">SpeedValueStringConverter</a>, <a href="org/tquadrat/foundation/value/TimeValueStringConverter.html" title="class in org.tquadrat.foundation.value">TimeValueStringConverter</a>, <a href="org/tquadrat/foundation/value/VolumeValueStringConverter.html" title="class in org.tquadrat.foundation.value">VolumeValueStringConverter</a>)</div>
+<br>(<span class="implementation-label">Implementation(s):</span>&nbsp;<a href="org/tquadrat/foundation/value/AreaValueStringConverter.html" title="class in org.tquadrat.foundation.value">AreaValueStringConverter</a>, <a href="org/tquadrat/foundation/value/DataSizeValueStringConverter.html" title="class in org.tquadrat.foundation.value">DataSizeValueStringConverter</a>, <a href="org/tquadrat/foundation/value/LengthValueStringConverter.html" title="class in org.tquadrat.foundation.value">LengthValueStringConverter</a>, <a href="org/tquadrat/foundation/value/MassValueStringConverter.html" title="class in org.tquadrat.foundation.value">MassValueStringConverter</a>, <a href="org/tquadrat/foundation/value/PressureValueStringConverter.html" title="class in org.tquadrat.foundation.value">PressureValueStringConverter</a>, <a href="org/tquadrat/foundation/value/SpeedValueStringConverter.html" title="class in org.tquadrat.foundation.value">SpeedValueStringConverter</a>, <a href="org/tquadrat/foundation/value/TemperatureValueStringConverter.html" title="class in org.tquadrat.foundation.value">TemperatureValueStringConverter</a>, <a href="org/tquadrat/foundation/value/TimeValueStringConverter.html" title="class in org.tquadrat.foundation.value">TimeValueStringConverter</a>, <a href="org/tquadrat/foundation/value/VolumeValueStringConverter.html" title="class in org.tquadrat.foundation.value">VolumeValueStringConverter</a>)</div>
 </div>
 </section>
 </li>

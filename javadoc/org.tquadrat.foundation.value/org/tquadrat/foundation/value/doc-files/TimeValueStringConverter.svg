@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='822.000'
-     height='978.000'>
+     height='989.000'>
     <defs>
         <style><![CDATA[
             line
@@ -118,7 +118,7 @@
         </marker>
         <clipPath id='ID000001'>
             <rect class='focusClass'
-                  height='73.000'
+                  height='84.000'
                   width='772.000'
                   x='0.000'
                   y='0.000'/>
@@ -130,7 +130,7 @@
                     <rect x='0.000'
                           y='0.000'
                           width='772.000'
-                          height='73.000'
+                          height='84.000'
                           class='focusClass'/>
                     <line x1='0.000'
                           y1='17.000'
@@ -151,7 +151,10 @@
                     <text x='5.000'
                           y='58.000'># createValue(number:java.math.BigDecimal,dimension:org.tquadrat.foundation.value.Time):org.tquadrat.foundation.value.TimeValue</text>
                     <text x='5.000'
-                          y='69.000'># unitFromSymbol(unit:java.lang.String):org.tquadrat.foundation.value.Time</text>
+                          y='69.000'
+                          class='static'>+ provider():org.tquadrat.foundation.value.TimeValueStringConverter</text>
+                    <text x='5.000'
+                          y='80.000'># unitFromSymbol(unit:java.lang.String):org.tquadrat.foundation.value.Time</text>
                 </g>
             </g>
         </symbol>

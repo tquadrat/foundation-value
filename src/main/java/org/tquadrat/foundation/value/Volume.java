@@ -26,7 +26,7 @@ import java.math.BigDecimal;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.Dimension;
+import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
 
 /**
  *  The various instances of volume &hellip;
@@ -39,7 +39,7 @@ import org.tquadrat.foundation.value.api.Dimension;
  */
 @ClassVersion( sourceVersion = "$Id: Volume.java 989 2022-01-13 19:09:58Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
-public enum Volume implements Dimension
+public enum Volume implements DimensionWithLinearConversion
 {
         /*------------------*\
     ====** Enum Declaration **=================================================

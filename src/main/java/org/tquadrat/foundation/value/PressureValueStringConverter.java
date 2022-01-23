@@ -65,11 +65,24 @@ public class PressureValueStringConverter extends DimensionedValueStringConverte
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final PressureValue createValue( final BigDecimal number, final Pressure dimension )
     {
         return new PressureValue( dimension, number );
     }   //  createValue()
+
+    /**
+     *  This method is used by the
+     *  {@link java.util.ServiceLoader}
+     *  to obtain the instance for this
+     *  {@link org.tquadrat.foundation.lang.StringConverter}
+     *  implementation.
+     *
+     *  @return The instance for this {@code StringConverter} implementation.
+     */
+    @SuppressWarnings( "UseOfConcreteClass" )
+    public static final PressureValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}

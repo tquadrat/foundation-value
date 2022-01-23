@@ -25,6 +25,7 @@
 <meta name="keywords" content="setUnit()">
 <meta name="keywords" content="sum()">
 <meta name="keywords" content="toString()">
+<meta name="keywords" content="validate()">
 <meta name="keywords" content="value()">
 <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../script-dir/jquery-ui.min.css" title="Style">
@@ -103,13 +104,13 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="../AreaValue.html" title="class in org.tquadrat.foundation.value">AreaValue</a></code>, <code><a href="../DataSizeValue.html" title="class in org.tquadrat.foundation.value">DataSizeValue</a></code>, <code><a href="../LengthValue.html" title="class in org.tquadrat.foundation.value">LengthValue</a></code>, <code><a href="../MassValue.html" title="class in org.tquadrat.foundation.value">MassValue</a></code>, <code><a href="../PressureValue.html" title="class in org.tquadrat.foundation.value">PressureValue</a></code>, <code><a href="../SpeedValue.html" title="class in org.tquadrat.foundation.value">SpeedValue</a></code>, <code><a href="../TimeValue.html" title="class in org.tquadrat.foundation.value">TimeValue</a></code>, <code><a href="ValueBase.html" title="class in org.tquadrat.foundation.value.api">ValueBase</a></code>, <code><a href="../VolumeValue.html" title="class in org.tquadrat.foundation.value">VolumeValue</a></code></dd>
+<dd><code><a href="../AreaValue.html" title="class in org.tquadrat.foundation.value">AreaValue</a></code>, <code><a href="../DataSizeValue.html" title="class in org.tquadrat.foundation.value">DataSizeValue</a></code>, <code><a href="../LengthValue.html" title="class in org.tquadrat.foundation.value">LengthValue</a></code>, <code><a href="../MassValue.html" title="class in org.tquadrat.foundation.value">MassValue</a></code>, <code><a href="../PressureValue.html" title="class in org.tquadrat.foundation.value">PressureValue</a></code>, <code><a href="../SpeedValue.html" title="class in org.tquadrat.foundation.value">SpeedValue</a></code>, <code><a href="../TemperatureValue.html" title="class in org.tquadrat.foundation.value">TemperatureValue</a></code>, <code><a href="../TimeValue.html" title="class in org.tquadrat.foundation.value">TimeValue</a></code>, <code><a href="ValueBase.html" title="class in org.tquadrat.foundation.value.api">ValueBase</a></code>, <code><a href="../VolumeValue.html" title="class in org.tquadrat.foundation.value">VolumeValue</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">@ClassVersion</a>(<a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html#sourceVersion()" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">sourceVersion</a>="$Id: DimensionedValue.java 989 2022-01-13 19:09:58Z tquadrat $")
 <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html" title="class or interface in org.apiguardian.api" class="external-link">@API</a>(<a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#status()" title="class or interface in org.apiguardian.api" class="external-link">status</a>=<a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.Status.html#STABLE" title="class or interface in org.apiguardian.api" class="external-link">STABLE</a>,
      <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#since()" title="class or interface in org.apiguardian.api" class="external-link">since</a>="0.1.0")
-</span><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-69">DimensionedValue</a>&lt;D extends <a href="Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a>&gt;</span><span class="extends-implements">
+</span><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-70">DimensionedValue</a>&lt;D extends <a href="Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a>&gt;</span><span class="extends-implements">
 extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Cloneable.html" title="class or interface in java.lang" class="external-link">Cloneable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;D&gt;&gt;, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formattable.html" title="class or interface in java.util" class="external-link">Formattable</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></span></div>
 <div class="block">The definition for a value with a dimension. <br>
   <br>Although the unit for the dimension may be changed, instances of
@@ -240,21 +241,13 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><br>
-  <br>Two instances of a class implementing this interface are equals if
-  they are of the <i>same</i> class and if their values, converted to the
-  base dimension, are equals.</div>
-</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#formatTo(java.util.Formatter,int,int,int)" class="member-name-link">formatTo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formatter.html" title="class or interface in java.util" class="external-link">Formatter</a>&nbsp;formatter,
  int&nbsp;flags,
  int&nbsp;width,
  int&nbsp;precision)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block"><br>
-  <br>The precision is applied to the numerical part only.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUnit()" class="member-name-link">getUnit</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -262,14 +255,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><br>
-  <br>The hash code is based on the
-  <a href="#baseValue()">base value</a>
-  and
-  <a href="#baseUnit()">base unit</a>
-  only.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#multiply(java.lang.Number)" class="member-name-link">multiply</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;multiplicand)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
@@ -346,8 +332,14 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <div class="block">Provides a String representation of this value</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#value()" class="member-name-link">value</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#validate(java.math.BigDecimal)" class="member-name-link">validate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Validates the given value, based on the type of the
+  dimension.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#value()" class="member-name-link">value</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Returns the numerical value.</div>
 </div>
 </div>
@@ -367,7 +359,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="MATH_CONTEXT">
 <h3>MATH_CONTEXT</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/MathContext.html" title="class or interface in java.math" class="external-link">MathContext</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-82">MATH_CONTEXT</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/MathContext.html" title="class or interface in java.math" class="external-link">MathContext</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-83">MATH_CONTEXT</a></span></div>
 <div class="block">The
   <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/MathContext.html" title="class or interface in java.math" class="external-link"><code>MathContext</code></a>
   that is used for all the operations with dimensioned values.</div>
@@ -384,7 +376,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="baseUnit()">
 <h3>baseUnit</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-92">baseUnit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-93">baseUnit</a></span>()</div>
 <div class="block">Returns the base unit of the dimension for the value.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -395,7 +387,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="baseValue()">
 <h3>baseValue</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-111">baseValue</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-112">baseValue</a></span>()</div>
 <div class="block"><p>Returns the base value (this value, converted to the base
   unit).</p>
   <p>According to the result, this is the same as calling</p>
@@ -415,7 +407,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="clone()">
 <h3>clone</h3>
-<div class="member-signature"><span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-120">clone</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-121">clone</a></span>()</div>
 <div class="block">Creates a new copy of this value.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -432,7 +424,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="compareTo(org.tquadrat.foundation.value.api.DimensionedValue)">
 <h3>compareTo</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-127">compareTo</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;&nbsp;other)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-128">compareTo</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;&nbsp;other)</span></div>
 <div class="block">
   <p>The comparison is made based on the
   <a href="#baseValue()"><code>baseValue()</code></a>.</p></div>
@@ -445,7 +437,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="convert(D)">
 <h3 id="convert(org.tquadrat.foundation.value.api.Dimension)">convert</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-145">convert</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&nbsp;unit)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-146">convert</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&nbsp;unit)</span></div>
 <div class="block">Converts this value to the given unit and returns the numerical value.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -465,7 +457,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="copy()">
 <h3>copy</h3>
-<div class="member-signature"><span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-160">copy</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-162">copy</a></span>()</div>
 <div class="block">Creates a new copy of this value.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -482,7 +474,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="copy(D)">
 <h3 id="copy(org.tquadrat.foundation.value.api.Dimension)">copy</h3>
-<div class="member-signature"><span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-170">copy</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&nbsp;unit)</span></div>
+<div class="member-signature"><span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-172">copy</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&nbsp;unit)</span></div>
 <div class="block">Creates a new copy of this value.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -501,7 +493,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="divide(java.math.BigDecimal)">
 <h3>divide</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-179">divide</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;divisor)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-181">divide</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;divisor)</span></div>
 <div class="block">Divides the value by a dimension-less value and returns the result
   without changing this instance.</div>
 <dl class="notes">
@@ -515,7 +507,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="divide(java.lang.Number)">
 <h3>divide</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-195">divide</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-197">divide</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</span></div>
 <div class="block">Divides the value by a dimension-less value and returns the result
   without changing this instance.</div>
 <dl class="notes">
@@ -529,7 +521,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="divide(java.lang.String)">
 <h3>divide</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-217">divide</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;divisor)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-219">divide</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;divisor)</span></div>
 <div class="block">Divides the value by a dimension-less value and returns the result
   without changing this instance.</div>
 <dl class="notes">
@@ -554,11 +546,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-238">equals</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
-<div class="block"><br>
-  <br>Two instances of a class implementing this interface are equals if
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-239">equals</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="block">
+  <p>Two instances of a class implementing this interface are equals if
   they are of the <i>same</i> class and if their values, converted to the
-  base dimension, are equals.</div>
+  base dimension, are equals.</p></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -571,7 +563,6 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <ul class="see-list">
 <li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link"><code>Object.equals(Object)</code></a></li>
 <li><a href="Dimension.html#baseUnit()"><code>Dimension.baseUnit()</code></a></li>
-<li><a href="Dimension.html#factor()"><code>Dimension.factor()</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -580,14 +571,15 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="formatTo(java.util.Formatter,int,int,int)">
 <h3>formatTo</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-260">formatTo</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formatter.html" title="class or interface in java.util" class="external-link">Formatter</a>&nbsp;formatter,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-261">formatTo</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formatter.html" title="class or interface in java.util" class="external-link">Formatter</a>&nbsp;formatter,
  int&nbsp;flags,
  int&nbsp;width,
  int&nbsp;precision)</span></div>
-<div class="block"><br>
-  <br>The precision is applied to the numerical part only. The width
+<div class="block">
+  <p>The precision is applied to the numerical part only. The width
   includes the
-  <a href="Dimension.html#unitSymbol()">unit symbol</a>, too.</div>
+  <a href="Dimension.html#unitSymbol()">unit symbol</a>,
+  too.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formattable.html#formatTo(java.util.Formatter,int,int,int)" title="class or interface in java.util" class="external-link">formatTo</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formattable.html" title="class or interface in java.util" class="external-link">Formattable</a></code></dd>
@@ -595,13 +587,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <dt><span class="simpleTagLabel">Note:</span></dt>
 <dd>
 <ul>
-<li>In case the <code>formatter</code> argument is <code>null</code> throws a
-      
-      and <i>not</i> the usual
-      ,
-      because this method is usually called by instances of
-      
-      that does not know about our special exceptions.</li>
+<li>In case the <code>formatter</code> argument is <code>null</code>, this
+      method throws a <code>NullPointerException</code> and <i>not</i> the
+      usual <code>NullArgumentException</code>, because this method is usually
+      called by instances of <code>java.util.Formatter</code>, and those do
+      not know about our special exceptions.</li>
 </ul>
 </dd>
 <dt>Throws:</dt>
@@ -610,6 +600,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list-long">
+<li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formatter.html" title="class or interface in java.util" class="external-link"><code>Formatter</code></a></li>
 <li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formattable.html#formatTo(java.util.Formatter,int,int,int)" title="class or interface in java.util" class="external-link"><code>Formattable.formatTo(java.util.Formatter, int, int, int)</code></a></li>
 </ul>
 </dd>
@@ -619,7 +610,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="getUnit()">
 <h3>getUnit</h3>
-<div class="member-signature"><span class="return-type"><a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-287">getUnit</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-288">getUnit</a></span>()</div>
 <div class="block">Returns the unit for the value.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -630,13 +621,13 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-297">hashCode</a></span>()</div>
-<div class="block"><br>
-  <br>The hash code is based on the
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-298">hashCode</a></span>()</div>
+<div class="block">
+  <p>The hash code is based on the
   <a href="#baseValue()">base value</a>
   and
   <a href="#baseUnit()">base unit</a>
-  only.</div>
+  only.</p></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -646,7 +637,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="multiply(java.math.BigDecimal)">
 <h3>multiply</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-307">multiply</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;multiplicand)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-308">multiply</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;multiplicand)</span></div>
 <div class="block">Multiplies the value by a dimension-less value and returns the result
   without changing this instance.</div>
 <dl class="notes">
@@ -660,7 +651,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="multiply(java.lang.Number)">
 <h3>multiply</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-323">multiply</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;multiplicand)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-324">multiply</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;multiplicand)</span></div>
 <div class="block">Multiplies the value by a dimension-less value and returns the result
   without changing this instance.</div>
 <dl class="notes">
@@ -674,7 +665,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="multiply(java.lang.String)">
 <h3>multiply</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-345">multiply</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;multiplicand)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-346">multiply</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;multiplicand)</span></div>
 <div class="block">Multiplies the value by a dimension-less value and returns the result
   without changing this instance.</div>
 <dl class="notes">
@@ -699,7 +690,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="newInstance(D,java.math.BigDecimal)">
 <h3 id="newInstance(org.tquadrat.foundation.value.api.Dimension,java.math.BigDecimal)">newInstance</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-360">newInstance</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&nbsp;dimension,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-361">newInstance</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&nbsp;dimension,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;value)</span></div>
 <div class="block">Creates an instance for the class.</div>
 <dl class="notes">
@@ -714,7 +705,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="setUnit(D)">
 <h3 id="setUnit(org.tquadrat.foundation.value.api.Dimension)">setUnit</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-403">setUnit</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&nbsp;unit)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-404">setUnit</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&nbsp;unit)</span></div>
 <div class="block">Applies another unit for the value. This does not affect the results
   of
   <a href="#equals(java.lang.Object)"><code>equals(Object)</code></a>,
@@ -732,7 +723,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="sum(D,org.tquadrat.foundation.value.api.DimensionedValue)">
 <h3 id="sum(org.tquadrat.foundation.value.api.Dimension,org.tquadrat.foundation.value.api.DimensionedValue)">sum</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-413">sum</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&nbsp;unit,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-414">sum</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&nbsp;unit,
  <a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;&nbsp;summand)</span></div>
 <div class="block">Creates a new instance with the sum of this and the given value, and
   returns that.</div>
@@ -748,7 +739,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="sum(org.tquadrat.foundation.value.api.DimensionedValue)">
 <h3>sum</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-429">sum</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;&nbsp;summand)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-430">sum</a></span><wbr><span class="parameters">(<a href="DimensionedValue.html" title="interface in org.tquadrat.foundation.value.api">DimensionedValue</a>&lt;<a href="DimensionedValue.html" title="type parameter in DimensionedValue">D</a>&gt;&nbsp;summand)</span></div>
 <div class="block">Creates a new instance with the sum of this and the given value, and
   returns that. The unit for the new instance is that of this instance.</div>
 <dl class="notes">
@@ -762,7 +753,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-449">toString</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-450">toString</a></span>()</div>
 <div class="block"><p>Returns the String representation for this value;
   usually, this is in the format</p>
   <pre><code>&lt;<i>numerical value</i>&gt;&nbsp;&lt;<i>unit symbol</i>&gt;</code></pre>
@@ -781,7 +772,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="toString(java.util.Locale,int,int)">
 <h3>toString</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-476">toString</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html" title="class or interface in java.util" class="external-link">Locale</a>&nbsp;locale,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-477">toString</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html" title="class or interface in java.util" class="external-link">Locale</a>&nbsp;locale,
  int&nbsp;width,
  int&nbsp;precision)</span></div>
 <div class="block"><p>Provides a String representation of this value, in the
@@ -814,7 +805,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="toString(java.util.Locale,int,int,boolean)">
 <h3>toString</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-512">toString</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html" title="class or interface in java.util" class="external-link">Locale</a>&nbsp;locale,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-513">toString</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html" title="class or interface in java.util" class="external-link">Locale</a>&nbsp;locale,
  int&nbsp;width,
  int&nbsp;precision,
  boolean&nbsp;useNiceUnit)</span></div>
@@ -852,7 +843,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="toString(int,int)">
 <h3>toString</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-551">toString</a></span><wbr><span class="parameters">(int&nbsp;width,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-552">toString</a></span><wbr><span class="parameters">(int&nbsp;width,
  int&nbsp;precision)</span></div>
 <div class="block"><p>Provides a String representation of this value, in the
   format</p>
@@ -883,7 +874,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="toString(java.util.Locale,java.lang.String,boolean)">
 <h3>toString</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-580">toString</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html" title="class or interface in java.util" class="external-link">Locale</a>&nbsp;locale,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-581">toString</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html" title="class or interface in java.util" class="external-link">Locale</a>&nbsp;locale,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
  boolean&nbsp;useNiceUnit)</span>
                  throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/IllegalFormatException.html" title="class or interface in java.util" class="external-link">IllegalFormatException</a></span></div>
@@ -917,9 +908,31 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 </section>
 </li>
 <li>
+<section class="detail" id="validate(java.math.BigDecimal)">
+<h3>validate</h3>
+<div class="member-signature"><span class="annotations"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/MountPoint.html" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">@MountPoint</a>
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-602">validate</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;value)</span>
+                     throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
+<div class="block"><p>Validates the given value, based on the type of the
+  dimension.</p>
+  <p>This method will be called by the constructors always with the
+  <a href="#baseUnit()">base unit</a>
+  value just before the value will be initialised.</p>
+  <p>This default implementation will do nothing.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The value in base units.</dd>
+<dt>Returns:</dt>
+<dd>The value.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - The validation failed.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="value()">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-594">value</a></span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/DimensionedValue.html#line-612">value</a></span>()</div>
 <div class="block">Returns the numerical value.</div>
 <dl class="notes">
 <dt>Returns:</dt>

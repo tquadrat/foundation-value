@@ -6,8 +6,8 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      version='1.1'
      baseProfile='full'
-     width='6216.000'
-     height='1330.000'>
+     width='6864.000'
+     height='1341.000'>
     <defs>
         <style><![CDATA[
             line
@@ -536,6 +536,48 @@
             </g>
         </symbol>
         <clipPath id='ID000010'>
+            <rect class='otherClass'
+                  height='95.000'
+                  width='598.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.value.TemperatureValue'>
+            <g>
+                <g clip-path='url(#ID000010)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='598.000'
+                          height='95.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='17.000'
+                          x2='598.000'
+                          y2='17.000'
+                          class='separator'/>
+                    <text x='251.000'
+                          y='13.000'>TemperatureValue</text>
+                    <line x1='0.000'
+                          y1='34.000'
+                          x2='598.000'
+                          y2='34.000'
+                          class='separator'/>
+                    <text y='30.000'
+                          class='static final'>- serialVersionUID:long</text>
+                    <text x='5.000'
+                          y='47.000'>+ TemperatureValue(dimension:org.tquadrat.foundation.value.Temperature,value:java.math.BigDecimal)</text>
+                    <text x='5.000'
+                          y='58.000'>+ TemperatureValue(dimension:org.tquadrat.foundation.value.Temperature,value:java.lang.String)</text>
+                    <text x='5.000'
+                          y='69.000'>+ TemperatureValue(dimension:org.tquadrat.foundation.value.Temperature,value:N)</text>
+                    <text x='5.000'
+                          y='80.000'>+ clone():org.tquadrat.foundation.value.TemperatureValue</text>
+                    <text x='5.000'
+                          y='91.000'>+ validate(value:java.math.BigDecimal):java.math.BigDecimal</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000011'>
             <rect class='externalClass'
                   height='172.000'
                   width='244.000'
@@ -544,7 +586,7 @@
         </clipPath>
         <symbol id='java.lang.Object'>
             <g>
-                <g clip-path='url(#ID000010)'>
+                <g clip-path='url(#ID000011)'>
                     <rect x='0.000'
                           y='0.000'
                           width='244.000'
@@ -591,20 +633,20 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000011'>
+        <clipPath id='ID000012'>
             <rect class='otherClass'
-                  height='348.000'
+                  height='359.000'
                   width='784.000'
                   x='0.000'
                   y='8.000'/>
         </clipPath>
         <symbol id='org.tquadrat.foundation.value.api.DimensionedValue'>
             <g>
-                <g clip-path='url(#ID000011)'>
+                <g clip-path='url(#ID000012)'>
                     <rect x='0.000'
                           y='8.000'
                           width='784.000'
-                          height='348.000'
+                          height='359.000'
                           class='otherClass'/>
                     <line x1='0.000'
                           y1='36.000'
@@ -686,7 +728,9 @@
                     <text x='5.000'
                           y='341.000'>&#x2A22; toString(locale:java.util.Locale,format:java.lang.String,useNiceUnit:boolean):java.lang.String</text>
                     <text x='5.000'
-                          y='352.000'>&#x2A22; value():java.math.BigDecimal</text>
+                          y='352.000'>&#x2A22; validate(value:java.math.BigDecimal):java.math.BigDecimal</text>
+                    <text x='5.000'
+                          y='363.000'>&#x2A22; value():java.math.BigDecimal</text>
                 </g>
                 <g transform='translate(759.000 0.000)'>
                     <rect x='0.000'
@@ -706,7 +750,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000012'>
+        <clipPath id='ID000013'>
             <rect class='externalClass'
                   height='62.000'
                   width='76.000'
@@ -715,7 +759,7 @@
         </clipPath>
         <symbol id='java.lang.Cloneable'>
             <g>
-                <g clip-path='url(#ID000012)'>
+                <g clip-path='url(#ID000013)'>
                     <rect x='0.000'
                           y='0.000'
                           width='76.000'
@@ -744,7 +788,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000013'>
+        <clipPath id='ID000014'>
             <rect class='externalClass'
                   height='62.000'
                   width='148.000'
@@ -753,7 +797,7 @@
         </clipPath>
         <symbol id='java.lang.Comparable'>
             <g>
-                <g clip-path='url(#ID000013)'>
+                <g clip-path='url(#ID000014)'>
                     <rect x='0.000'
                           y='8.000'
                           width='148.000'
@@ -799,7 +843,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000014'>
+        <clipPath id='ID000015'>
             <rect class='externalClass'
                   height='62.000'
                   width='418.000'
@@ -808,7 +852,7 @@
         </clipPath>
         <symbol id='java.util.Formattable'>
             <g>
-                <g clip-path='url(#ID000014)'>
+                <g clip-path='url(#ID000015)'>
                     <rect x='0.000'
                           y='0.000'
                           width='418.000'
@@ -838,7 +882,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000015'>
+        <clipPath id='ID000016'>
             <rect class='externalClass'
                   height='62.000'
                   width='82.000'
@@ -847,7 +891,7 @@
         </clipPath>
         <symbol id='java.io.Serializable'>
             <g>
-                <g clip-path='url(#ID000015)'>
+                <g clip-path='url(#ID000016)'>
                     <rect x='0.000'
                           y='0.000'
                           width='82.000'
@@ -878,90 +922,96 @@
         </symbol>
     </defs>
     <path class='inheritance'
-          d='M495.000,1066.000 c0.000,-85.000,2495.500,0.000,2495.500,-85.000 v-15'
+          d='M495.000,1077.000 c0.000,-85.000,2804.500,0.000,2804.500,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M1272.000,1066.000 c0.000,-85.000,1748.500,0.000,1748.500,-85.000 v-15'
+          d='M1272.000,1077.000 c0.000,-85.000,2057.500,0.000,2057.500,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M1860.000,1066.000 c0.000,-85.000,1190.500,0.000,1190.500,-85.000 v-15'
+          d='M1860.000,1077.000 c0.000,-85.000,1499.500,0.000,1499.500,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M2472.000,1066.000 c0.000,-85.000,608.500,0.000,608.500,-85.000 v-15'
+          d='M2472.000,1077.000 c0.000,-85.000,917.500,0.000,917.500,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M3072.000,1066.000 c0.000,-85.000,38.500,0.000,38.500,-85.000 v-15'
+          d='M3072.000,1077.000 c0.000,-85.000,347.500,0.000,347.500,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M3648.000,1066.000 c0.000,-85.000,-507.500,0.000,-507.500,-85.000 v-15'
+          d='M3648.000,1077.000 c0.000,-85.000,-198.500,0.000,-198.500,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M4422.000,1066.000 c0.000,-85.000,-1251.500,0.000,-1251.500,-85.000 v-15'
+          d='M4422.000,1077.000 c0.000,-85.000,-942.500,0.000,-942.500,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M5565.000,1066.000 c0.000,-85.000,-2364.500,0.000,-2364.500,-85.000 v-15'
+          d='M5565.000,1077.000 c0.000,-85.000,-2055.500,0.000,-2055.500,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M3070.500,761.000 c0.000,-549.000,-2448.900,0.000,-2448.900,-549.000 v-15'
+          d='M6540.000,1077.000 c0.000,-85.000,-3000.500,0.000,-3000.500,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M3394.500,772.000 c0.000,-560.000,-2708.100,0.000,-2708.100,-560.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='implementation'
-          d='M3120.500,761.000 c0.000,-93.000,-25.000,0.000,-25.000,-93.000 v-15'
+          d='M3444.500,772.000 c0.000,-93.000,-25.000,0.000,-25.000,-93.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='inheritance'
-          d='M3020.500,305.000 c0.000,-203.000,-1155.700,0.000,-1155.700,-203.000 v-15'
+          d='M3344.500,305.000 c0.000,-203.000,-1285.300,0.000,-1285.300,-203.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M3070.500,305.000 c0.000,-195.000,25.000,0.000,25.000,-195.000 v-15'
+          d='M3394.500,305.000 c0.000,-195.000,25.000,0.000,25.000,-195.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M3120.500,305.000 c0.000,-203.000,1230.700,0.000,1230.700,-203.000 v-15'
+          d='M3444.500,305.000 c0.000,-203.000,1360.300,0.000,1360.300,-203.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M3170.500,305.000 c0.000,-203.000,2423.900,0.000,2423.900,-203.000 v-15'
+          d='M3494.500,305.000 c0.000,-203.000,2683.100,0.000,2683.100,-203.000 v-15'
           marker-end='url(#inheritance)'/>
-    <use x='499.600'
+    <use x='564.400'
          y='25.000'
          xlink:href='#java.lang.Object'/>
-    <use x='1826.800'
+    <use x='2021.200'
          y='25.000'
          xlink:href='#java.lang.Cloneable'/>
-    <use x='3021.500'
+    <use x='3345.500'
          y='25.000'
          xlink:href='#java.lang.Comparable'/>
-    <use x='4142.200'
+    <use x='4595.800'
          y='25.000'
          xlink:href='#java.util.Formattable'/>
-    <use x='5553.400'
+    <use x='6136.600'
          y='25.000'
          xlink:href='#java.io.Serializable'/>
-    <use x='2703.500'
+    <use x='3027.500'
          y='297.000'
          xlink:href='#org.tquadrat.foundation.value.api.DimensionedValue'/>
-    <use x='2952.500'
-         y='753.000'
+    <use x='3276.500'
+         y='764.000'
          xlink:href='#org.tquadrat.foundation.value.api.ValueBase'/>
     <use x='25.000'
-         y='1066.000'
+         y='1077.000'
          xlink:href='#org.tquadrat.foundation.value.SpeedValue'/>
     <use x='1015.000'
-         y='1066.000'
+         y='1077.000'
          xlink:href='#org.tquadrat.foundation.value.MassValue'/>
     <use x='1579.000'
-         y='1066.000'
+         y='1077.000'
          xlink:href='#org.tquadrat.foundation.value.PressureValue'/>
     <use x='2191.000'
-         y='1066.000'
+         y='1077.000'
          xlink:href='#org.tquadrat.foundation.value.DataSizeValue'/>
     <use x='2803.000'
-         y='1066.000'
+         y='1077.000'
          xlink:href='#org.tquadrat.foundation.value.LengthValue'/>
     <use x='3391.000'
-         y='1066.000'
+         y='1077.000'
          xlink:href='#org.tquadrat.foundation.value.TimeValue'/>
     <use x='3955.000'
-         y='1066.000'
+         y='1077.000'
          xlink:href='#org.tquadrat.foundation.value.AreaValue'/>
     <use x='4939.000'
-         y='1066.000'
+         y='1077.000'
          xlink:href='#org.tquadrat.foundation.value.VolumeValue'/>
+    <use x='6241.000'
+         y='1077.000'
+         xlink:href='#org.tquadrat.foundation.value.TemperatureValue'/>
 </svg>

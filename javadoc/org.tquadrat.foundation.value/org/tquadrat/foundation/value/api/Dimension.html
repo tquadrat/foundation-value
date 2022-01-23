@@ -11,8 +11,9 @@
 <meta name="keywords" content="MSG_UnknownUnit">
 <meta name="keywords" content="baseUnit()">
 <meta name="keywords" content="equals()">
-<meta name="keywords" content="factor()">
+<meta name="keywords" content="fromBase()">
 <meta name="keywords" content="getPrecision()">
+<meta name="keywords" content="toBase()">
 <meta name="keywords" content="name()">
 <meta name="keywords" content="toString()">
 <meta name="keywords" content="unitSymbol()">
@@ -89,14 +90,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code></dd>
 </dl>
 <dl class="notes">
+<dt>All Known Subinterfaces:</dt>
+<dd><code><a href="DimensionWithLinearConversion.html" title="interface in org.tquadrat.foundation.value.api">DimensionWithLinearConversion</a></code></dd>
+</dl>
+<dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="../Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></code>, <code><a href="../DataSize.html" title="enum class in org.tquadrat.foundation.value">DataSize</a></code>, <code><a href="../Length.html" title="enum class in org.tquadrat.foundation.value">Length</a></code>, <code><a href="../Mass.html" title="enum class in org.tquadrat.foundation.value">Mass</a></code>, <code><a href="../Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></code>, <code><a href="../Speed.html" title="enum class in org.tquadrat.foundation.value">Speed</a></code>, <code><a href="../Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></code>, <code><a href="../Volume.html" title="enum class in org.tquadrat.foundation.value">Volume</a></code></dd>
+<dd><code><a href="../Area.html" title="enum class in org.tquadrat.foundation.value">Area</a></code>, <code><a href="../DataSize.html" title="enum class in org.tquadrat.foundation.value">DataSize</a></code>, <code><a href="../Length.html" title="enum class in org.tquadrat.foundation.value">Length</a></code>, <code><a href="../Mass.html" title="enum class in org.tquadrat.foundation.value">Mass</a></code>, <code><a href="../Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a></code>, <code><a href="../Speed.html" title="enum class in org.tquadrat.foundation.value">Speed</a></code>, <code><a href="../Temperature.html" title="enum class in org.tquadrat.foundation.value">Temperature</a></code>, <code><a href="../Time.html" title="enum class in org.tquadrat.foundation.value">Time</a></code>, <code><a href="../Volume.html" title="enum class in org.tquadrat.foundation.value">Volume</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">@ClassVersion</a>(<a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html#sourceVersion()" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">sourceVersion</a>="$Id: Dimension.java 989 2022-01-13 19:09:58Z tquadrat $")
 <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html" title="class or interface in org.apiguardian.api" class="external-link">@API</a>(<a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#status()" title="class or interface in org.apiguardian.api" class="external-link">status</a>=<a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.Status.html#STABLE" title="class or interface in org.apiguardian.api" class="external-link">STABLE</a>,
      <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#since()" title="class or interface in org.apiguardian.api" class="external-link">since</a>="0.1.0")
-</span><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-49">Dimension</a></span><span class="extends-implements">
+</span><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-50">Dimension</a></span><span class="extends-implements">
 extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></span></div>
 <div class="block"><p>The implementations of this interface are used to give
   (numerical) values a dimension and a measuring unit. So <code>3.1415</code> is
@@ -176,11 +181,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"></div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#factor()" class="member-name-link">factor</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#fromBase()" class="member-name-link">fromBase</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Returns the factor that is used to convert a value from
-  this unit to the base unit.</div>
+<div class="block">Returns the conversion that is used to convert a value
+  from the base unit to this unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getPrecision()" class="member-name-link">getPrecision</a>()</code></div>
@@ -193,18 +198,24 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the internal name of the dimension.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toBase()" class="member-name-link">toBase</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the conversion that is used to convert a value
+  from this unit to the base unit.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unitSymbol()" class="member-name-link">unitSymbol</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unitSymbol()" class="member-name-link">unitSymbol</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the unit symbol for the dimension as a single line
   string.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#unitSymbolForPrinting()" class="member-name-link">unitSymbolForPrinting</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#unitSymbolForPrinting()" class="member-name-link">unitSymbolForPrinting</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Returns the unit symbol for the dimension still as a
   single line string, but with special characters.</div>
 </div>
@@ -225,7 +236,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="MSG_UnknownUnit">
 <h3>MSG_UnknownUnit</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-59">MSG_UnknownUnit</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-60">MSG_UnknownUnit</a></span></div>
 <div class="block">Message: Unknown Unit.</div>
 <dl class="notes">
 <dt>See Also:</dt>
@@ -248,7 +259,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="baseUnit()">
 <h3>baseUnit</h3>
-<div class="member-signature"><span class="type-parameters">&lt;D extends <a href="Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a>&gt;</span>&nbsp;<span class="return-type">D</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-72">baseUnit</a></span>()</div>
+<div class="member-signature"><span class="type-parameters">&lt;D extends <a href="Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a>&gt;</span>&nbsp;<span class="return-type">D</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-73">baseUnit</a></span>()</div>
 <div class="block"><p>Returns the base unit.</p>
   <p>E.g. for length, the base unit would be Meter (m), for mass, it is
   Kilogram (kg), and so on.</p></div>
@@ -263,7 +274,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-83">equals</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-84">equals</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <div class="block">
   <p>Dimensions are equal when they are identical; therefore they
   should be implemented as <i>Multitons</i> (constants of the
@@ -282,31 +293,21 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 </section>
 </li>
 <li>
-<section class="detail" id="factor()">
-<h3>factor</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-98">factor</a></span>()</div>
-<div class="block"><p>Returns the factor that is used to convert a value from
-  this unit to the base unit.</p>
-  <p>For length, if you have to convert a Centimeter value to Meter, you
-  will divide that by 100 or multiply it with a <i>factor</i> of
-  0.01.</p>
-  <p>For the base unit, the factor is 1.0.</p></div>
+<section class="detail" id="fromBase()">
+<h3>fromBase</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-93">fromBase</a></span>()</div>
+<div class="block"><p>Returns the conversion that is used to convert a value
+  from the base unit to this unit.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>The factor.</dd>
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="#baseUnit()"><code>baseUnit()</code></a></li>
-</ul>
-</dd>
+<dd>The conversion.</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getPrecision()">
 <h3>getPrecision</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-106">getPrecision</a></span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-101">getPrecision</a></span>()</div>
 <div class="block">Returns the default precision for this unit that is used when the
   respective value is converted to a String.</div>
 <dl class="notes">
@@ -316,9 +317,21 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 </section>
 </li>
 <li>
+<section class="detail" id="toBase()">
+<h3>toBase</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-109">toBase</a></span>()</div>
+<div class="block"><p>Returns the conversion that is used to convert a value
+  from this unit to the base unit.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The conversion.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="name()">
 <h3>name</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-113">name</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-116">name</a></span>()</div>
 <div class="block">Returns the internal name of the dimension.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -329,7 +342,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-123">toString</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-126">toString</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -349,7 +362,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="unitSymbol()">
 <h3>unitSymbol</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-135">unitSymbol</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-138">unitSymbol</a></span>()</div>
 <div class="block"><p>Returns the unit symbol for the dimension as a single line
   string.</p>
   <p>For a length, this would be &quot;m&quot;, for a speed
@@ -364,7 +377,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
 <li>
 <section class="detail" id="unitSymbolForPrinting()">
 <h3>unitSymbolForPrinting</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-148">unitSymbolForPrinting</a></span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/api/Dimension.html#line-151">unitSymbolForPrinting</a></span>()</div>
 <div class="block"><p>Returns the unit symbol for the dimension still as a
   single line string, but with special characters.</p>
   <p>For a length, this would still be &quot;m&quot;, for a speed

@@ -78,26 +78,39 @@
 <span class="source-line-no">065</span><span id="line-65">    /**</span>
 <span class="source-line-no">066</span><span id="line-66">     *  {@inheritDoc}</span>
 <span class="source-line-no">067</span><span id="line-67">     */</span>
-<span class="source-line-no">068</span><span id="line-68">    @Override</span>
-<span class="source-line-no">069</span><span id="line-69">    protected final PressureValue createValue( final BigDecimal number, final Pressure dimension )</span>
-<span class="source-line-no">070</span><span id="line-70">    {</span>
-<span class="source-line-no">071</span><span id="line-71">        return new PressureValue( dimension, number );</span>
-<span class="source-line-no">072</span><span id="line-72">    }   //  createValue()</span>
-<span class="source-line-no">073</span><span id="line-73"></span>
-<span class="source-line-no">074</span><span id="line-74">    /**</span>
-<span class="source-line-no">075</span><span id="line-75">     *  {@inheritDoc}</span>
-<span class="source-line-no">076</span><span id="line-76">     */</span>
-<span class="source-line-no">077</span><span id="line-77">    @Override</span>
-<span class="source-line-no">078</span><span id="line-78">    protected Pressure unitFromSymbol( final String unit )</span>
-<span class="source-line-no">079</span><span id="line-79">    {</span>
-<span class="source-line-no">080</span><span id="line-80">        return Pressure.forUnit( unit );</span>
-<span class="source-line-no">081</span><span id="line-81">    }   //  unitFromSymbol()</span>
-<span class="source-line-no">082</span><span id="line-82">}</span>
-<span class="source-line-no">083</span><span id="line-83">//  class PressureValueStringConverter</span>
-<span class="source-line-no">084</span><span id="line-84"></span>
-<span class="source-line-no">085</span><span id="line-85">/*</span>
-<span class="source-line-no">086</span><span id="line-86"> *  End of File</span>
-<span class="source-line-no">087</span><span id="line-87"> */</span>
+<span class="source-line-no">068</span><span id="line-68">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">069</span><span id="line-69">    @Override</span>
+<span class="source-line-no">070</span><span id="line-70">    protected final PressureValue createValue( final BigDecimal number, final Pressure dimension )</span>
+<span class="source-line-no">071</span><span id="line-71">    {</span>
+<span class="source-line-no">072</span><span id="line-72">        return new PressureValue( dimension, number );</span>
+<span class="source-line-no">073</span><span id="line-73">    }   //  createValue()</span>
+<span class="source-line-no">074</span><span id="line-74"></span>
+<span class="source-line-no">075</span><span id="line-75">    /**</span>
+<span class="source-line-no">076</span><span id="line-76">     *  This method is used by the</span>
+<span class="source-line-no">077</span><span id="line-77">     *  {@link java.util.ServiceLoader}</span>
+<span class="source-line-no">078</span><span id="line-78">     *  to obtain the instance for this</span>
+<span class="source-line-no">079</span><span id="line-79">     *  {@link org.tquadrat.foundation.lang.StringConverter}</span>
+<span class="source-line-no">080</span><span id="line-80">     *  implementation.</span>
+<span class="source-line-no">081</span><span id="line-81">     *</span>
+<span class="source-line-no">082</span><span id="line-82">     *  @return The instance for this {@code StringConverter} implementation.</span>
+<span class="source-line-no">083</span><span id="line-83">     */</span>
+<span class="source-line-no">084</span><span id="line-84">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">085</span><span id="line-85">    public static final PressureValueStringConverter provider() { return INSTANCE; }</span>
+<span class="source-line-no">086</span><span id="line-86"></span>
+<span class="source-line-no">087</span><span id="line-87">    /**</span>
+<span class="source-line-no">088</span><span id="line-88">     *  {@inheritDoc}</span>
+<span class="source-line-no">089</span><span id="line-89">     */</span>
+<span class="source-line-no">090</span><span id="line-90">    @Override</span>
+<span class="source-line-no">091</span><span id="line-91">    protected Pressure unitFromSymbol( final String unit )</span>
+<span class="source-line-no">092</span><span id="line-92">    {</span>
+<span class="source-line-no">093</span><span id="line-93">        return Pressure.forUnit( unit );</span>
+<span class="source-line-no">094</span><span id="line-94">    }   //  unitFromSymbol()</span>
+<span class="source-line-no">095</span><span id="line-95">}</span>
+<span class="source-line-no">096</span><span id="line-96">//  class PressureValueStringConverter</span>
+<span class="source-line-no">097</span><span id="line-97"></span>
+<span class="source-line-no">098</span><span id="line-98">/*</span>
+<span class="source-line-no">099</span><span id="line-99"> *  End of File</span>
+<span class="source-line-no">100</span><span id="line-100"> */</span>
 
 
 

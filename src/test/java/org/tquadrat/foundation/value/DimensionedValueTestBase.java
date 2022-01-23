@@ -30,7 +30,6 @@ import static org.tquadrat.foundation.util.StringUtils.format;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -39,6 +38,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.lang.StringConverter;
 import org.tquadrat.foundation.testutil.TestBaseClass;
 import org.tquadrat.foundation.value.api.Dimension;
+import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
 import org.tquadrat.foundation.value.api.DimensionedValue;
 
 /**
@@ -155,8 +155,11 @@ public abstract class DimensionedValueTestBase<D extends Dimension, T extends Di
             //---* Same dimension *--------------------------------------------
             if( dimension == value.getUnit() ) continue;
 
-            //---* Alternative unit *------------------------------------------
-            if( dimension.factor().equals( value.getUnit().factor() ) ) continue;
+            if( dimension instanceof DimensionWithLinearConversion dimensionWithFactor )
+            {
+                //---* Alternative unit *--------------------------------------
+                if( dimensionWithFactor.factor().equals( ((DimensionWithLinearConversion) value.getUnit()).factor() ) ) continue;
+            }
 
             //---* Base value is zero *----------------------------------------
             if( value.baseValue().equals( BigDecimal.ZERO ) ) continue;

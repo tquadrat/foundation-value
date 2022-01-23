@@ -74,6 +74,7 @@ public class MassValueStringConverter extends DimensionedValueStringConverter<Ma
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final MassValue createValue( final BigDecimal number, final Mass dimension )
     {
@@ -89,6 +90,7 @@ public class MassValueStringConverter extends DimensionedValueStringConverter<Ma
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public static final MassValueStringConverter provider() { return INSTANCE; }
 
     /**

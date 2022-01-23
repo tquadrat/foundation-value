@@ -32,6 +32,7 @@ import java.util.List;
 import java.util.stream.Stream;
 import java.util.stream.Stream.Builder;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.exception.EmptyArgumentException;
@@ -50,6 +51,7 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  @version $Id: TestPressure.java 828 2021-01-04 23:25:43Z tquadrat $
  */
 @ClassVersion( sourceVersion = "$Id: TestPressure.java 828 2021-01-04 23:25:43Z tquadrat $" )
+@DisplayName( "org.tquadrat.foundation.value.TestPressure" )
 public class TestPressure extends DimensionedValueTestBase<Pressure,PressureValue>
 {
         /*---------*\

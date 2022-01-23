@@ -74,6 +74,7 @@ public class DataSizeValueStringConverter extends DimensionedValueStringConverte
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final DataSizeValue createValue( final BigDecimal number, final DataSize dimension )
     {
@@ -89,6 +90,7 @@ public class DataSizeValueStringConverter extends DimensionedValueStringConverte
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public static final DataSizeValueStringConverter provider() { return INSTANCE; }
 
     /**

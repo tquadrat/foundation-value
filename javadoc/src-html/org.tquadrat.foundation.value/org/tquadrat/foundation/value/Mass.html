@@ -39,7 +39,7 @@
 <span class="source-line-no">026</span><span id="line-26"></span>
 <span class="source-line-no">027</span><span id="line-27">import org.apiguardian.api.API;</span>
 <span class="source-line-no">028</span><span id="line-28">import org.tquadrat.foundation.annotation.ClassVersion;</span>
-<span class="source-line-no">029</span><span id="line-29">import org.tquadrat.foundation.value.api.Dimension;</span>
+<span class="source-line-no">029</span><span id="line-29">import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;</span>
 <span class="source-line-no">030</span><span id="line-30"></span>
 <span class="source-line-no">031</span><span id="line-31">/**</span>
 <span class="source-line-no">032</span><span id="line-32"> *  The various instances of masses and weights (although this is not really</span>
@@ -53,7 +53,7 @@
 <span class="source-line-no">040</span><span id="line-40"> */</span>
 <span class="source-line-no">041</span><span id="line-41">@ClassVersion( sourceVersion = "$Id: Mass.java 827 2021-01-04 17:01:34Z tquadrat $" )</span>
 <span class="source-line-no">042</span><span id="line-42">@API( status = STABLE, since = "0.1.0" )</span>
-<span class="source-line-no">043</span><span id="line-43">public enum Mass implements Dimension</span>
+<span class="source-line-no">043</span><span id="line-43">public enum Mass implements DimensionWithLinearConversion</span>
 <span class="source-line-no">044</span><span id="line-44">{</span>
 <span class="source-line-no">045</span><span id="line-45">        /*------------------*\</span>
 <span class="source-line-no">046</span><span id="line-46">    ====** Enum Declaration **=================================================</span>
@@ -95,7 +95,7 @@
 <span class="source-line-no">082</span><span id="line-82">    OUNCE( new BigDecimal( "0.028349523125" ), "oz." ),</span>
 <span class="source-line-no">083</span><span id="line-83"></span>
 <span class="source-line-no">084</span><span id="line-84">    /**</span>
-<span class="source-line-no">085</span><span id="line-85">     *  An troy ounce (same as &lt;i&gt;Apothecaries Ounce&lt;/i&gt;, as used for precious</span>
+<span class="source-line-no">085</span><span id="line-85">     *  A troy ounce (same as &lt;i&gt;Apothecaries Ounce&lt;/i&gt;, as used for precious</span>
 <span class="source-line-no">086</span><span id="line-86">     *  metal.</span>
 <span class="source-line-no">087</span><span id="line-87">     */</span>
 <span class="source-line-no">088</span><span id="line-88">    TROY_OUNCE( new BigDecimal( "0.0311034768" ), "oz.tr." ),</span>

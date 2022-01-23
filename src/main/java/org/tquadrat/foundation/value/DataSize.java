@@ -26,7 +26,7 @@ import java.math.BigDecimal;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.Dimension;
+import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
 
 /**
  *  The various instances of data sizes (for files or free disk space or
@@ -40,7 +40,7 @@ import org.tquadrat.foundation.value.api.Dimension;
  */
 @ClassVersion( sourceVersion = "$Id: DataSize.java 820 2020-12-29 20:34:22Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
-public enum DataSize implements Dimension
+public enum DataSize implements DimensionWithLinearConversion
 {
         /*------------------*\
     ====** Enum Declaration **=================================================

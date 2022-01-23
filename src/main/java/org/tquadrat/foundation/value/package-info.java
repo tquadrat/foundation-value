@@ -19,7 +19,13 @@
  *  Various implementations for value types.
  */
 
+@API( status = STABLE, since = "0.1.0" )
 package org.tquadrat.foundation.value;
+
+import static org.apiguardian.api.API.Status.STABLE;
+
+import org.apiguardian.api.API;
+
 /*
  *  End of File
  */

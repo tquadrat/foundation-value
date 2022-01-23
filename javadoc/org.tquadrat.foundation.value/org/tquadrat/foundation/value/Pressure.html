@@ -90,7 +90,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a>&gt;</code>, <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code>, <code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a>&gt;</code>, <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a></code>, <code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code>, <code><a href="api/DimensionWithLinearConversion.html" title="interface in org.tquadrat.foundation.value.api">DimensionWithLinearConversion</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">@ClassVersion</a>(<a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html#sourceVersion()" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">sourceVersion</a>="$Id: Pressure.java 989 2022-01-13 19:09:58Z tquadrat $")
@@ -98,7 +98,7 @@ loadScripts(document, 'script');</script>
      <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#since()" title="class or interface in org.apiguardian.api" class="external-link">since</a>="0.1.0")
 </span><span class="modifiers">public enum </span><span class="element-name"><a href="../../../../../src-html/org.tquadrat.foundation.value/org/tquadrat/foundation/value/Pressure.html#line-40">Pressure</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="Pressure.html" title="enum class in org.tquadrat.foundation.value">Pressure</a>&gt;
-implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></span></div>
+implements <a href="api/DimensionWithLinearConversion.html" title="interface in org.tquadrat.foundation.value.api">DimensionWithLinearConversion</a></span></div>
 <div class="block">The various instances of pressure.</div>
 <dl class="notes">
 <dt><span class="simpleTagLabel">Author:</span></dt>
@@ -236,8 +236,8 @@ implements <a href="api/Dimension.html" title="interface in org.tquadrat.foundat
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="fields-inherited-from-class-org.tquadrat.foundation.value.api.Dimension">Fields inherited from interface&nbsp;org.tquadrat.foundation.value.api.<a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></h3>
-<code><a href="api/Dimension.html#MSG_UnknownUnit">MSG_UnknownUnit</a></code></div>
+<h3 id="fields-inherited-from-class-org.tquadrat.foundation.value.api.DimensionWithLinearConversion">Fields inherited from interface&nbsp;org.tquadrat.foundation.value.api.<a href="api/DimensionWithLinearConversion.html" title="interface in org.tquadrat.foundation.value.api">DimensionWithLinearConversion</a></h3>
+<code><a href="api/DimensionWithLinearConversion.html#MSG_UnknownUnit">MSG_UnknownUnit</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -314,6 +314,9 @@ the order they are declared.</div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.tquadrat.foundation.value.api.Dimension">Methods inherited from interface&nbsp;org.tquadrat.foundation.value.api.<a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></h3>
 <code><a href="api/Dimension.html#equals(java.lang.Object)">equals</a>, <a href="api/Dimension.html#getPrecision()">getPrecision</a>, <a href="api/Dimension.html#name()">name</a>, <a href="api/Dimension.html#toString()">toString</a>, <a href="api/Dimension.html#unitSymbolForPrinting()">unitSymbolForPrinting</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-org.tquadrat.foundation.value.api.DimensionWithLinearConversion">Methods inherited from interface&nbsp;org.tquadrat.foundation.value.api.<a href="api/DimensionWithLinearConversion.html" title="interface in org.tquadrat.foundation.value.api">DimensionWithLinearConversion</a></h3>
+<code><a href="api/DimensionWithLinearConversion.html#fromBase()">fromBase</a>, <a href="api/DimensionWithLinearConversion.html#toBase()">toBase</a></code></div>
 </section>
 </li>
 </ul>
@@ -545,7 +548,7 @@ not permitted.)</div>
   <p>For the base unit, the factor is 1.0.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="api/Dimension.html#factor()">factor</a></code>&nbsp;in interface&nbsp;<code><a href="api/Dimension.html" title="interface in org.tquadrat.foundation.value.api">Dimension</a></code></dd>
+<dd><code><a href="api/DimensionWithLinearConversion.html#factor()">factor</a></code>&nbsp;in interface&nbsp;<code><a href="api/DimensionWithLinearConversion.html" title="interface in org.tquadrat.foundation.value.api">DimensionWithLinearConversion</a></code></dd>
 <dt>Returns:</dt>
 <dd>The factor.</dd>
 <dt>See Also:</dt>

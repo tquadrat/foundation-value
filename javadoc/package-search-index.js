@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"org.tquadrat.foundation.value","l":"org.tquadrat.foundation.value"},{"m":"org.tquadrat.foundation.value","l":"org.tquadrat.foundation.value.api"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"org.tquadrat.foundation.value","l":"org.tquadrat.foundation.value"},{"m":"org.tquadrat.foundation.value","l":"org.tquadrat.foundation.value.api"},{"m":"org.tquadrat.foundation.value","l":"org.tquadrat.foundation.value.internal"}];updateSearchResults();

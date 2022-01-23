@@ -87,37 +87,39 @@
 <span class="source-line-no">074</span><span id="line-74">    /**</span>
 <span class="source-line-no">075</span><span id="line-75">     *  {@inheritDoc}</span>
 <span class="source-line-no">076</span><span id="line-76">     */</span>
-<span class="source-line-no">077</span><span id="line-77">    @Override</span>
-<span class="source-line-no">078</span><span id="line-78">    protected final LengthValue createValue( final BigDecimal number, final Length dimension )</span>
-<span class="source-line-no">079</span><span id="line-79">    {</span>
-<span class="source-line-no">080</span><span id="line-80">        return new LengthValue( dimension, number );</span>
-<span class="source-line-no">081</span><span id="line-81">    }   //  createValue()</span>
-<span class="source-line-no">082</span><span id="line-82"></span>
-<span class="source-line-no">083</span><span id="line-83">    /**</span>
-<span class="source-line-no">084</span><span id="line-84">     *  This method is used by the</span>
-<span class="source-line-no">085</span><span id="line-85">     *  {@link java.util.ServiceLoader}</span>
-<span class="source-line-no">086</span><span id="line-86">     *  to obtain the instance for this</span>
-<span class="source-line-no">087</span><span id="line-87">     *  {@link org.tquadrat.foundation.lang.StringConverter}</span>
-<span class="source-line-no">088</span><span id="line-88">     *  implementation.</span>
-<span class="source-line-no">089</span><span id="line-89">     *</span>
-<span class="source-line-no">090</span><span id="line-90">     *  @return The instance for this {@code StringConverter} implementation.</span>
-<span class="source-line-no">091</span><span id="line-91">     */</span>
-<span class="source-line-no">092</span><span id="line-92">    public static final LengthValueStringConverter provider() { return INSTANCE; }</span>
-<span class="source-line-no">093</span><span id="line-93"></span>
-<span class="source-line-no">094</span><span id="line-94">    /**</span>
-<span class="source-line-no">095</span><span id="line-95">     *  {@inheritDoc}</span>
-<span class="source-line-no">096</span><span id="line-96">     */</span>
-<span class="source-line-no">097</span><span id="line-97">    @Override</span>
-<span class="source-line-no">098</span><span id="line-98">    protected Length unitFromSymbol( final String unitSymbol )</span>
-<span class="source-line-no">099</span><span id="line-99">    {</span>
-<span class="source-line-no">100</span><span id="line-100">        return Length.forUnit( unitSymbol );</span>
-<span class="source-line-no">101</span><span id="line-101">    }   //  dimensionFromUnit()</span>
-<span class="source-line-no">102</span><span id="line-102">}</span>
-<span class="source-line-no">103</span><span id="line-103">//  class LengthValueStringConverter</span>
-<span class="source-line-no">104</span><span id="line-104"></span>
-<span class="source-line-no">105</span><span id="line-105">/*</span>
-<span class="source-line-no">106</span><span id="line-106"> *  End of File</span>
-<span class="source-line-no">107</span><span id="line-107"> */</span>
+<span class="source-line-no">077</span><span id="line-77">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">078</span><span id="line-78">    @Override</span>
+<span class="source-line-no">079</span><span id="line-79">    protected final LengthValue createValue( final BigDecimal number, final Length dimension )</span>
+<span class="source-line-no">080</span><span id="line-80">    {</span>
+<span class="source-line-no">081</span><span id="line-81">        return new LengthValue( dimension, number );</span>
+<span class="source-line-no">082</span><span id="line-82">    }   //  createValue()</span>
+<span class="source-line-no">083</span><span id="line-83"></span>
+<span class="source-line-no">084</span><span id="line-84">    /**</span>
+<span class="source-line-no">085</span><span id="line-85">     *  This method is used by the</span>
+<span class="source-line-no">086</span><span id="line-86">     *  {@link java.util.ServiceLoader}</span>
+<span class="source-line-no">087</span><span id="line-87">     *  to obtain the instance for this</span>
+<span class="source-line-no">088</span><span id="line-88">     *  {@link org.tquadrat.foundation.lang.StringConverter}</span>
+<span class="source-line-no">089</span><span id="line-89">     *  implementation.</span>
+<span class="source-line-no">090</span><span id="line-90">     *</span>
+<span class="source-line-no">091</span><span id="line-91">     *  @return The instance for this {@code StringConverter} implementation.</span>
+<span class="source-line-no">092</span><span id="line-92">     */</span>
+<span class="source-line-no">093</span><span id="line-93">    @SuppressWarnings( "UseOfConcreteClass" )</span>
+<span class="source-line-no">094</span><span id="line-94">    public static final LengthValueStringConverter provider() { return INSTANCE; }</span>
+<span class="source-line-no">095</span><span id="line-95"></span>
+<span class="source-line-no">096</span><span id="line-96">    /**</span>
+<span class="source-line-no">097</span><span id="line-97">     *  {@inheritDoc}</span>
+<span class="source-line-no">098</span><span id="line-98">     */</span>
+<span class="source-line-no">099</span><span id="line-99">    @Override</span>
+<span class="source-line-no">100</span><span id="line-100">    protected Length unitFromSymbol( final String unitSymbol )</span>
+<span class="source-line-no">101</span><span id="line-101">    {</span>
+<span class="source-line-no">102</span><span id="line-102">        return Length.forUnit( unitSymbol );</span>
+<span class="source-line-no">103</span><span id="line-103">    }   //  dimensionFromUnit()</span>
+<span class="source-line-no">104</span><span id="line-104">}</span>
+<span class="source-line-no">105</span><span id="line-105">//  class LengthValueStringConverter</span>
+<span class="source-line-no">106</span><span id="line-106"></span>
+<span class="source-line-no">107</span><span id="line-107">/*</span>
+<span class="source-line-no">108</span><span id="line-108"> *  End of File</span>
+<span class="source-line-no">109</span><span id="line-109"> */</span>
 
 
 

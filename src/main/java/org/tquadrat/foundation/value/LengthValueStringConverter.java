@@ -74,6 +74,7 @@ public class LengthValueStringConverter extends DimensionedValueStringConverter<
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final LengthValue createValue( final BigDecimal number, final Length dimension )
     {
@@ -89,6 +90,7 @@ public class LengthValueStringConverter extends DimensionedValueStringConverter<
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     public static final LengthValueStringConverter provider() { return INSTANCE; }
 
     /**

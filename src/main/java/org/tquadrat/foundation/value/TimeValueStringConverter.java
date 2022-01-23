@@ -65,11 +65,24 @@ public class TimeValueStringConverter extends DimensionedValueStringConverter<Ti
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final TimeValue createValue( final BigDecimal number, final Time dimension )
     {
         return new TimeValue( dimension, number );
     }   //  createValue()
+
+    /**
+     *  This method is used by the
+     *  {@link java.util.ServiceLoader}
+     *  to obtain the instance for this
+     *  {@link org.tquadrat.foundation.lang.StringConverter}
+     *  implementation.
+     *
+     *  @return The instance for this {@code StringConverter} implementation.
+     */
+    @SuppressWarnings( "UseOfConcreteClass" )
+    public static final TimeValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}

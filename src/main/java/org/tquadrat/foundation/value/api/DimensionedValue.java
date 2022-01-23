@@ -38,6 +38,7 @@ import java.util.Locale;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.annotation.MountPoint;
 import org.tquadrat.foundation.exception.UnexpectedExceptionError;
 
 /**
@@ -144,7 +145,8 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
      */
     public default BigDecimal convert( final D unit )
     {
-        final var retValue = baseValue().divide( requireNonNullArgument( unit, "unit" ).factor(), MATH_CONTEXT ).stripTrailingZeros();
+        final var conversion = requireNonNullArgument( unit, "unit" ).fromBase();
+        final var retValue = conversion.apply( baseValue() ).stripTrailingZeros();
 
         //---* Done *----------------------------------------------------------
         return retValue;
@@ -223,38 +225,37 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
     }   //  divide()
 
     /**
-     *  {@inheritDoc}<br>
-     *  <br>Two instances of a class implementing this interface are equals if
+     *  {@inheritDoc}
+     *  <p>Two instances of a class implementing this interface are equals if
      *  they are of the <i>same</i> class and if their values, converted to the
-     *  base dimension, are equals.
+     *  base dimension, are equals.</p>
      *
      *  @param  o   The other value.
      *  @return {@code true} if they are equal, {@code false} if not.
      *
      *  @see Object#equals(Object)
      *  @see Dimension#baseUnit()
-     *  @see Dimension#factor()
      */
     @Override
     public boolean equals( final Object o );
 
     /**
-     *  {@inheritDoc}<br>
-     *  <br>The precision is applied to the numerical part only. The width
+     *  {@inheritDoc}
+     *  <p>The precision is applied to the numerical part only. The width
      *  includes the
-     *  {@linkplain Dimension#unitSymbol() unit symbol}, too.
+     *  {@linkplain Dimension#unitSymbol() unit symbol},
+     *  too.</p>
      *
-     *  @note In case the {@code formatter} argument is {@code null} throws a
-     *      {@link NullPointerException}
-     *      and <i>not</i> the usual
-     *      {@link org.tquadrat.foundation.exception.NullArgumentException NullArgumentException},
-     *      because this method is usually called by instances of
-     *      {@link java.util.Formatter}
-     *      that does not know about our special exceptions.
+     *  @note In case the {@code formatter} argument is {@code null}, this
+     *      method throws a {@code NullPointerException} and <i>not</i> the
+     *      usual {@code NullArgumentException}, because this method is usually
+     *      called by instances of {@code java.util.Formatter}, and those do
+     *      not know about our special exceptions.
      *
      *  @throws NullPointerException    The {@code formatter} argument is
      *      {@code null}.
      *
+     *  @see java.util.Formatter
      *  @see java.util.Formattable#formatTo(java.util.Formatter, int, int, int)
      */
     @SuppressWarnings( "ProhibitedExceptionThrown" )
@@ -287,12 +288,12 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
     public D getUnit();
 
     /**
-     *  {@inheritDoc}<br>
-     *  <br>The hash code is based on the
+     *  {@inheritDoc}
+     *  <p>The hash code is based on the
      *  {@linkplain #baseValue() base value}
      *  and
      *  {@linkplain #baseUnit() base unit}
-     *  only.
+     *  only.</p>
      */
     @Override
     public int hashCode();
@@ -586,6 +587,23 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
         return retValue;
     }   //  toString()
 
+    /**
+     *  <p>{@summary Validates the given value, based on the type of the
+     *  dimension.}</p>
+     *  <p>This method will be called by the constructors always with the
+     *  {@linkplain #baseUnit() base unit}
+     *  value just before the value will be initialised.</p>
+     *  <p>This default implementation will do nothing.</p>
+     *
+     *  @param  value   The value in base units.
+     *  @return The value.
+     *  @throws IllegalArgumentException    The validation failed.
+     */
+    @MountPoint
+    public default BigDecimal validate( final BigDecimal value ) throws IllegalArgumentException
+    {
+        return value;
+    }   //  validate()
     /**
      *  Returns the numerical value.
      *

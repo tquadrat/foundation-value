@@ -22,6 +22,7 @@ import org.tquadrat.foundation.value.LengthValueStringConverter;
 import org.tquadrat.foundation.value.MassValueStringConverter;
 import org.tquadrat.foundation.value.PressureValueStringConverter;
 import org.tquadrat.foundation.value.SpeedValueStringConverter;
+import org.tquadrat.foundation.value.TemperatureValueStringConverter;
 import org.tquadrat.foundation.value.TimeValueStringConverter;
 import org.tquadrat.foundation.value.VolumeValueStringConverter;
 
@@ -35,11 +36,11 @@ import org.tquadrat.foundation.value.VolumeValueStringConverter;
  *
  *  @todo task.list
  */
-@SuppressWarnings( "rawtypes" )
 module org.tquadrat.foundation.value
 {
     requires java.base;
     requires transitive org.tquadrat.foundation.util;
+    requires org.tquadrat.foundation.i18n;
 
     //---* Common Use *--------------------------------------------------------
     exports org.tquadrat.foundation.value.api;
@@ -52,6 +53,7 @@ module org.tquadrat.foundation.value
         MassValueStringConverter,
         PressureValueStringConverter,
         SpeedValueStringConverter,
+        TemperatureValueStringConverter,
         TimeValueStringConverter,
         VolumeValueStringConverter;
 }

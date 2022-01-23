@@ -26,7 +26,7 @@ import java.math.BigDecimal;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.Dimension;
+import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
 
 /**
  *  The various instances of masses and weights (although this is not really
@@ -40,7 +40,7 @@ import org.tquadrat.foundation.value.api.Dimension;
  */
 @ClassVersion( sourceVersion = "$Id: Mass.java 827 2021-01-04 17:01:34Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
-public enum Mass implements Dimension
+public enum Mass implements DimensionWithLinearConversion
 {
         /*------------------*\
     ====** Enum Declaration **=================================================
@@ -82,7 +82,7 @@ public enum Mass implements Dimension
     OUNCE( new BigDecimal( "0.028349523125" ), "oz." ),
 
     /**
-     *  An troy ounce (same as <i>Apothecaries Ounce</i>, as used for precious
+     *  A troy ounce (same as <i>Apothecaries Ounce</i>, as used for precious
      *  metal.
      */
     TROY_OUNCE( new BigDecimal( "0.0311034768" ), "oz.tr." ),

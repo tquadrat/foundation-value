@@ -65,11 +65,24 @@ public class SpeedValueStringConverter extends DimensionedValueStringConverter<S
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final SpeedValue createValue( final BigDecimal number, final Speed dimension )
     {
         return new SpeedValue( dimension, number );
     }   //  createValue()
+
+    /**
+     *  This method is used by the
+     *  {@link java.util.ServiceLoader}
+     *  to obtain the instance for this
+     *  {@link org.tquadrat.foundation.lang.StringConverter}
+     *  implementation.
+     *
+     *  @return The instance for this {@code StringConverter} implementation.
+     */
+    @SuppressWarnings( "UseOfConcreteClass" )
+    public static final SpeedValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}

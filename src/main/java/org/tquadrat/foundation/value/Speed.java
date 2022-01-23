@@ -35,7 +35,7 @@ import java.math.BigDecimal;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.Dimension;
+import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
 
 /**
  *  <p>{@summary The various instances of speed &hellip;}</p>
@@ -54,7 +54,7 @@ import org.tquadrat.foundation.value.api.Dimension;
  */
 @ClassVersion( sourceVersion = "$Id: Speed.java 827 2021-01-04 17:01:34Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
-public enum Speed implements Dimension
+public enum Speed implements DimensionWithLinearConversion
 {
         /*------------------*\
     ====** Enum Declaration **=================================================

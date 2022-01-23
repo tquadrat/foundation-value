@@ -21,6 +21,7 @@ import static org.apiguardian.api.API.Status.STABLE;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.function.UnaryOperator;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
@@ -84,18 +85,12 @@ public interface Dimension extends Serializable
     public boolean equals( Object o );
 
     /**
-     *  <p>{@summary Returns the factor that is used to convert a value from
-     *  this unit to the base unit.}</p>
-     *  <p>For length, if you have to convert a Centimeter value to Meter, you
-     *  will divide that by 100 or multiply it with a <i>factor</i> of
-     *  0.01.</p>
-     *  <p>For the base unit, the factor is 1.0.</p>
+     *  <p>{@summary Returns the conversion that is used to convert a value
+     *  from the base unit to this unit.}</p>
      *
-     *  @return The factor.
-     *
-     *  @see #baseUnit()
+     *  @return The conversion.
      */
-    public BigDecimal factor();
+    public UnaryOperator<BigDecimal> fromBase();
 
     /**
      *  Returns the default precision for this unit that is used when the
@@ -104,6 +99,14 @@ public interface Dimension extends Serializable
      *  @return The mantissa length for a value with this unit.
      */
     public default int getPrecision() { return 1; }
+
+    /**
+     *  <p>{@summary Returns the conversion that is used to convert a value
+     *  from this unit to the base unit.}</p>
+     *
+     *  @return The conversion.
+     */
+    public UnaryOperator<BigDecimal> toBase();
 
     /**
      *  Returns the internal name of the dimension.

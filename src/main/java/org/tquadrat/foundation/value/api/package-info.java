@@ -18,7 +18,13 @@
 /**
  *  The definition of the value class API.
  */
+
+@API( status = MAINTAINED, since = "0.0.1" )
 package org.tquadrat.foundation.value.api;
+
+import static org.apiguardian.api.API.Status.MAINTAINED;
+
+import org.apiguardian.api.API;
 
 /*
  *  End of File
