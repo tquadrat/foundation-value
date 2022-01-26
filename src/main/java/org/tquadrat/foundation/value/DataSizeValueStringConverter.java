@@ -35,12 +35,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DataSizeValueStringConverter.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: DataSizeValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: DataSizeValueStringConverter.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DataSizeValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class DataSizeValueStringConverter extends DimensionedValueStringConverter<DataSize, DataSizeValue>
 {

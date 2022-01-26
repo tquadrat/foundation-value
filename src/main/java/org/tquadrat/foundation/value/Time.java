@@ -47,12 +47,12 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  wherever possible.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Time.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: Time.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Time.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Time.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Time implements DimensionWithLinearConversion
 {
@@ -228,12 +228,12 @@ public enum Time implements DimensionWithLinearConversion
      *  based on the settings for the {@code Time} instance.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: Time.java 989 2022-01-13 19:09:58Z tquadrat $
+     *  @version $Id: Time.java 995 2022-01-23 01:09:35Z tquadrat $
      *  @since 0.1.0
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: Time.java 989 2022-01-13 19:09:58Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: Time.java 995 2022-01-23 01:09:35Z tquadrat $" )
     @API( status = STABLE, since = "0.1.0" )
     private class TemporalUnitImpl implements TemporalUnit
     {

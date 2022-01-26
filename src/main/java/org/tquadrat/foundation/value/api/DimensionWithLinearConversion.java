@@ -44,12 +44,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  division or multiplication of a factor, as for length or speed.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Dimension.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: DimensionWithLinearConversion.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Dimension.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DimensionWithLinearConversion.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public interface DimensionWithLinearConversion extends Dimension
 {

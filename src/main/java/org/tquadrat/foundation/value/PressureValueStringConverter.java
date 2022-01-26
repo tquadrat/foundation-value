@@ -34,12 +34,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: PressureValueStringConverter.java 827 2021-01-04 17:01:34Z tquadrat $
+ *  @version $Id: PressureValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: PressureValueStringConverter.java 827 2021-01-04 17:01:34Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: PressureValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class PressureValueStringConverter extends DimensionedValueStringConverter<Pressure,PressureValue>
 {

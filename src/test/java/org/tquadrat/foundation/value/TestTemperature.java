@@ -50,9 +50,9 @@ import org.tquadrat.foundation.lang.StringConverter;
  *  {@link TemperatureValueStringConverter}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestTemperature.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestTemperature.java 995 2022-01-23 01:09:35Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestTemperature.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestTemperature.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestTemperature" )
 public class TestTemperature extends DimensionedValueTestBase<Temperature,TemperatureValue>
 {

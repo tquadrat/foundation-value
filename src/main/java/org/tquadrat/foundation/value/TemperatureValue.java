@@ -30,12 +30,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for temperatures.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: LengthValue.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: TemperatureValue.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: LengthValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TemperatureValue.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class TemperatureValue extends ValueBase<Temperature, TemperatureValue>
 {

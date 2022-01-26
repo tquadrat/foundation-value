@@ -33,12 +33,12 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  capacities of memory sticks &hellip;).
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DataSize.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: DataSize.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: DataSize.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DataSize.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum DataSize implements DimensionWithLinearConversion
 {

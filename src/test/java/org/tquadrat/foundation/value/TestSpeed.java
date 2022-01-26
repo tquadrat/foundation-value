@@ -48,9 +48,9 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  {@link SpeedValueAccessor}.
  *
  *  @author Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestSpeed.java 828 2021-01-04 23:25:43Z tquadrat $
+ *  @version $Id: TestSpeed.java 995 2022-01-23 01:09:35Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestSpeed.java 828 2021-01-04 23:25:43Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestSpeed.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestSpeed" )
 public class TestSpeed extends DimensionedValueTestBase<Speed,SpeedValue>
 {

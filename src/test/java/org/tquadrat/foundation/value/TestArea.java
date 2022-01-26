@@ -47,9 +47,9 @@ import org.tquadrat.foundation.lang.StringConverter;
  *  {@link AreaValueStringConverter}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestArea.java 829 2021-01-05 09:08:51Z tquadrat $
+ *  @version $Id: TestArea.java 995 2022-01-23 01:09:35Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestArea.java 829 2021-01-05 09:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestArea.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestArea" )
 public class TestArea extends DimensionedValueTestBase<Area,AreaValue>
 {

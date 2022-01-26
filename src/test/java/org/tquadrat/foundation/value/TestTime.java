@@ -48,9 +48,9 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  {@link TimeValueAccessor}.
  *
  *  @author Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestTime.java 828 2021-01-04 23:25:43Z tquadrat $
+ *  @version $Id: TestTime.java 995 2022-01-23 01:09:35Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestTime.java 828 2021-01-04 23:25:43Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestTime.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestTime" )
 public class TestTime extends DimensionedValueTestBase<Time,TimeValue>
 {

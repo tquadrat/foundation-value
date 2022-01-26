@@ -47,12 +47,12 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  {@link Time#factor()}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Speed.java 827 2021-01-04 17:01:34Z tquadrat $
+ *  @version $Id: Speed.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.0.4
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Speed.java 827 2021-01-04 17:01:34Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Speed.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public enum Speed implements DimensionWithLinearConversion
 {

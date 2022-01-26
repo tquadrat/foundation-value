@@ -44,12 +44,12 @@ import org.tquadrat.foundation.util.RangeMap;
  *  The wind force according to the Beaufort table.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: WindForce.java 574 2019-04-16 18:33:24Z tquadrat $
+ *  @version $Id: WindForce.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.0.4
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: WindForce.java 574 2019-04-16 18:33:24Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: WindForce.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public enum WindForce
 {

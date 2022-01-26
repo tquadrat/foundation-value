@@ -35,12 +35,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AreaValueStringConverter.java 829 2021-01-05 09:08:51Z tquadrat $
+ *  @version $Id: AreaValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: AreaValueStringConverter.java 829 2021-01-05 09:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: AreaValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class AreaValueStringConverter extends DimensionedValueStringConverter<Area,AreaValue>
 {

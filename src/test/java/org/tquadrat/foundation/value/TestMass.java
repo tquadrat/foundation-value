@@ -47,9 +47,9 @@ import org.tquadrat.foundation.lang.StringConverter;
  *  {@link MassValueStringConverter}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestMass.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestMass.java 995 2022-01-23 01:09:35Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestMass.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestMass.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestMass" )
 public class TestMass extends DimensionedValueTestBase<Mass, MassValue>
 {

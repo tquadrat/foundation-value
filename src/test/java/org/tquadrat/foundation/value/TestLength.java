@@ -47,9 +47,9 @@ import org.tquadrat.foundation.lang.StringConverter;
  *  {@link LengthValueStringConverter}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestLength.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TestLength.java 995 2022-01-23 01:09:35Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestLength.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestLength.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestLength" )
 public class TestLength extends DimensionedValueTestBase<Length,LengthValue>
 {

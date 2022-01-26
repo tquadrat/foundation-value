@@ -46,12 +46,12 @@ import org.tquadrat.foundation.value.api.DimensionedValue;
  *  {@link DimensionedValue}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DimensionedValueTestBase.java 829 2021-01-05 09:08:51Z tquadrat $
+ *  @version $Id: DimensionedValueTestBase.java 995 2022-01-23 01:09:35Z tquadrat $
  *
  *  @param  <D> The type for the dimension.
  *  @param  <T> The type for the dimensioned value.
  */
-@ClassVersion( sourceVersion = "$Id: DimensionedValueTestBase.java 829 2021-01-05 09:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DimensionedValueTestBase.java 995 2022-01-23 01:09:35Z tquadrat $" )
 public abstract class DimensionedValueTestBase<D extends Dimension, T extends DimensionedValue<D>> extends TestBaseClass
 {
         /*---------*\

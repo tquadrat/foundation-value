@@ -48,9 +48,9 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  {@link PressureValueAccessor}.
  *
  *  @author Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestPressure.java 828 2021-01-04 23:25:43Z tquadrat $
+ *  @version $Id: TestPressure.java 995 2022-01-23 01:09:35Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestPressure.java 828 2021-01-04 23:25:43Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestPressure.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestPressure" )
 public class TestPressure extends DimensionedValueTestBase<Pressure,PressureValue>
 {

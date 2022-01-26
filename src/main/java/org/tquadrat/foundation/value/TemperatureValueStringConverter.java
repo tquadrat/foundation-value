@@ -35,12 +35,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TemperatureValueStringConverter.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: TemperatureValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: TemperatureValueStringConverter.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TemperatureValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class TemperatureValueStringConverter extends DimensionedValueStringConverter<Temperature,TemperatureValue>
 {

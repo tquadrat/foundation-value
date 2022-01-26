@@ -46,12 +46,12 @@ import org.tquadrat.foundation.value.api.Dimension;
  *  The various instances of temperature &hellip;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Area.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: Temperature.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Area.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Temperature.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Temperature implements Dimension
 {

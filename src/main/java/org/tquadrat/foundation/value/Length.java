@@ -32,12 +32,12 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  The various instances of length &hellip;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Length.java 820 2020-12-29 20:34:22Z tquadrat $
+ *  @version $Id: Length.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Length.java 820 2020-12-29 20:34:22Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Length.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Length implements DimensionWithLinearConversion
 {
