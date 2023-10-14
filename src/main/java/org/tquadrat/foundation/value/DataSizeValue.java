@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -30,12 +30,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for byte values, as for file sizes, disk capacities or alike.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DataSizeValue.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: DataSizeValue.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: DataSizeValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DataSizeValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class DataSizeValue extends ValueBase<DataSize, DataSizeValue>
 {
@@ -61,7 +61,8 @@ public final class DataSizeValue extends ValueBase<DataSize, DataSizeValue>
      */
     public DataSizeValue( final DataSize dimension, final BigDecimal value )
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  DataSizeValue()
 
     /**
@@ -76,7 +77,8 @@ public final class DataSizeValue extends ValueBase<DataSize, DataSizeValue>
      */
     public DataSizeValue( final DataSize dimension, final String value ) throws NumberFormatException
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  DataSizeValue()
 
     /**
@@ -88,7 +90,8 @@ public final class DataSizeValue extends ValueBase<DataSize, DataSizeValue>
      */
     public <N extends Number> DataSizeValue( final DataSize dimension, final N value )
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  DataSizeValue()
 
         /*---------*\
@@ -97,7 +100,6 @@ public final class DataSizeValue extends ValueBase<DataSize, DataSizeValue>
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final DataSizeValue clone()
     {

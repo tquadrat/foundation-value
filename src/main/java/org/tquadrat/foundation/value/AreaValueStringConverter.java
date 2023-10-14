@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -35,12 +35,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AreaValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: AreaValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: AreaValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: AreaValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class AreaValueStringConverter extends DimensionedValueStringConverter<Area,AreaValue>
 {
@@ -74,7 +74,6 @@ public class AreaValueStringConverter extends DimensionedValueStringConverter<Ar
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final AreaValue createValue( final BigDecimal number, final Area dimension )
     {
@@ -90,16 +89,15 @@ public class AreaValueStringConverter extends DimensionedValueStringConverter<Ar
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final AreaValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}
      */
     @Override
-    protected Area unitFromSymbol( final String unitSymbol )
+    protected Area unitFromSymbol( final String symbol )
     {
-        return Area.forUnit( unitSymbol );
+        return Area.forUnit( symbol );
     }   //  dimensionFromUnit()
 }
 //  class AreaValueStringConverter

@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='1243.000'
-     height='1297.000'>
+     height='1319.000'>
     <defs>
         <style><![CDATA[
             line
@@ -161,8 +161,8 @@
         </symbol>
         <clipPath id='ID000002'>
             <rect class='otherClass'
-                  height='205.000'
-                  width='286.000'
+                  height='238.000'
+                  width='676.000'
                   x='0.000'
                   y='8.000'/>
         </clipPath>
@@ -171,56 +171,62 @@
                 <g clip-path='url(#ID000002)'>
                     <rect x='0.000'
                           y='8.000'
-                          width='286.000'
-                          height='205.000'
+                          width='676.000'
+                          height='238.000'
                           class='otherClass'/>
                     <line x1='0.000'
                           y1='36.000'
-                          x2='286.000'
+                          x2='676.000'
                           y2='36.000'
                           class='separator'/>
-                    <text x='128.600'
+                    <text x='323.600'
                           y='21.000'
                           class='stereotype'>&#xAB;Type&#xBB;</text>
-                    <text x='116.000'
+                    <text x='311.000'
                           y='32.000'
                           class='abstract'>ValueBase</text>
                     <line x1='0.000'
-                          y1='75.000'
-                          x2='286.000'
-                          y2='75.000'
+                          y1='97.000'
+                          x2='676.000'
+                          y2='97.000'
                           class='separator'/>
-                    <text y='49.000'>- m_Unit:D</text>
-                    <text y='60.000'
-                          class='final'>- m_Value:java.math.BigDecimal</text>
+                    <text y='49.000'
+                          class='static final'># DEFAULT_VALIDATOR:java.util.function.BiPredicate</text>
+                    <text y='60.000'>- m_Unit:D</text>
                     <text y='71.000'
+                          class='final'>- m_Validator:java.util.function.BiPredicate&lt;D,java.math.BigDecimal&gt;</text>
+                    <text y='82.000'
+                          class='final'>- m_Value:java.math.BigDecimal</text>
+                    <text y='93.000'
                           class='static final'>- serialVersionUID:long</text>
                     <text x='5.000'
-                          y='88.000'># ValueBase(unit:D,value:java.math.BigDecimal)</text>
+                          y='110.000'># ValueBase(unit:D,value:java.math.BigDecimal,validator:java.util.function.BiPredicate&lt;D,java.math.BigDecimal&gt;)</text>
                     <text x='5.000'
-                          y='99.000'># ValueBase(unit:D,value:java.lang.String)</text>
+                          y='121.000'># ValueBase(unit:D,value:java.lang.String,validator:java.util.function.BiPredicate&lt;D,java.math.BigDecimal&gt;)</text>
                     <text x='5.000'
-                          y='110.000'># ValueBase(unit:D,value:N)</text>
+                          y='132.000'># ValueBase(unit:D,value:N,validator:java.util.function.BiPredicate&lt;D,java.math.BigDecimal&gt;)</text>
                     <text x='5.000'
-                          y='121.000'>+ baseValue():java.math.BigDecimal</text>
+                          y='143.000'>+ baseValue():java.math.BigDecimal</text>
                     <text x='5.000'
-                          y='132.000'>+ clone():I</text>
+                          y='154.000'>+ clone():I</text>
                     <text x='5.000'
-                          y='143.000'>+ copy():I</text>
+                          y='165.000'>+ copy():I</text>
                     <text x='5.000'
-                          y='154.000'>+ copy(unit:D):I</text>
+                          y='176.000'>+ copy(unit:D):I</text>
                     <text x='5.000'
-                          y='165.000'>+ equals(obj:java.lang.Object):boolean</text>
+                          y='187.000'>+ equals(obj:java.lang.Object):boolean</text>
                     <text x='5.000'
-                          y='176.000'>+ getUnit():D</text>
+                          y='198.000'>+ getUnit():D</text>
                     <text x='5.000'
-                          y='187.000'>+ hashCode():int</text>
+                          y='209.000'>+ hashCode():int</text>
                     <text x='5.000'
-                          y='198.000'>+ setUnit(dimension:D):void</text>
+                          y='220.000'>+ setUnit(dimension:D):void</text>
                     <text x='5.000'
-                          y='209.000'>+ toString():java.lang.String</text>
+                          y='231.000'>+ toString():java.lang.String</text>
+                    <text x='5.000'
+                          y='242.000'>- validate(value:java.math.BigDecimal):java.math.BigDecimal</text>
                 </g>
-                <g transform='translate(261.000 0.000)'>
+                <g transform='translate(651.000 0.000)'>
                     <rect x='0.000'
                           y='1.000'
                           width='50.000'
@@ -296,7 +302,7 @@
         </symbol>
         <clipPath id='ID000004'>
             <rect class='otherClass'
-                  height='359.000'
+                  height='348.000'
                   width='784.000'
                   x='0.000'
                   y='8.000'/>
@@ -307,7 +313,7 @@
                     <rect x='0.000'
                           y='8.000'
                           width='784.000'
-                          height='359.000'
+                          height='348.000'
                           class='otherClass'/>
                     <line x1='0.000'
                           y1='36.000'
@@ -389,9 +395,7 @@
                     <text x='5.000'
                           y='341.000'>&#x2A22; toString(locale:java.util.Locale,format:java.lang.String,useNiceUnit:boolean):java.lang.String</text>
                     <text x='5.000'
-                          y='352.000'>&#x2A22; validate(value:java.math.BigDecimal):java.math.BigDecimal</text>
-                    <text x='5.000'
-                          y='363.000'>&#x2A22; value():java.math.BigDecimal</text>
+                          y='352.000'>&#x2A22; value():java.math.BigDecimal</text>
                 </g>
                 <g transform='translate(759.000 0.000)'>
                     <rect x='0.000'
@@ -583,13 +587,13 @@
         </symbol>
     </defs>
     <path class='inheritance'
-          d='M621.500,1077.000 c0.000,-85.000,-12.500,0.000,-12.500,-85.000 v-15'
+          d='M621.500,1099.000 c0.000,-85.000,-12.500,0.000,-12.500,-85.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M584.000,772.000 c0.000,-560.000,-437.000,0.000,-437.000,-560.000 v-15'
+          d='M584.000,761.000 c0.000,-549.000,-437.000,0.000,-437.000,-549.000 v-15'
           marker-end='url(#inheritance)'/>
     <path class='implementation'
-          d='M634.000,772.000 c0.000,-93.000,-25.000,0.000,-25.000,-93.000 v-15'
+          d='M634.000,761.000 c0.000,-93.000,-25.000,0.000,-25.000,-93.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='inheritance'
           d='M534.000,305.000 c0.000,-203.000,-177.000,0.000,-177.000,-203.000 v-15'
@@ -621,10 +625,10 @@
     <use x='217.000'
          y='297.000'
          xlink:href='#org.tquadrat.foundation.value.api.DimensionedValue'/>
-    <use x='466.000'
-         y='764.000'
+    <use x='271.000'
+         y='753.000'
          xlink:href='#org.tquadrat.foundation.value.api.ValueBase'/>
     <use x='151.500'
-         y='1077.000'
+         y='1099.000'
          xlink:href='#org.tquadrat.foundation.value.SpeedValue'/>
 </svg>

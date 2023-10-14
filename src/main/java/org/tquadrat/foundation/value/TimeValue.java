@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,12 +17,12 @@
 
 package org.tquadrat.foundation.value;
 
+import static java.lang.String.format;
 import static java.util.FormattableFlags.ALTERNATE;
 import static java.util.FormattableFlags.LEFT_JUSTIFY;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.isNull;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 import static org.tquadrat.foundation.util.StringUtils.padLeft;
 import static org.tquadrat.foundation.util.StringUtils.padRight;
 import static org.tquadrat.foundation.value.Time.DAY;
@@ -48,12 +48,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  case, opposite to the time displayed on the wall-clock.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TimeValue.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: TimeValue.java 1073 2023-10-01 11:08:51Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: TimeValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TimeValue.java 1073 2023-10-01 11:08:51Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class TimeValue extends ValueBase<Time,TimeValue>
 {
@@ -79,7 +79,8 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
      */
     public TimeValue( final Time dimension, final BigDecimal value )
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  TimeValue()
 
     /**
@@ -94,7 +95,8 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
      */
     public TimeValue( final Time dimension, final String value ) throws NumberFormatException
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  TimeValue()
 
     /**
@@ -106,7 +108,8 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
      */
     public <N extends Number> TimeValue( final Time dimension, final N value )
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  TimeValue()
 
     /**
@@ -117,7 +120,8 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
      */
     public TimeValue( final Time dimension, final Duration value )
     {
-        super( NANOSECOND, requireNonNullArgument( value, "value" ).get( ChronoUnit.NANOS ) );
+        //noinspection unchecked
+        super( NANOSECOND, convertDurationToNanos( value ), DEFAULT_VALIDATOR );
         setUnit( dimension );
     }   //  TimeValue()
 
@@ -143,7 +147,13 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
      */
     public final Duration asDuration()
     {
-        final var retValue = Duration.ofNanos( convert( NANOSECOND ).longValue() );
+        final var billion = new BigDecimal( "1E+9" );
+        final var totalNanos = convert( NANOSECOND );
+        final var seconds = totalNanos.divideToIntegralValue( billion )
+            .longValue();
+        final var remainingNanos = totalNanos.remainder( billion )
+            .longValue();
+        final var retValue = Duration.ofSeconds( seconds, remainingNanos );
 
         //---* Done *----------------------------------------------------------
         return retValue;
@@ -152,7 +162,6 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final TimeValue clone()
     {
@@ -161,6 +170,24 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
         //---* Done *----------------------------------------------------------
         return retValue;
     }   //  clone()
+
+    /**
+     *  Converts the given instance of
+     *  {@link Duration}
+     *  to nanoseconds.
+     *
+     *  @param  duration    The duration.
+     *  @return The nanoseconds value,
+     */
+    private static final BigDecimal convertDurationToNanos( final Duration duration )
+    {
+        final var retValue = new BigDecimal( requireNonNullArgument( duration, "duration" ).getSeconds() )
+            .multiply( new BigDecimal( "1E+9" ) )
+            .add( new BigDecimal( duration.getNano() ) );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  convertDurationToNanos()
 
     /**
      *  {@inheritDoc}
@@ -190,7 +217,7 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
             }
             buffer.append( format( "%1.3fs", result [1] ) );
 
-            final var s = width < buffer.length() ? buffer.toString() : leftJustified ? padRight( buffer, width ) : padLeft( buffer, width );
+            final var string = width < buffer.length() ? buffer.toString() : leftJustified ? padRight( buffer, width ) : padLeft( buffer, width );
 
             /*
              * We do not use Formatter.out().append() because we do not know how to
@@ -198,7 +225,7 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
              * Appendable.append(). Using Formatter.format() assumes that Formatter
              * knows ...
              */
-            formatter.format( "%s", s );
+            formatter.format( "%s", string );
         }
         else
         {
@@ -219,7 +246,7 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
     private static final Duration translatePeriodToDuration( final Period period )
     {
         final var months = requireNonNullArgument( period, "period" ).toTotalMonths();
-        final var days = months * ChronoUnit.MONTHS.getDuration().getSeconds() / ChronoUnit.DAYS.getDuration().getSeconds() + period.getDays();
+        final var days = months * ChronoUnit.MONTHS.getDuration().getSeconds() / ChronoUnit.DAYS.getDuration().getSeconds() + (long) period.getDays();
         final var retValue = Duration.ofDays( days );
 
         //---* Done *----------------------------------------------------------

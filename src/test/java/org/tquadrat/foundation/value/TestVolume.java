@@ -18,13 +18,13 @@
 
 package org.tquadrat.foundation.value;
 
+import static java.lang.String.format;
 import static java.lang.System.out;
 import static java.util.Arrays.asList;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.math.BigDecimal;
 import java.util.Collection;
@@ -47,9 +47,9 @@ import org.tquadrat.foundation.lang.StringConverter;
  *  {@link VolumeValueStringConverter}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestVolume.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: TestVolume.java 1076 2023-10-03 18:36:07Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestVolume.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestVolume.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestVolume" )
 public class TestVolume extends DimensionedValueTestBase<Volume,VolumeValue>
 {
@@ -336,6 +336,7 @@ public class TestVolume extends DimensionedValueTestBase<Volume,VolumeValue>
             }
         }
 
+        //noinspection UnnecessaryCodeBlock
         {
             final Class<? extends Throwable> expectedException = EmptyArgumentException.class;
 
@@ -362,7 +363,7 @@ public class TestVolume extends DimensionedValueTestBase<Volume,VolumeValue>
 
     /**
      *  Provides test values for
-     *  {@link #testValueConversion(AreaValue)}.
+     *  {@link #testValueConversion(VolumeValue)}.
      *
      *  @return The test values.
      *  @throws Exception   Something unexpected went wrong.
@@ -381,7 +382,7 @@ public class TestVolume extends DimensionedValueTestBase<Volume,VolumeValue>
             {
                 builder.add( new VolumeValue( u, v ) );
             }
-            for( final var v : List.of( 0.0, 0.1, 0.2, 0.25, 0.5, 1, 2, 3.1415, 1e10 ) )
+            for( final var v : List.of( 0.0, 0.1, 0.2, 0.25, 0.5, 1, 2, 3.1415, 1.0E+10 ) )
             {
                 builder.add( new VolumeValue( u, v ) );
             }
@@ -394,7 +395,7 @@ public class TestVolume extends DimensionedValueTestBase<Volume,VolumeValue>
         return retValue;
     }   //  valueProviderBigDecimal()
 }
-//  class TestArea
+//  class TestVolume
 
 /*
  *  End of File

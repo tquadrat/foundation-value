@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -35,12 +35,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: MassValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: MassValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: MassValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: MassValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class MassValueStringConverter extends DimensionedValueStringConverter<Mass, MassValue>
 {
@@ -74,7 +74,6 @@ public class MassValueStringConverter extends DimensionedValueStringConverter<Ma
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final MassValue createValue( final BigDecimal number, final Mass dimension )
     {
@@ -90,16 +89,15 @@ public class MassValueStringConverter extends DimensionedValueStringConverter<Ma
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final MassValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}
      */
     @Override
-    protected Mass unitFromSymbol( final String unitSymbol )
+    protected Mass unitFromSymbol( final String symbol )
     {
-        return Mass.forUnit( unitSymbol );
+        return Mass.forUnit( symbol );
     }   //  dimensionFromUnit()
 }
 //  class MassValueStringConverter

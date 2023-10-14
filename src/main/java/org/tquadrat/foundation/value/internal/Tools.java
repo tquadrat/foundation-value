@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- *  Copyright © 2002-2022 by Thomas Thrien.
+ *  Copyright © 2002-2023 by Thomas Thrien.
  *  All Rights Reserved.
  * ============================================================================
  *  Licensed to the public under the agreements of the GNU Lesser General Public
@@ -36,13 +36,14 @@ import org.tquadrat.foundation.i18n.BaseBundleName;
 /**
  *  Internal utilities for the value module.
  *
- *  @version $Id: Tools.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: Tools.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  *  @UMLGraph.link
  *  @since 0.1.0
  */
+@SuppressWarnings( "NewClassNamingConvention" )
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: Tools.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Tools.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class Tools
 {

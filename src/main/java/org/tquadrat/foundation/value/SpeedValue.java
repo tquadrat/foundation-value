@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -32,12 +32,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for speeds.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SpeedValue.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: SpeedValue.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SpeedValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SpeedValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class SpeedValue extends ValueBase<Speed,SpeedValue>
 {
@@ -63,7 +63,8 @@ public final class SpeedValue extends ValueBase<Speed,SpeedValue>
      */
     public SpeedValue( final Speed dimension, final BigDecimal value )
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  SpeedValue()
 
     /**
@@ -78,7 +79,8 @@ public final class SpeedValue extends ValueBase<Speed,SpeedValue>
      */
     public SpeedValue( final Speed dimension, final String value ) throws NumberFormatException
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  SpeedValue()
 
     /**
@@ -90,7 +92,8 @@ public final class SpeedValue extends ValueBase<Speed,SpeedValue>
      */
     public <N extends Number> SpeedValue( final Speed dimension, final N value )
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  SpeedValue()
 
     /**
@@ -103,7 +106,8 @@ public final class SpeedValue extends ValueBase<Speed,SpeedValue>
     @SuppressWarnings( "UseOfConcreteClass" )
     public SpeedValue( final Speed dimension, final LengthValue distance, final TimeValue time )
     {
-        super( dimension, requireNonNullArgument( distance, "distance" ).baseValue().divide( requireNonNullArgument( time, "time" ).baseValue(), DECIMAL128 ) );
+        //noinspection unchecked
+        super( dimension, requireNonNullArgument( distance, "distance" ).baseValue().divide( requireNonNullArgument( time, "time" ).baseValue(), DECIMAL128 ), DEFAULT_VALIDATOR );
     }   //  SpeedValue()
 
         /*---------*\
@@ -112,7 +116,6 @@ public final class SpeedValue extends ValueBase<Speed,SpeedValue>
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final SpeedValue clone()
     {

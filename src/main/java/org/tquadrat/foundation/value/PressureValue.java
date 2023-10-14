@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -30,12 +30,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for pressure values.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: PressureValue.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: PressureValue.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: PressureValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: PressureValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class PressureValue extends ValueBase<Pressure,PressureValue>
 {
@@ -61,7 +61,8 @@ public final class PressureValue extends ValueBase<Pressure,PressureValue>
      */
     public PressureValue( final Pressure dimension, final BigDecimal value )
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  PressureValue()
 
     /**
@@ -76,7 +77,8 @@ public final class PressureValue extends ValueBase<Pressure,PressureValue>
      */
     public PressureValue( final Pressure dimension, final String value ) throws NumberFormatException
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  PressureValue()
 
     /**
@@ -88,7 +90,8 @@ public final class PressureValue extends ValueBase<Pressure,PressureValue>
      */
     public <N extends Number> PressureValue( final Pressure dimension, final N value )
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  PressureValue()
 
         /*---------*\
@@ -97,7 +100,6 @@ public final class PressureValue extends ValueBase<Pressure,PressureValue>
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final PressureValue clone()
     {

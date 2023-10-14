@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,13 +17,13 @@
 
 package org.tquadrat.foundation.value.api;
 
+import static java.lang.String.format;
 import static java.math.RoundingMode.HALF_EVEN;
 import static java.util.FormattableFlags.LEFT_JUSTIFY;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.isNull;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 import static org.tquadrat.foundation.util.StringUtils.padRight;
 
 import java.io.Serializable;
@@ -38,12 +38,11 @@ import java.util.Locale;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.annotation.MountPoint;
 import org.tquadrat.foundation.exception.UnexpectedExceptionError;
 
 /**
- *  The definition for a value with a dimension. <br>
- *  <br>Although the unit for the dimension may be changed, instances of
+ *  <p>{@summary The definition for a value with a dimension.}</p>
+ *  <p>Although the unit for the dimension may be changed, instances of
  *  classes implementing this interface can be assumed to be immutable as the
  *  <i>value</i> remains always the same. So at least the results of the
  *  methods
@@ -55,12 +54,12 @@ import org.tquadrat.foundation.exception.UnexpectedExceptionError;
  *  (while the results from
  *  {@link #toString()}
  *  may differ after a call to
- *  {@link #setUnit(Dimension)}).<br>
- *  <br>All concrete (non-abstract) implementations of this interface should be
- *  {@code final}.
+ *  {@link #setUnit(Dimension)}).</p>
+ *  <p>All concrete (non-abstract) implementations of this interface should be
+ *  {@code final}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DimensionedValue.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: DimensionedValue.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @param  <D> The dimension.
@@ -68,9 +67,10 @@ import org.tquadrat.foundation.exception.UnexpectedExceptionError;
  *  @UMLGraph.link
  */
 @SuppressWarnings( "ClassWithTooManyMethods" )
-@ClassVersion( sourceVersion = "$Id: DimensionedValue.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DimensionedValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
-public interface DimensionedValue<D extends Dimension> extends Cloneable, Comparable<DimensionedValue<D>>, Formattable, Serializable
+public sealed interface DimensionedValue<D extends Dimension> extends Cloneable, Comparable<DimensionedValue<D>>, Formattable, Serializable
+    permits ValueBase
 {
         /*-----------*\
     ====** Constants **========================================================
@@ -101,7 +101,7 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
 
     /**
      *  <p>{@summary Returns the base value (this value, converted to the base
-      *  unit).}</p>
+     *  unit).}</p>
      *  <p>According to the result, this is the same as calling</p>
      *  <pre><code>convert( baseUnit() );</code></pre>.
      *
@@ -115,8 +115,6 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
      *  Creates a new copy of this value.
      *
      *  @return The copy.
-     *
-     *  @see Object#clone()
      */
     public DimensionedValue<D> clone();
 
@@ -233,7 +231,6 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
      *  @param  o   The other value.
      *  @return {@code true} if they are equal, {@code false} if not.
      *
-     *  @see Object#equals(Object)
      *  @see Dimension#baseUnit()
      */
     @Override
@@ -256,7 +253,6 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
      *      {@code null}.
      *
      *  @see java.util.Formatter
-     *  @see java.util.Formattable#formatTo(java.util.Formatter, int, int, int)
      */
     @SuppressWarnings( "ProhibitedExceptionThrown" )
     @Override
@@ -264,11 +260,11 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
     {
         if( isNull( formatter ) ) throw new NullPointerException( "formatter is null" );
 
-        var s = toString( width, precision );
+        var string = toString( width, precision );
 
-        if( ((flags & LEFT_JUSTIFY) == LEFT_JUSTIFY) && (width > s.trim().length()) )
+        if( ((flags & LEFT_JUSTIFY) == LEFT_JUSTIFY) && (width > string.trim().length()) )
         {
-            s = padRight( s.trim(), width );
+            string = padRight( string.trim(), width );
         }
 
         /*
@@ -277,7 +273,7 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
          * Appendable.append(). Using Formatter.format() assumes that Formatter
          * knows ...
          */
-        formatter.format( "%s", s );
+        formatter.format( "%s", string );
     }   //  formatTo()
 
     /**
@@ -366,7 +362,7 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
         {
             //---* Let's get the constructor *---------------------------------
             final Constructor<DimensionedValue<D>> constructor;
-            if( requireNonNullArgument( dimension, "dimension" ) instanceof Enum<?> enumConstant )
+            if( requireNonNullArgument( dimension, "dimension" ) instanceof final Enum<?> enumConstant )
             {
                 final var enumClass = enumConstant.getDeclaringClass();
                 //noinspection unchecked
@@ -374,7 +370,7 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
             }
             else
             {
-                throw new IllegalArgumentException( format( "Invalid type for 'dimension': %s", dimension.getClass().getName() ) );
+                throw new IllegalArgumentException( "Invalid type for 'dimension': %s".formatted( dimension.getClass().getName() ) );
             }
 
             //---* Create the new value *----------------------------------
@@ -587,23 +583,6 @@ public interface DimensionedValue<D extends Dimension> extends Cloneable, Compar
         return retValue;
     }   //  toString()
 
-    /**
-     *  <p>{@summary Validates the given value, based on the type of the
-     *  dimension.}</p>
-     *  <p>This method will be called by the constructors always with the
-     *  {@linkplain #baseUnit() base unit}
-     *  value just before the value will be initialised.</p>
-     *  <p>This default implementation will do nothing.</p>
-     *
-     *  @param  value   The value in base units.
-     *  @return The value.
-     *  @throws IllegalArgumentException    The validation failed.
-     */
-    @MountPoint
-    public default BigDecimal validate( final BigDecimal value ) throws IllegalArgumentException
-    {
-        return value;
-    }   //  validate()
     /**
      *  Returns the numerical value.
      *

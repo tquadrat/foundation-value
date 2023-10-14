@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -30,12 +30,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for weights and masses.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: MassValue.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: MassValue.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: MassValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: MassValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class MassValue extends ValueBase<Mass,MassValue>
 {
@@ -61,7 +61,8 @@ public final class MassValue extends ValueBase<Mass,MassValue>
      */
     public MassValue( final Mass dimension, final BigDecimal value )
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  MassValue()
 
     /**
@@ -76,7 +77,8 @@ public final class MassValue extends ValueBase<Mass,MassValue>
      */
     public MassValue( final Mass dimension, final String value ) throws NumberFormatException
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  MassValue()
 
     /**
@@ -88,7 +90,8 @@ public final class MassValue extends ValueBase<Mass,MassValue>
      */
     public <N extends Number> MassValue( final Mass dimension, final N value )
     {
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  MassValue()
 
         /*---------*\
@@ -97,7 +100,6 @@ public final class MassValue extends ValueBase<Mass,MassValue>
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final MassValue clone()
     {

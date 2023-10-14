@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -30,12 +30,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for lengths.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: LengthValue.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: LengthValue.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: LengthValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: LengthValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class LengthValue extends ValueBase<Length,LengthValue>
 {
@@ -62,7 +62,8 @@ public final class LengthValue extends ValueBase<Length,LengthValue>
     public LengthValue( final Length dimension, final BigDecimal value )
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  LengthValue()
 
     /**
@@ -78,7 +79,8 @@ public final class LengthValue extends ValueBase<Length,LengthValue>
     public LengthValue( final Length dimension, final String value ) throws NumberFormatException
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  LengthValue()
 
     /**
@@ -91,7 +93,8 @@ public final class LengthValue extends ValueBase<Length,LengthValue>
     public <N extends Number> LengthValue( final Length dimension, final N value )
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        //noinspection unchecked
+        super( dimension, value, DEFAULT_VALIDATOR );
     }   //  LengthValue()
 
         /*---------*\
@@ -100,7 +103,6 @@ public final class LengthValue extends ValueBase<Length,LengthValue>
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final LengthValue clone()
     {

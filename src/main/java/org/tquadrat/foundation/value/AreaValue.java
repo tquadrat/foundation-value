@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -23,6 +23,7 @@ import static org.tquadrat.foundation.value.Area.SQUARE_METER;
 
 import java.io.Serial;
 import java.math.BigDecimal;
+import java.util.function.BiPredicate;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
@@ -32,15 +33,24 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for areas.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AreaValue.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: AreaValue.java 1073 2023-10-01 11:08:51Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: AreaValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: AreaValue.java 1073 2023-10-01 11:08:51Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class AreaValue extends ValueBase<Area, AreaValue>
 {
+        /*-----------*\
+    ====** Constants **========================================================
+        \*-----------*/
+    /**
+     *  <p>{@summary The validator for areas.}</p>
+     *  An area may not be less than 0.
+     */
+    private static final BiPredicate<Area, BigDecimal> AREA_VALIDATOR = ( unit, value) -> !(value.signum() < 0);
+
         /*------------------------*\
     ====** Static Initialisations **===========================================
         \*------------------------*/
@@ -64,7 +74,7 @@ public final class AreaValue extends ValueBase<Area, AreaValue>
     public AreaValue( final Area dimension, final BigDecimal value )
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        super( dimension, value, AREA_VALIDATOR );
     }   //  AreaValue()
 
     /**
@@ -80,7 +90,7 @@ public final class AreaValue extends ValueBase<Area, AreaValue>
     public AreaValue( final Area dimension, final String value ) throws NumberFormatException
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        super( dimension, value, AREA_VALIDATOR );
     }   //  AreaValue()
 
     /**
@@ -93,12 +103,12 @@ public final class AreaValue extends ValueBase<Area, AreaValue>
     public <N extends Number> AreaValue( final Area dimension, final N value )
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        super( dimension, value, AREA_VALIDATOR );
     }   //  AreaValue()
 
     /**
-     *  Creates a new {@code AreaValue} instance. An area can be determined by
-     *  multiplication of length and width.
+     *  <p>{@summary Creates a new {@code AreaValue} instance.} An area can be
+     *  determined by multiplication of length and width.</p>
      *
      *  @param  dimension   The dimension.
      *  @param  length  The length.
@@ -107,7 +117,7 @@ public final class AreaValue extends ValueBase<Area, AreaValue>
     @SuppressWarnings( "UseOfConcreteClass" )
     public AreaValue( final Area dimension, final LengthValue length, final LengthValue width )
     {
-        super( SQUARE_METER, requireNonNullArgument( length, "length" ).baseValue().multiply( requireNonNullArgument( width, "width" ).baseValue() ) );
+        super( SQUARE_METER, requireNonNullArgument( length, "length" ).baseValue().multiply( requireNonNullArgument( width, "width" ).baseValue() ), AREA_VALIDATOR );
         setUnit( requireNonNullArgument( dimension, "dimension" ) );
     }   //  AreaValue()
 
@@ -117,7 +127,6 @@ public final class AreaValue extends ValueBase<Area, AreaValue>
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final AreaValue clone()
     {

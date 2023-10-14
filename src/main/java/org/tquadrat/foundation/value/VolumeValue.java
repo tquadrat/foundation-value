@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2022 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -23,24 +23,34 @@ import static org.tquadrat.foundation.value.Volume.CUBIC_METER;
 
 import java.io.Serial;
 import java.math.BigDecimal;
+import java.util.function.BiPredicate;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.value.api.ValueBase;
 
 /**
- *  A value class for areas.
+ *  A value class for volumes.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: VolumeValue.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: VolumeValue.java 1073 2023-10-01 11:08:51Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: VolumeValue.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: VolumeValue.java 1073 2023-10-01 11:08:51Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class VolumeValue extends ValueBase<Volume, VolumeValue>
 {
+        /*-----------*\
+    ====** Constants **========================================================
+        \*-----------*/
+    /**
+     *  <p>{@summary The validator for volumes.}</p>
+     *  A volume may not be less than 0.
+     */
+    private static final BiPredicate<Volume, BigDecimal> VOLUME_VALIDATOR = ( unit, value) -> !(value.signum() < 0);
+
         /*------------------------*\
     ====** Static Initialisations **===========================================
         \*------------------------*/
@@ -64,7 +74,7 @@ public final class VolumeValue extends ValueBase<Volume, VolumeValue>
     public VolumeValue( final Volume dimension, final BigDecimal value )
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        super( dimension, value, VOLUME_VALIDATOR );
     }   //  VolumeValue()
 
     /**
@@ -80,7 +90,7 @@ public final class VolumeValue extends ValueBase<Volume, VolumeValue>
     public VolumeValue( final Volume dimension, final String value ) throws NumberFormatException
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        super( dimension, value, VOLUME_VALIDATOR );
     }   //  VolumeValue()
 
     /**
@@ -93,7 +103,7 @@ public final class VolumeValue extends ValueBase<Volume, VolumeValue>
     public <N extends Number> VolumeValue( final Volume dimension, final N value )
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        super( dimension, value, VOLUME_VALIDATOR );
     }   //  VolumeValue()
 
     /**
@@ -106,12 +116,11 @@ public final class VolumeValue extends ValueBase<Volume, VolumeValue>
      *  @param  width   The width.
      *  @param  height  The height.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
-    public VolumeValue( final Volume dimension, final LengthValue length, final LengthValue width, final LengthValue height )
+    public VolumeValue( final Volume dimension, @SuppressWarnings( "UseOfConcreteClass" ) final LengthValue length, @SuppressWarnings( "UseOfConcreteClass" ) final LengthValue width, @SuppressWarnings( "UseOfConcreteClass" ) final LengthValue height )
     {
         super( CUBIC_METER, requireNonNullArgument( length, "length" ).baseValue()
             .multiply( requireNonNullArgument( width, "width" ).baseValue() )
-            .multiply( requireNonNullArgument( height, "height" ).baseValue() ) );
+            .multiply( requireNonNullArgument( height, "height" ).baseValue() ), VOLUME_VALIDATOR );
         setUnit( requireNonNullArgument( dimension, "dimension" ) );
     }   //  VolumeValue()
 
@@ -124,11 +133,10 @@ public final class VolumeValue extends ValueBase<Volume, VolumeValue>
      *  @param  area    The ground area.
      *  @param  height  The height.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
-    public VolumeValue( final Volume dimension, final AreaValue area, final LengthValue height )
+    public VolumeValue( final Volume dimension, @SuppressWarnings( "UseOfConcreteClass" ) final AreaValue area, @SuppressWarnings( "UseOfConcreteClass" ) final LengthValue height )
     {
         super( CUBIC_METER, requireNonNullArgument( area, "area" ).baseValue()
-            .multiply( requireNonNullArgument( height, "height" ).baseValue() ) );
+            .multiply( requireNonNullArgument( height, "height" ).baseValue() ), VOLUME_VALIDATOR );
         setUnit( requireNonNullArgument( dimension, "dimension" ) );
     }   //  VolumeValue()
 
@@ -138,7 +146,6 @@ public final class VolumeValue extends ValueBase<Volume, VolumeValue>
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final VolumeValue clone()
     {

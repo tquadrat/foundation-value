@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,10 +17,10 @@
 
 package org.tquadrat.foundation.value;
 
+import static java.lang.String.format;
 import static java.util.Arrays.stream;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.math.BigDecimal;
 
@@ -33,12 +33,13 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  the same, from a physical or scientific point of view ...).
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Mass.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: Mass.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Mass.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@SuppressWarnings( "NewClassNamingConvention" )
+@ClassVersion( sourceVersion = "$Id: Mass.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Mass implements DimensionWithLinearConversion
 {
@@ -113,7 +114,21 @@ public enum Mass implements DimensionWithLinearConversion
     /**
      *  A metric ton.
      */
-    TON( new BigDecimal( "1000.0" ), "t" );
+    TON( new BigDecimal( "1000.0" ), "t" ),
+
+    /**
+     *  <p>{@summary The (estimated) mass of our sun.} This is often used when
+     *  comparing stars.</p>
+     */
+    @API( status = STABLE, since ="0.3.0" )
+    SOLAR_MASS( new BigDecimal( "1.989E+30" ), "SolarMass" ),
+
+    /**
+     *  <p>{@summary The mass of our planet Earth.} This is often used when
+     *  comparing masses of astronomical objects.</p>
+     */
+    @API( status = STABLE, since ="0.3.0" )
+    EARTH_MASS( new BigDecimal( "5.9722E+24" ), "EarthMass" );
 
         /*------------*\
     ====** Attributes **=======================================================

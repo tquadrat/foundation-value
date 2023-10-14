@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -35,12 +35,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: LengthValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: LengthValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: LengthValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: LengthValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class LengthValueStringConverter extends DimensionedValueStringConverter<Length,LengthValue>
 {
@@ -74,7 +74,6 @@ public class LengthValueStringConverter extends DimensionedValueStringConverter<
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final LengthValue createValue( final BigDecimal number, final Length dimension )
     {
@@ -90,16 +89,15 @@ public class LengthValueStringConverter extends DimensionedValueStringConverter<
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final LengthValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}
      */
     @Override
-    protected Length unitFromSymbol( final String unitSymbol )
+    protected Length unitFromSymbol( final String symbol )
     {
-        return Length.forUnit( unitSymbol );
+        return Length.forUnit( symbol );
     }   //  dimensionFromUnit()
 }
 //  class LengthValueStringConverter

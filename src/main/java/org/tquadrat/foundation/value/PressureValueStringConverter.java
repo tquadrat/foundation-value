@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -34,12 +34,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: PressureValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: PressureValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: PressureValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: PressureValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class PressureValueStringConverter extends DimensionedValueStringConverter<Pressure,PressureValue>
 {
@@ -65,7 +65,6 @@ public class PressureValueStringConverter extends DimensionedValueStringConverte
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final PressureValue createValue( final BigDecimal number, final Pressure dimension )
     {
@@ -81,16 +80,15 @@ public class PressureValueStringConverter extends DimensionedValueStringConverte
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final PressureValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}
      */
     @Override
-    protected Pressure unitFromSymbol( final String unit )
+    protected Pressure unitFromSymbol( final String symbol )
     {
-        return Pressure.forUnit( unit );
+        return Pressure.forUnit( symbol );
     }   //  unitFromSymbol()
 }
 //  class PressureValueStringConverter

@@ -152,7 +152,7 @@
                     <text y='52.000'
                           class='final'>- m_UnitSymbol:java.lang.String</text>
                     <text y='63.000'
-                          class='final'>- m_TemporalUnit:java.time.temporal.TemporalUnit</text>
+                          class='final'>- m_TemporalUnit:java.util.Optional&lt;java.time.temporal.TemporalUnit&gt;</text>
                     <text y='74.000'
                           class='final'>- m_TimeUnit:java.util.concurrent.TimeUnit</text>
                     <text x='5.000'

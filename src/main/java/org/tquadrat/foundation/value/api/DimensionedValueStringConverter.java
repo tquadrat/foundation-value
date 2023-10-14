@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -18,11 +18,11 @@
 
 package org.tquadrat.foundation.value.api;
 
+import static java.lang.String.format;
 import static java.util.Locale.ROOT;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.isNull;
 import static org.tquadrat.foundation.lang.Objects.nonNull;
-import static org.tquadrat.foundation.util.StringUtils.format;
 import static org.tquadrat.foundation.util.StringUtils.isEmptyOrBlank;
 
 import java.io.Serial;
@@ -45,7 +45,7 @@ import org.tquadrat.foundation.util.stringconverter.BigDecimalStringConverter;
  *  <code>16.0&nbsp;t</code>.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DimensionedValueStringConverter.java 897 2021-04-06 21:34:01Z tquadrat $
+ *  @version $Id: DimensionedValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @param  <D> The type for the dimension.
@@ -53,7 +53,7 @@ import org.tquadrat.foundation.util.stringconverter.BigDecimalStringConverter;
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: DimensionedValueStringConverter.java 897 2021-04-06 21:34:01Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DimensionedValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public abstract class DimensionedValueStringConverter<D extends Dimension,V extends DimensionedValue<D>> implements StringConverter<V>
 {

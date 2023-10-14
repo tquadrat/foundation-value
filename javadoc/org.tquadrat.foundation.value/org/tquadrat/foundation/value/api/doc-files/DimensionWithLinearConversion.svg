@@ -6,7 +6,7 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      version='1.1'
      baseProfile='full'
-     width='4626.000'
+     width='6216.000'
      height='973.000'>
     <defs>
         <style><![CDATA[
@@ -162,6 +162,66 @@
         </symbol>
         <clipPath id='ID000002'>
             <rect class='otherClass'
+                  height='172.000'
+                  width='484.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.value.Energy'>
+            <g>
+                <g clip-path='url(#ID000002)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='484.000'
+                          height='172.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='484.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='227.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Enum&#xBB;</text>
+                    <text x='224.000'
+                          y='24.000'>Energy</text>
+                    <line x1='0.000'
+                          y1='67.000'
+                          x2='484.000'
+                          y2='67.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='final'>- m_Factor:java.math.BigDecimal</text>
+                    <text y='52.000'
+                          class='final'>- m_Precision:int</text>
+                    <text y='63.000'
+                          class='final'>- m_UnitSymbol:java.lang.String</text>
+                    <text x='5.000'
+                          y='80.000'>- Energy(factor:java.math.BigDecimal,unitSymbol:java.lang.String)</text>
+                    <text x='5.000'
+                          y='91.000'>- Energy(factor:java.math.BigDecimal,unitSymbol:java.lang.String,precision:int)</text>
+                    <text x='5.000'
+                          y='102.000'
+                          class='static'>+ values():org.tquadrat.foundation.value.Energy[]</text>
+                    <text x='5.000'
+                          y='113.000'
+                          class='static'>+ valueOf(name:java.lang.String):org.tquadrat.foundation.value.Energy</text>
+                    <text x='5.000'
+                          y='124.000'>+ baseUnit():org.tquadrat.foundation.value.Energy</text>
+                    <text x='5.000'
+                          y='135.000'>+ factor():java.math.BigDecimal</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='static'>+ forUnit(unitSymbol:java.lang.String):org.tquadrat.foundation.value.Energy</text>
+                    <text x='5.000'
+                          y='157.000'>+ getPrecision():int</text>
+                    <text x='5.000'
+                          y='168.000'>+ unitSymbol():java.lang.String</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000003'>
+            <rect class='otherClass'
                   height='139.000'
                   width='472.000'
                   x='0.000'
@@ -169,7 +229,7 @@
         </clipPath>
         <symbol id='org.tquadrat.foundation.value.Pressure'>
             <g>
-                <g clip-path='url(#ID000002)'>
+                <g clip-path='url(#ID000003)'>
                     <rect x='0.000'
                           y='0.000'
                           width='472.000'
@@ -214,7 +274,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000003'>
+        <clipPath id='ID000004'>
             <rect class='otherClass'
                   height='227.000'
                   width='892.000'
@@ -223,7 +283,7 @@
         </clipPath>
         <symbol id='org.tquadrat.foundation.value.Time'>
             <g>
-                <g clip-path='url(#ID000003)'>
+                <g clip-path='url(#ID000004)'>
                     <rect x='0.000'
                           y='0.000'
                           width='892.000'
@@ -249,7 +309,7 @@
                     <text y='52.000'
                           class='final'>- m_UnitSymbol:java.lang.String</text>
                     <text y='63.000'
-                          class='final'>- m_TemporalUnit:java.time.temporal.TemporalUnit</text>
+                          class='final'>- m_TemporalUnit:java.util.Optional&lt;java.time.temporal.TemporalUnit&gt;</text>
                     <text y='74.000'
                           class='final'>- m_TimeUnit:java.util.concurrent.TimeUnit</text>
                     <text x='5.000'
@@ -287,7 +347,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000004'>
+        <clipPath id='ID000005'>
             <rect class='otherClass'
                   height='172.000'
                   width='496.000'
@@ -296,7 +356,7 @@
         </clipPath>
         <symbol id='org.tquadrat.foundation.value.DataSize'>
             <g>
-                <g clip-path='url(#ID000004)'>
+                <g clip-path='url(#ID000005)'>
                     <rect x='0.000'
                           y='0.000'
                           width='496.000'
@@ -347,7 +407,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000005'>
+        <clipPath id='ID000006'>
             <rect class='otherClass'
                   height='139.000'
                   width='454.000'
@@ -356,7 +416,7 @@
         </clipPath>
         <symbol id='org.tquadrat.foundation.value.Speed'>
             <g>
-                <g clip-path='url(#ID000005)'>
+                <g clip-path='url(#ID000006)'>
                     <rect x='0.000'
                           y='0.000'
                           width='454.000'
@@ -401,7 +461,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000006'>
+        <clipPath id='ID000007'>
             <rect class='otherClass'
                   height='172.000'
                   width='484.000'
@@ -410,7 +470,7 @@
         </clipPath>
         <symbol id='org.tquadrat.foundation.value.Volume'>
             <g>
-                <g clip-path='url(#ID000006)'>
+                <g clip-path='url(#ID000007)'>
                     <rect x='0.000'
                           y='0.000'
                           width='484.000'
@@ -461,7 +521,67 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000007'>
+        <clipPath id='ID000008'>
+            <rect class='otherClass'
+                  height='172.000'
+                  width='478.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.value.Power'>
+            <g>
+                <g clip-path='url(#ID000008)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='478.000'
+                          height='172.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='478.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='224.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Enum&#xBB;</text>
+                    <text x='224.000'
+                          y='24.000'>Power</text>
+                    <line x1='0.000'
+                          y1='67.000'
+                          x2='478.000'
+                          y2='67.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='final'>- m_Factor:java.math.BigDecimal</text>
+                    <text y='52.000'
+                          class='final'>- m_Precision:int</text>
+                    <text y='63.000'
+                          class='final'>- m_UnitSymbol:java.lang.String</text>
+                    <text x='5.000'
+                          y='80.000'>- Power(factor:java.math.BigDecimal,unitSymbol:java.lang.String)</text>
+                    <text x='5.000'
+                          y='91.000'>- Power(factor:java.math.BigDecimal,unitSymbol:java.lang.String,precision:int)</text>
+                    <text x='5.000'
+                          y='102.000'
+                          class='static'>+ values():org.tquadrat.foundation.value.Power[]</text>
+                    <text x='5.000'
+                          y='113.000'
+                          class='static'>+ valueOf(name:java.lang.String):org.tquadrat.foundation.value.Power</text>
+                    <text x='5.000'
+                          y='124.000'>+ baseUnit():org.tquadrat.foundation.value.Power</text>
+                    <text x='5.000'
+                          y='135.000'>+ factor():java.math.BigDecimal</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='static'>+ forUnit(unitSymbol:java.lang.String):org.tquadrat.foundation.value.Power</text>
+                    <text x='5.000'
+                          y='157.000'>+ getPrecision():int</text>
+                    <text x='5.000'
+                          y='168.000'>+ unitSymbol():java.lang.String</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000009'>
             <rect class='otherClass'
                   height='172.000'
                   width='472.000'
@@ -470,7 +590,7 @@
         </clipPath>
         <symbol id='org.tquadrat.foundation.value.Area'>
             <g>
-                <g clip-path='url(#ID000007)'>
+                <g clip-path='url(#ID000009)'>
                     <rect x='0.000'
                           y='0.000'
                           width='472.000'
@@ -521,7 +641,67 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000008'>
+        <clipPath id='ID000010'>
+            <rect class='otherClass'
+                  height='172.000'
+                  width='478.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.value.Force'>
+            <g>
+                <g clip-path='url(#ID000010)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='478.000'
+                          height='172.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='478.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='224.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Enum&#xBB;</text>
+                    <text x='224.000'
+                          y='24.000'>Force</text>
+                    <line x1='0.000'
+                          y1='67.000'
+                          x2='478.000'
+                          y2='67.000'
+                          class='separator'/>
+                    <text y='41.000'
+                          class='final'>- m_Factor:java.math.BigDecimal</text>
+                    <text y='52.000'
+                          class='final'>- m_Precision:int</text>
+                    <text y='63.000'
+                          class='final'>- m_UnitSymbol:java.lang.String</text>
+                    <text x='5.000'
+                          y='80.000'>- Force(factor:java.math.BigDecimal,unitSymbol:java.lang.String)</text>
+                    <text x='5.000'
+                          y='91.000'>- Force(factor:java.math.BigDecimal,unitSymbol:java.lang.String,precision:int)</text>
+                    <text x='5.000'
+                          y='102.000'
+                          class='static'>+ values():org.tquadrat.foundation.value.Force[]</text>
+                    <text x='5.000'
+                          y='113.000'
+                          class='static'>+ valueOf(name:java.lang.String):org.tquadrat.foundation.value.Force</text>
+                    <text x='5.000'
+                          y='124.000'>+ baseUnit():org.tquadrat.foundation.value.Force</text>
+                    <text x='5.000'
+                          y='135.000'>+ factor():java.math.BigDecimal</text>
+                    <text x='5.000'
+                          y='146.000'
+                          class='static'>+ forUnit(unitSymbol:java.lang.String):org.tquadrat.foundation.value.Force</text>
+                    <text x='5.000'
+                          y='157.000'>+ getPrecision():int</text>
+                    <text x='5.000'
+                          y='168.000'>+ unitSymbol():java.lang.String</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000011'>
             <rect class='otherClass'
                   height='172.000'
                   width='484.000'
@@ -530,7 +710,7 @@
         </clipPath>
         <symbol id='org.tquadrat.foundation.value.Length'>
             <g>
-                <g clip-path='url(#ID000008)'>
+                <g clip-path='url(#ID000011)'>
                     <rect x='0.000'
                           y='0.000'
                           width='484.000'
@@ -581,7 +761,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000009'>
+        <clipPath id='ID000012'>
             <rect class='otherClass'
                   height='172.000'
                   width='472.000'
@@ -590,7 +770,7 @@
         </clipPath>
         <symbol id='org.tquadrat.foundation.value.Mass'>
             <g>
-                <g clip-path='url(#ID000009)'>
+                <g clip-path='url(#ID000012)'>
                     <rect x='0.000'
                           y='0.000'
                           width='472.000'
@@ -641,7 +821,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000010'>
+        <clipPath id='ID000013'>
             <rect class='otherClass'
                   height='150.000'
                   width='412.000'
@@ -650,7 +830,7 @@
         </clipPath>
         <symbol id='org.tquadrat.foundation.value.api.Dimension'>
             <g>
-                <g clip-path='url(#ID000010)'>
+                <g clip-path='url(#ID000013)'>
                     <rect x='0.000'
                           y='0.000'
                           width='412.000'
@@ -702,7 +882,7 @@
                 </g>
             </g>
         </symbol>
-        <clipPath id='ID000011'>
+        <clipPath id='ID000014'>
             <rect class='externalClass'
                   height='62.000'
                   width='82.000'
@@ -711,7 +891,7 @@
         </clipPath>
         <symbol id='java.io.Serializable'>
             <g>
-                <g clip-path='url(#ID000011)'>
+                <g clip-path='url(#ID000014)'>
                     <rect x='0.000'
                           y='0.000'
                           width='82.000'
@@ -742,66 +922,84 @@
         </symbol>
     </defs>
     <path class='implementation'
-          d='M261.000,621.000 c0.000,-85.000,1947.000,0.000,1947.000,-85.000 v-15'
+          d='M267.000,621.000 c0.000,-85.000,2691.000,0.000,2691.000,-85.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='implementation'
-          d='M993.000,621.000 c0.000,-85.000,1245.000,0.000,1245.000,-85.000 v-15'
+          d='M795.000,621.000 c0.000,-85.000,2193.000,0.000,2193.000,-85.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='implementation'
-          d='M1737.000,621.000 c0.000,-85.000,531.000,0.000,531.000,-85.000 v-15'
+          d='M1527.000,621.000 c0.000,-85.000,1491.000,0.000,1491.000,-85.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='implementation'
-          d='M2262.000,621.000 c0.000,-85.000,36.000,0.000,36.000,-85.000 v-15'
+          d='M2271.000,621.000 c0.000,-85.000,777.000,0.000,777.000,-85.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='implementation'
-          d='M2781.000,621.000 c0.000,-85.000,-453.000,0.000,-453.000,-85.000 v-15'
+          d='M2796.000,621.000 c0.000,-85.000,282.000,0.000,282.000,-85.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='implementation'
-          d='M3309.000,621.000 c0.000,-85.000,-951.000,0.000,-951.000,-85.000 v-15'
+          d='M3315.000,621.000 c0.000,-85.000,-207.000,0.000,-207.000,-85.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='implementation'
-          d='M3837.000,621.000 c0.000,-85.000,-1449.000,0.000,-1449.000,-85.000 v-15'
+          d='M3846.000,621.000 c0.000,-85.000,-708.000,0.000,-708.000,-85.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='implementation'
-          d='M4365.000,621.000 c0.000,-85.000,-1947.000,0.000,-1947.000,-85.000 v-15'
+          d='M4371.000,621.000 c0.000,-85.000,-1203.000,0.000,-1203.000,-85.000 v-15'
+          marker-end='url(#implementation)'/>
+    <path class='implementation'
+          d='M4896.000,621.000 c0.000,-85.000,-1698.000,0.000,-1698.000,-85.000 v-15'
+          marker-end='url(#implementation)'/>
+    <path class='implementation'
+          d='M5427.000,621.000 c0.000,-85.000,-2199.000,0.000,-2199.000,-85.000 v-15'
+          marker-end='url(#implementation)'/>
+    <path class='implementation'
+          d='M5955.000,621.000 c0.000,-85.000,-2697.000,0.000,-2697.000,-85.000 v-15'
           marker-end='url(#implementation)'/>
     <path class='inheritance'
-          d='M2313.000,437.000 L2313.000,337.000'
+          d='M3108.000,437.000 L3108.000,337.000'
           marker-end='url(#inheritance)'/>
     <path class='inheritance'
-          d='M2313.000,187.000 L2313.000,87.000'
+          d='M3108.000,187.000 L3108.000,87.000'
           marker-end='url(#inheritance)'/>
-    <use x='2272.000'
+    <use x='3067.000'
          y='25.000'
          xlink:href='#java.io.Serializable'/>
-    <use x='2107.000'
+    <use x='2902.000'
          y='187.000'
          xlink:href='#org.tquadrat.foundation.value.api.Dimension'/>
-    <use x='2107.000'
+    <use x='2902.000'
          y='437.000'
          xlink:href='#org.tquadrat.foundation.value.api.DimensionWithLinearConversion'/>
     <use x='25.000'
          y='621.000'
+         xlink:href='#org.tquadrat.foundation.value.Energy'/>
+    <use x='559.000'
+         y='621.000'
          xlink:href='#org.tquadrat.foundation.value.Pressure'/>
-    <use x='547.000'
+    <use x='1081.000'
          y='621.000'
          xlink:href='#org.tquadrat.foundation.value.Time'/>
-    <use x='1489.000'
+    <use x='2023.000'
          y='621.000'
          xlink:href='#org.tquadrat.foundation.value.DataSize'/>
-    <use x='2035.000'
+    <use x='2569.000'
          y='621.000'
          xlink:href='#org.tquadrat.foundation.value.Speed'/>
-    <use x='2539.000'
-         y='621.000'
-         xlink:href='#org.tquadrat.foundation.value.Volume'/>
     <use x='3073.000'
          y='621.000'
+         xlink:href='#org.tquadrat.foundation.value.Volume'/>
+    <use x='3607.000'
+         y='621.000'
+         xlink:href='#org.tquadrat.foundation.value.Power'/>
+    <use x='4135.000'
+         y='621.000'
          xlink:href='#org.tquadrat.foundation.value.Area'/>
-    <use x='3595.000'
+    <use x='4657.000'
+         y='621.000'
+         xlink:href='#org.tquadrat.foundation.value.Force'/>
+    <use x='5185.000'
          y='621.000'
          xlink:href='#org.tquadrat.foundation.value.Length'/>
-    <use x='4129.000'
+    <use x='5719.000'
          y='621.000'
          xlink:href='#org.tquadrat.foundation.value.Mass'/>
 </svg>

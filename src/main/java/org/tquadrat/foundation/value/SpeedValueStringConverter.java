@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -34,12 +34,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SpeedValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: SpeedValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SpeedValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SpeedValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class SpeedValueStringConverter extends DimensionedValueStringConverter<Speed,SpeedValue>
 {
@@ -65,7 +65,6 @@ public class SpeedValueStringConverter extends DimensionedValueStringConverter<S
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final SpeedValue createValue( final BigDecimal number, final Speed dimension )
     {
@@ -81,16 +80,15 @@ public class SpeedValueStringConverter extends DimensionedValueStringConverter<S
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final SpeedValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}
      */
     @Override
-    protected Speed unitFromSymbol( final String unit )
+    protected Speed unitFromSymbol( final String symbol )
     {
-        return Speed.forUnit( unit );
+        return Speed.forUnit( symbol );
     }   //  unitFromSymbol()
 }
 //  class SpeedValueStringConverter

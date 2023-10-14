@@ -156,7 +156,7 @@
                           y='80.000'
                           class='static'>+ provider():org.tquadrat.foundation.value.AreaValueStringConverter</text>
                     <text x='5.000'
-                          y='91.000'># unitFromSymbol(unitSymbol:java.lang.String):org.tquadrat.foundation.value.Area</text>
+                          y='91.000'># unitFromSymbol(symbol:java.lang.String):org.tquadrat.foundation.value.Area</text>
                 </g>
             </g>
         </symbol>

@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2022 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -21,6 +21,7 @@ import static org.apiguardian.api.API.Status.STABLE;
 
 import java.io.Serial;
 import java.math.BigDecimal;
+import java.util.function.BiPredicate;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
@@ -30,15 +31,24 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for temperatures.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TemperatureValue.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: TemperatureValue.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: TemperatureValue.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TemperatureValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class TemperatureValue extends ValueBase<Temperature, TemperatureValue>
 {
+        /*-----------*\
+    ====** Constants **========================================================
+        \*-----------*/
+    /**
+     *  <p>{@summary The validator for temperatures.}</p>
+     *  A temperature in Kelvin may not be less than 0.
+     */
+    private static final BiPredicate<Temperature, BigDecimal> TEMPERATURE_VALIDATOR = ( unit, value) -> !(value.signum() < 0);
+
         /*------------------------*\
     ====** Static Initialisations **===========================================
         \*------------------------*/
@@ -62,7 +72,7 @@ public final class TemperatureValue extends ValueBase<Temperature, TemperatureVa
     public TemperatureValue( final Temperature dimension, final BigDecimal value )
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        super( dimension, value, TEMPERATURE_VALIDATOR );
     }   //  TemperatureValue()
 
     /**
@@ -78,7 +88,7 @@ public final class TemperatureValue extends ValueBase<Temperature, TemperatureVa
     public TemperatureValue( final Temperature dimension, final String value ) throws NumberFormatException
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        super( dimension, value, TEMPERATURE_VALIDATOR );
     }   //  TemperatureValue()
 
     /**
@@ -91,7 +101,7 @@ public final class TemperatureValue extends ValueBase<Temperature, TemperatureVa
     public <N extends Number> TemperatureValue( final Temperature dimension, final N value )
     {
         //---* Daddy's performing the null check ... *-------------------------
-        super( dimension, value );
+        super( dimension, value, TEMPERATURE_VALIDATOR );
     }   //  TemperatureValue()
 
         /*---------*\
@@ -100,7 +110,6 @@ public final class TemperatureValue extends ValueBase<Temperature, TemperatureVa
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     public final TemperatureValue clone()
     {
@@ -110,22 +119,6 @@ public final class TemperatureValue extends ValueBase<Temperature, TemperatureVa
         //---* Done *----------------------------------------------------------
         return retValue;
     }   //  clone()
-
-    /**
-     *  Validates that the given temperature is not below 0.
-     *
-     *  @param  value   The value in base units.
-     *  @return The value.
-     *  @throws IllegalArgumentException    The validation failed.
-     */
-    @Override
-    public final BigDecimal validate( final BigDecimal value ) throws IllegalArgumentException
-    {
-        if( value.signum() <0 ) throw new IllegalArgumentException( "Temperature cannot be less than 0 K" );
-
-        //---* Done *----------------------------------------------------------
-        return value;
-    }   //  validate()
 }
 //  class TemperatureValue
 

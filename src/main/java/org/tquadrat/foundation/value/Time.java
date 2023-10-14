@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,20 +17,20 @@
 
 package org.tquadrat.foundation.value;
 
+import static java.lang.String.format;
 import static java.math.BigDecimal.TEN;
 import static java.util.Arrays.stream;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.CommonConstants.TROPICAL_YEAR;
-import static org.tquadrat.foundation.lang.Objects.nonNull;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
 import java.time.temporal.TemporalUnit;
+import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
 import org.apiguardian.api.API;
@@ -47,12 +47,13 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  wherever possible.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Time.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: Time.java 1073 2023-10-01 11:08:51Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Time.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@SuppressWarnings( "NewClassNamingConvention" )
+@ClassVersion( sourceVersion = "$Id: Time.java 1073 2023-10-01 11:08:51Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Time implements DimensionWithLinearConversion
 {
@@ -60,14 +61,14 @@ public enum Time implements DimensionWithLinearConversion
     ====** Enum Declaration **=================================================
         \*------------------*/
     /**
-     *  A nano second.
+     *  A nanosecond.
      */
-    NANOSECOND( new BigDecimal( "0.000000001" ), "ns", TimeUnit.NANOSECONDS, ChronoUnit.NANOS ),
+    NANOSECOND( new BigDecimal( "1E-9" ), "ns", TimeUnit.NANOSECONDS, ChronoUnit.NANOS ),
 
     /**
      *  A microsecond.
      */
-    MICROSECOND( new BigDecimal( "0.000001" ), "µs", TimeUnit.MICROSECONDS, ChronoUnit.MICROS ),
+    MICROSECOND( new BigDecimal( "1E-6" ), "µs", TimeUnit.MICROSECONDS, ChronoUnit.MICROS ),
 
     /**
      *  A millisecond.
@@ -125,6 +126,7 @@ public enum Time implements DimensionWithLinearConversion
             final var retValue = new TemporalUnitImpl( "Fortnights" );
 
             //---* Done *------------------------------------------------------
+            //noinspection ReturnOfInnerClass
             return retValue;
         }   //  asTemporalUnit
     },
@@ -144,6 +146,7 @@ public enum Time implements DimensionWithLinearConversion
             final var retValue = new TemporalUnitImpl( "BankMonths" );
 
             //---* Done *------------------------------------------------------
+            //noinspection ReturnOfInnerClass
             return retValue;
         }   //  asTemporalUnit
     },
@@ -170,6 +173,7 @@ public enum Time implements DimensionWithLinearConversion
             final var retValue = new TemporalUnitImpl( "BankYears" );
 
             //---* Done *------------------------------------------------------
+            //noinspection ReturnOfInnerClass
             return retValue;
         }   //  asTemporalUnit
     },
@@ -190,6 +194,7 @@ public enum Time implements DimensionWithLinearConversion
             final var retValue = new TemporalUnitImpl( "TropicalYears" );
 
             //---* Done *------------------------------------------------------
+            //noinspection ReturnOfInnerClass
             return retValue;
         }   //  asTemporalUnit
     },
@@ -228,12 +233,12 @@ public enum Time implements DimensionWithLinearConversion
      *  based on the settings for the {@code Time} instance.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: Time.java 995 2022-01-23 01:09:35Z tquadrat $
+     *  @version $Id: Time.java 1073 2023-10-01 11:08:51Z tquadrat $
      *  @since 0.1.0
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: Time.java 995 2022-01-23 01:09:35Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: Time.java 1073 2023-10-01 11:08:51Z tquadrat $" )
     @API( status = STABLE, since = "0.1.0" )
     private class TemporalUnitImpl implements TemporalUnit
     {
@@ -334,7 +339,8 @@ public enum Time implements DimensionWithLinearConversion
     /**
      *  The time unit as used by the {@code java.time} package.
      */
-    private final TemporalUnit m_TemporalUnit;
+    @SuppressWarnings( "OptionalUsedAsFieldOrParameterType" )
+    private final Optional<TemporalUnit> m_TemporalUnit;
 
     /**
      *  The time unit as used by the {@code java.util.concurrent} package.
@@ -359,7 +365,7 @@ public enum Time implements DimensionWithLinearConversion
         m_Factor = factor.stripTrailingZeros();
         m_UnitSymbol = unitSymbol;
         m_TimeUnit = timeUnit;
-        m_TemporalUnit = nonNull( temporalUnit ) ? temporalUnit : asTemporalUnit();
+        m_TemporalUnit = Optional.ofNullable( temporalUnit );
     }   //  Time()
 
         /*---------*\
@@ -481,7 +487,7 @@ public enum Time implements DimensionWithLinearConversion
      *      there is no corresponding time unit.
      */
     @SuppressWarnings( "PublicMethodNotExposedInInterface" )
-    public final TemporalUnit getTemporalUnit() { return m_TemporalUnit; }
+    public final TemporalUnit getTemporalUnit() { return m_TemporalUnit.orElse( asTemporalUnit() ); }
 
     /**
      *  Returns the correspondent

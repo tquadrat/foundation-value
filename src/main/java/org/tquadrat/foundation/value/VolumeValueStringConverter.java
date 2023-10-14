@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2022 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -35,12 +35,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: VolumeValueStringConverter.java 989 2022-01-13 19:09:58Z tquadrat $
+ *  @version $Id: VolumeValueStringConverter.java 1073 2023-10-01 11:08:51Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: VolumeValueStringConverter.java 989 2022-01-13 19:09:58Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: VolumeValueStringConverter.java 1073 2023-10-01 11:08:51Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class VolumeValueStringConverter extends DimensionedValueStringConverter<Volume,VolumeValue>
 {
@@ -74,7 +74,6 @@ public class VolumeValueStringConverter extends DimensionedValueStringConverter<
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final VolumeValue createValue( final BigDecimal number, final Volume dimension )
     {
@@ -90,16 +89,15 @@ public class VolumeValueStringConverter extends DimensionedValueStringConverter<
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final VolumeValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}
      */
     @Override
-    protected Volume unitFromSymbol( final String unitSymbol )
+    protected Volume unitFromSymbol( final String symbol )
     {
-        return Volume.forUnit( unitSymbol );
+        return Volume.forUnit( symbol );
     }   //  dimensionFromUnit()
 }
 //  class VolumeValueStringConverter

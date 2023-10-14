@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2019 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -44,12 +44,12 @@ import org.tquadrat.foundation.util.RangeMap;
  *  The wind force according to the Beaufort table.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: WindForce.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: WindForce.java 1073 2023-10-01 11:08:51Z tquadrat $
  *  @since 0.0.4
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: WindForce.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: WindForce.java 1073 2023-10-01 11:08:51Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public enum WindForce
 {
@@ -279,6 +279,7 @@ public enum WindForce
 
     static
     {
+        @SuppressWarnings( "OverlyLongLambda" )
         final var supplier = (Supplier<RangeMap<WindForce>>) () ->
         {
             final var retValue = RangeMap.of( BFT13, true );
@@ -365,7 +366,6 @@ public enum WindForce
      *
      *  @return The maximum speed.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     public final SpeedValue getMaxSpeed() { return m_MaxSpeed; }
 
     /**

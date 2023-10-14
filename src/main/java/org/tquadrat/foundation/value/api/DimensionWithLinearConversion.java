@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -44,12 +44,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  division or multiplication of a factor, as for length or speed.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DimensionWithLinearConversion.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: DimensionWithLinearConversion.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: DimensionWithLinearConversion.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DimensionWithLinearConversion.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public interface DimensionWithLinearConversion extends Dimension
 {
@@ -84,8 +84,7 @@ public interface DimensionWithLinearConversion extends Dimension
     @Override
     public default UnaryOperator<BigDecimal> fromBase()
     {
-        @SuppressWarnings( "RedundantExplicitVariableType" )
-        final UnaryOperator<BigDecimal> retValue = b -> b.multiply( factor() );
+        final UnaryOperator<BigDecimal> retValue = base -> base.multiply( factor() );
 
         //---* Done *----------------------------------------------------------
         return retValue;
@@ -100,12 +99,11 @@ public interface DimensionWithLinearConversion extends Dimension
     @Override
     public default UnaryOperator<BigDecimal> toBase()
     {
-        @SuppressWarnings( "RedundantExplicitVariableType" )
-        final UnaryOperator<BigDecimal> retValue = b -> b.divide( factor(), MATH_CONTEXT );
+        final UnaryOperator<BigDecimal> retValue = value -> value.divide( factor(), MATH_CONTEXT );
 
         //---* Done *----------------------------------------------------------
         return retValue;
-    }   //  fromBase()
+    }   //  toBase()
 }
 //  interface DimensionWithLinearConversion
 

@@ -18,8 +18,11 @@
 
 import org.tquadrat.foundation.value.AreaValueStringConverter;
 import org.tquadrat.foundation.value.DataSizeValueStringConverter;
+import org.tquadrat.foundation.value.EnergyValueStringConverter;
+import org.tquadrat.foundation.value.ForceValueStringConverter;
 import org.tquadrat.foundation.value.LengthValueStringConverter;
 import org.tquadrat.foundation.value.MassValueStringConverter;
+import org.tquadrat.foundation.value.PowerValueStringConverter;
 import org.tquadrat.foundation.value.PressureValueStringConverter;
 import org.tquadrat.foundation.value.SpeedValueStringConverter;
 import org.tquadrat.foundation.value.TemperatureValueStringConverter;
@@ -49,8 +52,11 @@ module org.tquadrat.foundation.value
     provides org.tquadrat.foundation.lang.StringConverter with
         AreaValueStringConverter,
         DataSizeValueStringConverter,
+        EnergyValueStringConverter,
+        ForceValueStringConverter,
         LengthValueStringConverter,
         MassValueStringConverter,
+        PowerValueStringConverter,
         PressureValueStringConverter,
         SpeedValueStringConverter,
         TemperatureValueStringConverter,

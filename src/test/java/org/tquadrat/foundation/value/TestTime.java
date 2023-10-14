@@ -18,13 +18,13 @@
 
 package org.tquadrat.foundation.value;
 
+import static java.lang.String.format;
 import static java.lang.System.out;
 import static java.util.Arrays.asList;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.math.BigDecimal;
 import java.util.Collection;
@@ -48,9 +48,9 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  {@link TimeValueAccessor}.
  *
  *  @author Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestTime.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: TestTime.java 1076 2023-10-03 18:36:07Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestTime.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestTime.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestTime" )
 public class TestTime extends DimensionedValueTestBase<Time,TimeValue>
 {

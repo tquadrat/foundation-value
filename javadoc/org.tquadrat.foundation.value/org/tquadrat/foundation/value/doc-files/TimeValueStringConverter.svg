@@ -154,7 +154,7 @@
                           y='69.000'
                           class='static'>+ provider():org.tquadrat.foundation.value.TimeValueStringConverter</text>
                     <text x='5.000'
-                          y='80.000'># unitFromSymbol(unit:java.lang.String):org.tquadrat.foundation.value.Time</text>
+                          y='80.000'># unitFromSymbol(symbol:java.lang.String):org.tquadrat.foundation.value.Time</text>
                 </g>
             </g>
         </symbol>

@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,10 +17,10 @@
 
 package org.tquadrat.foundation.value;
 
+import static java.lang.String.format;
 import static java.util.Arrays.stream;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 import static org.tquadrat.foundation.value.api.DimensionedValue.MATH_CONTEXT;
 import static org.tquadrat.foundation.value.internal.Tools.V0p8;
 import static org.tquadrat.foundation.value.internal.Tools.V0t525;
@@ -46,12 +46,12 @@ import org.tquadrat.foundation.value.api.Dimension;
  *  The various instances of temperature &hellip;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Temperature.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: Temperature.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Temperature.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Temperature.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Temperature implements Dimension
 {
@@ -70,7 +70,7 @@ public enum Temperature implements Dimension
             @Translation( language = "en", text = "Kelvin" )
         }
     )
-    KELVIN( k -> k, k -> k, "K", 2 ),
+    KELVIN( kelvinValue -> kelvinValue, kelvinValue -> kelvinValue, "K", 2 ),
 
     /**
      *  Celsius.
@@ -84,7 +84,7 @@ public enum Temperature implements Dimension
             @Translation( language = "en", text = "Celsius" )
         }
     )
-    CELSIUS( k -> k.subtract( V273 ), c -> c.add( V273 ), "C", 1 )
+    CELSIUS( kelvinValue -> kelvinValue.subtract( V273 ), celsiusValue -> celsiusValue.add( V273 ), "C", 1 )
     {
         /**
          *  {@inheritDoc}
@@ -105,7 +105,7 @@ public enum Temperature implements Dimension
             @Translation( language = "en", text = "Fahrenheit" )
         }
     )
-    FAHRENHEIT( k -> k.subtract( V273 ).divide( V5t9, MATH_CONTEXT ).add( V32 ), f -> f.subtract( V32 ).multiply( V5t9 ).add( V273 ), "F" )
+    FAHRENHEIT( kelvinValue -> kelvinValue.subtract( V273 ).divide( V5t9, MATH_CONTEXT ).add( V32 ), fahrenheitValue -> fahrenheitValue.subtract( V32 ).multiply( V5t9 ).add( V273 ), "F" )
     {
         /**
          *  {@inheritDoc}
@@ -126,7 +126,7 @@ public enum Temperature implements Dimension
             @Translation( language = "en", text = "Rankine" )
         }
     )
-    RANKINE( k -> k.divide( V5t9, MATH_CONTEXT ), r -> r.multiply( V5t9 ), "Ra", 1 )
+    RANKINE( kelvinValue -> kelvinValue.divide( V5t9, MATH_CONTEXT ), rankineValue -> rankineValue.multiply( V5t9 ), "Ra", 1 )
     {
         /**
          *  {@inheritDoc}
@@ -147,7 +147,7 @@ public enum Temperature implements Dimension
             @Translation( language = "en", text = "Delisle" )
         }
     )
-    DELISLE( k -> k.subtract( V273 ).multiply( V1p5 ).subtract( V100 ), d -> d.add( V100 ).divide( V1p5, MATH_CONTEXT ).add( V273 ) ,"De", 1 )
+    DELISLE( kelvinValue -> kelvinValue.subtract( V273 ).multiply( V1p5 ).subtract( V100 ), delisleValue -> delisleValue.add( V100 ).divide( V1p5, MATH_CONTEXT ).add( V273 ) ,"De", 1 )
     {
         /**
          *  {@inheritDoc}
@@ -168,7 +168,7 @@ public enum Temperature implements Dimension
             @Translation( language = "en", text = "Réaumur" )
         }
     )
-    REAUMUR( k -> k.subtract( V273 ).multiply( V0p8 ), r -> r.divide( V0p8, MATH_CONTEXT ).add( V273 ),"Re" )
+    REAUMUR( kelvinValue -> kelvinValue.subtract( V273 ).multiply( V0p8 ), reaumurValue -> reaumurValue.divide( V0p8, MATH_CONTEXT ).add( V273 ),"Re" )
     {
         /**
          *  {@inheritDoc}
@@ -192,7 +192,7 @@ public enum Temperature implements Dimension
             @Translation( language = "en", text = "Newton" )
         }
     )
-    NEWTON( k -> k.subtract( V273 ).multiply( V1t3 ), r -> r.divide( V1t3, MATH_CONTEXT ).add( V273 ),"N" )
+    NEWTON( kelvinValue -> kelvinValue.subtract( V273 ).multiply( V1t3 ), newtonValue -> newtonValue.divide( V1t3, MATH_CONTEXT ).add( V273 ),"N" )
     {
         /**
          *  {@inheritDoc}
@@ -213,7 +213,7 @@ public enum Temperature implements Dimension
             @Translation( language = "en", text = "Rømer" )
         }
     )
-    RØMER( k -> k.subtract( V273 ).multiply( V0t525 ).add( V7p5 ), r -> r.subtract( V7p5 ).divide( V0t525, MATH_CONTEXT ).add( V273 ), "Ro" )
+    RØMER( kelvinValue -> kelvinValue.subtract( V273 ).multiply( V0t525 ).add( V7p5 ), romerValue -> romerValue.subtract( V7p5 ).divide( V0t525, MATH_CONTEXT ).add( V273 ), "Ro" )
     {
         /**
          *  {@inheritDoc}

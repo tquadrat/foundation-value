@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -34,12 +34,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TimeValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: TimeValueStringConverter.java 1073 2023-10-01 11:08:51Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: TimeValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TimeValueStringConverter.java 1073 2023-10-01 11:08:51Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class TimeValueStringConverter extends DimensionedValueStringConverter<Time,TimeValue>
 {
@@ -65,7 +65,6 @@ public class TimeValueStringConverter extends DimensionedValueStringConverter<Ti
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final TimeValue createValue( final BigDecimal number, final Time dimension )
     {
@@ -81,16 +80,15 @@ public class TimeValueStringConverter extends DimensionedValueStringConverter<Ti
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final TimeValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}
      */
     @Override
-    protected Time unitFromSymbol( final String unit )
+    protected Time unitFromSymbol( final String symbol )
     {
-        return Time.forUnit( unit );
+        return Time.forUnit( symbol );
     }   //  unitFromSymbol()
 }
 //  class TimeValueStringConverter

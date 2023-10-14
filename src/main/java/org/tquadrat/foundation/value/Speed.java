@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,16 +17,15 @@
 
 package org.tquadrat.foundation.value;
 
+import static java.lang.String.format;
 import static java.math.MathContext.DECIMAL128;
 import static java.util.Arrays.stream;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 import static org.tquadrat.foundation.value.Length.FOOT;
 import static org.tquadrat.foundation.value.Length.KILOMETER;
 import static org.tquadrat.foundation.value.Length.MILE;
 import static org.tquadrat.foundation.value.Length.NAUTICAL_MILE;
-import static org.tquadrat.foundation.value.Length.ÅNGSTRÖM;
 import static org.tquadrat.foundation.value.Time.HOUR;
 import static org.tquadrat.foundation.value.Time.SECOND;
 import static org.tquadrat.foundation.value.Time.WEEK;
@@ -47,12 +46,13 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  {@link Time#factor()}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Speed.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: Speed.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.0.4
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Speed.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@SuppressWarnings( "NewClassNamingConvention" )
+@ClassVersion( sourceVersion = "$Id: Speed.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public enum Speed implements DimensionWithLinearConversion
 {
@@ -60,13 +60,14 @@ public enum Speed implements DimensionWithLinearConversion
     ====** Enum Declaration **=================================================
         \*------------------*/
     /**
-     *  &#x00C5;ngström per Week; this is by far not a useful unit for speed,
-     *  but it is the implementation of a famous instance of Murphy's Law:
-     *  &quot;Units are always provided in the most impractical form, e.g.
-     *  speeds as &#x00C5;ngström per Week.&quot;
+     *  <p>{@summary &#x00C5;ngström per Week.} This is by far not a useful
+     *  unit for speed, but it is the implementation of a famous instance of
+     *  Murphy's Laws:</p>
+     *  <cite>&quot;Units are always provided in the most impractical form, e.g.
+     *  a speed as &#x00C5;ngström per Week.&quot;</cite>
      */
     @SuppressWarnings( "NonAsciiCharacters" )
-    ÅNGSTRÖM_PER_WEEK( ÅNGSTRÖM.factor().divide( WEEK.factor(), DECIMAL128 ), "\u212B/w" ),
+    ÅNGSTRÖM_PER_WEEK( Length.ÅNGSTRÖM.factor().divide( WEEK.factor(), DECIMAL128 ), "Å/w" ),
 
     /**
      *  Feet per second.

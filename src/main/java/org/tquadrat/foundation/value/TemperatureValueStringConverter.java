@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2022 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -35,12 +35,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TemperatureValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: TemperatureValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: TemperatureValueStringConverter.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TemperatureValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class TemperatureValueStringConverter extends DimensionedValueStringConverter<Temperature,TemperatureValue>
 {
@@ -74,7 +74,6 @@ public final class TemperatureValueStringConverter extends DimensionedValueStrin
     /**
      *  {@inheritDoc}
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     @Override
     protected final TemperatureValue createValue( final BigDecimal number, final Temperature dimension )
     {
@@ -90,16 +89,15 @@ public final class TemperatureValueStringConverter extends DimensionedValueStrin
      *
      *  @return The instance for this {@code StringConverter} implementation.
      */
-    @SuppressWarnings( "UseOfConcreteClass" )
     public static final TemperatureValueStringConverter provider() { return INSTANCE; }
 
     /**
      *  {@inheritDoc}
      */
     @Override
-    protected Temperature unitFromSymbol( final String unitSymbol )
+    protected Temperature unitFromSymbol( final String symbol )
     {
-        return Temperature.forUnit( unitSymbol );
+        return Temperature.forUnit( symbol );
     }   //  dimensionFromUnit()
 }
 //  class TemperatureValueStringConverter

@@ -17,6 +17,7 @@
 
 package org.tquadrat.foundation.value;
 
+import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -25,7 +26,6 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.junit.jupiter.api.Assumptions.assumeFalse;
 import static org.tquadrat.foundation.lang.Objects.isNull;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -46,12 +46,12 @@ import org.tquadrat.foundation.value.api.DimensionedValue;
  *  {@link DimensionedValue}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DimensionedValueTestBase.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: DimensionedValueTestBase.java 1076 2023-10-03 18:36:07Z tquadrat $
  *
  *  @param  <D> The type for the dimension.
  *  @param  <T> The type for the dimensioned value.
  */
-@ClassVersion( sourceVersion = "$Id: DimensionedValueTestBase.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DimensionedValueTestBase.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 public abstract class DimensionedValueTestBase<D extends Dimension, T extends DimensionedValue<D>> extends TestBaseClass
 {
         /*---------*\

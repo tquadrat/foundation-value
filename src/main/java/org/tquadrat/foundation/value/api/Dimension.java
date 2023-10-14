@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -42,12 +42,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  {@linkplain #unitSymbol() symbol}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Dimension.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: Dimension.java 1072 2023-09-30 20:44:38Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Dimension.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Dimension.java 1072 2023-09-30 20:44:38Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public interface Dimension extends Serializable
 {
@@ -78,8 +78,6 @@ public interface Dimension extends Serializable
      *  should be implemented as <i>Multitons</i> (constants of the
      *  implementing class, without the option to create additional instances
      *  on runtime).</p>
-     *
-     *  @see Object#equals(Object)
      */
     @Override
     public boolean equals( Object o );

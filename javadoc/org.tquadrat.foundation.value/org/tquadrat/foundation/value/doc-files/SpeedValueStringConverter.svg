@@ -154,7 +154,7 @@
                           y='69.000'
                           class='static'>+ provider():org.tquadrat.foundation.value.SpeedValueStringConverter</text>
                     <text x='5.000'
-                          y='80.000'># unitFromSymbol(unit:java.lang.String):org.tquadrat.foundation.value.Speed</text>
+                          y='80.000'># unitFromSymbol(symbol:java.lang.String):org.tquadrat.foundation.value.Speed</text>
                 </g>
             </g>
         </symbol>
