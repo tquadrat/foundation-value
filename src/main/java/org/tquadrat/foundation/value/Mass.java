@@ -33,13 +33,13 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  the same, from a physical or scientific point of view ...).
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Mass.java 1072 2023-09-30 20:44:38Z tquadrat $
+ *  @version $Id: Mass.java 1077 2023-10-14 23:00:23Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "NewClassNamingConvention" )
-@ClassVersion( sourceVersion = "$Id: Mass.java 1072 2023-09-30 20:44:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Mass.java 1077 2023-10-14 23:00:23Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Mass implements DimensionWithLinearConversion
 {

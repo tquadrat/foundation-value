@@ -32,12 +32,12 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  The various instances of energy &hellip;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Energy.java 1073 2023-10-01 11:08:51Z tquadrat $
+ *  @version $Id: Energy.java 1077 2023-10-14 23:00:23Z tquadrat $
  *  @since 0.3.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: Energy.java 1073 2023-10-01 11:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Energy.java 1077 2023-10-14 23:00:23Z tquadrat $" )
 @API( status = STABLE, since = "0.3.0" )
 public enum Energy implements DimensionWithLinearConversion
 {
