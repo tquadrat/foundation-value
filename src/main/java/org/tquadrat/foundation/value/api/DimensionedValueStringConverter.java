@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2024 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -45,7 +45,7 @@ import org.tquadrat.foundation.util.stringconverter.BigDecimalStringConverter;
  *  <code>16.0&nbsp;t</code>.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DimensionedValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $
+ *  @version $Id: DimensionedValueStringConverter.java 1105 2024-02-28 12:58:46Z tquadrat $
  *  @since 0.1.0
  *
  *  @param  <D> The type for the dimension.
@@ -53,7 +53,7 @@ import org.tquadrat.foundation.util.stringconverter.BigDecimalStringConverter;
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: DimensionedValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DimensionedValueStringConverter.java 1105 2024-02-28 12:58:46Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public abstract class DimensionedValueStringConverter<D extends Dimension,V extends DimensionedValue<D>> implements StringConverter<V>
 {
@@ -70,6 +70,8 @@ public abstract class DimensionedValueStringConverter<D extends Dimension,V exte
         \*------------*/
     /**
      *  The subject class for this converter.
+     *
+     *  @serial
      */
     private final Class<V> m_SubjectClass;
 

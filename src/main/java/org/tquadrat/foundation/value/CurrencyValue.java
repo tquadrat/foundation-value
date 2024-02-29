@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2024 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -51,12 +51,12 @@ import org.tquadrat.foundation.value.api.DimensionedValue;
  *  {@link DimensionedValue}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: CurrencyValue.java 1072 2023-09-30 20:44:38Z tquadrat $
+ *  @version $Id: CurrencyValue.java 1105 2024-02-28 12:58:46Z tquadrat $
  *  @since 0.0.4
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1105 2024-02-28 12:58:46Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>, Formattable, Serializable
 {
@@ -65,11 +65,15 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
         \*------------*/
     /**
      *  The unit for the value.
+     *
+     *  @serial
      */
     private final Currency m_Unit;
 
     /**
      *  The numerical value for this instance.
+     *
+     *  @serial
      */
     private final BigDecimal m_Value;
 

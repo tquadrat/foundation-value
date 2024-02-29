@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2024 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -46,7 +46,7 @@ import org.tquadrat.foundation.exception.UnexpectedExceptionError;
  *  it returns {@code false}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: ValueBase.java 1072 2023-09-30 20:44:38Z tquadrat $
+ *  @version $Id: ValueBase.java 1105 2024-02-28 12:58:46Z tquadrat $
  *  @since 0.0.4
  *
  *  @param  <D> The dimension.
@@ -54,7 +54,7 @@ import org.tquadrat.foundation.exception.UnexpectedExceptionError;
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: ValueBase.java 1072 2023-09-30 20:44:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: ValueBase.java 1105 2024-02-28 12:58:46Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public abstract non-sealed class ValueBase<D extends Dimension, I extends DimensionedValue<D>> implements DimensionedValue<D>
 {
@@ -72,16 +72,22 @@ public abstract non-sealed class ValueBase<D extends Dimension, I extends Dimens
         \*------------*/
     /**
      *  The unit for the value.
+     *
+     *  @serial
      */
     private D m_Unit;
 
     /**
      *  The validation function.
+     *
+     *  @serial
      */
     private final BiPredicate<D,BigDecimal> m_Validator;
 
     /**
      *  The numerical value for this instance.
+     *
+     *  @serial
      */
     private final BigDecimal m_Value;
 
