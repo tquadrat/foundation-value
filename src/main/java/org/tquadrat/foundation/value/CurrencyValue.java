@@ -18,6 +18,7 @@
 package org.tquadrat.foundation.value;
 
 import static java.lang.String.format;
+import static java.util.FormattableFlags.ALTERNATE;
 import static java.util.FormattableFlags.LEFT_JUSTIFY;
 import static java.util.Locale.ROOT;
 import static org.apiguardian.api.API.Status.STABLE;
@@ -47,7 +48,7 @@ import org.tquadrat.foundation.value.api.DimensionedValue;
 /**
  *  <p>{@summary A value type for currency values.}</p>
  *  <p>As there is no constant conversion between currencies, this value type
- *  not implementing the interface
+ *  is not implementing the interface
  *  {@link DimensionedValue}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
@@ -248,7 +249,7 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
     {
         if( isNull( formatter ) ) throw new NullPointerException( "formatter is null" );
 
-        var string = toString( formatter.locale(), width, precision < 0 ? m_Unit.getDefaultFractionDigits() : precision );
+        var string = toString( formatter.locale(), width, precision < 0 ? m_Unit.getDefaultFractionDigits() : precision, (flags & ALTERNATE) == ALTERNATE );
 
         if( ((flags & LEFT_JUSTIFY) == LEFT_JUSTIFY) && (width > string.trim().length()) )
         {
