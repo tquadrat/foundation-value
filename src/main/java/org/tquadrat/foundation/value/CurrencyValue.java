@@ -52,12 +52,12 @@ import org.tquadrat.foundation.value.api.DimensionedValue;
  *  {@link DimensionedValue}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: CurrencyValue.java 1105 2024-02-28 12:58:46Z tquadrat $
+ *  @version $Id: CurrencyValue.java 1135 2024-05-28 21:32:48Z tquadrat $
  *  @since 0.0.4
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1105 2024-02-28 12:58:46Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1135 2024-05-28 21:32:48Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>, Formattable, Serializable
 {
