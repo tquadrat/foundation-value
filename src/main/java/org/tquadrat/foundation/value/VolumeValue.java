@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -33,12 +33,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for volumes.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: VolumeValue.java 1073 2023-10-01 11:08:51Z tquadrat $
+ *  @version $Id: VolumeValue.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: VolumeValue.java 1073 2023-10-01 11:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: VolumeValue.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class VolumeValue extends ValueBase<Volume, VolumeValue>
 {
@@ -49,7 +49,7 @@ public final class VolumeValue extends ValueBase<Volume, VolumeValue>
      *  <p>{@summary The validator for volumes.}</p>
      *  A volume may not be less than 0.
      */
-    private static final BiPredicate<Volume, BigDecimal> VOLUME_VALIDATOR = ( unit, value) -> !(value.signum() < 0);
+    private static final BiPredicate<Volume, BigDecimal> VOLUME_VALIDATOR = ( _, value) -> !(value.signum() < 0);
 
         /*------------------------*\
     ====** Static Initialisations **===========================================

@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -31,12 +31,12 @@ import org.tquadrat.foundation.value.api.ValueBase;
  *  A value class for temperatures.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TemperatureValue.java 1072 2023-09-30 20:44:38Z tquadrat $
+ *  @version $Id: TemperatureValue.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: TemperatureValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TemperatureValue.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class TemperatureValue extends ValueBase<Temperature, TemperatureValue>
 {
@@ -47,7 +47,7 @@ public final class TemperatureValue extends ValueBase<Temperature, TemperatureVa
      *  <p>{@summary The validator for temperatures.}</p>
      *  A temperature in Kelvin may not be less than 0.
      */
-    private static final BiPredicate<Temperature, BigDecimal> TEMPERATURE_VALIDATOR = ( unit, value) -> !(value.signum() < 0);
+    private static final BiPredicate<Temperature, BigDecimal> TEMPERATURE_VALIDATOR = ( _, value) -> !(value.signum() < 0);
 
         /*------------------------*\
     ====** Static Initialisations **===========================================

@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2024 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -52,12 +52,12 @@ import org.tquadrat.foundation.value.api.DimensionedValue;
  *  {@link DimensionedValue}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: CurrencyValue.java 1135 2024-05-28 21:32:48Z tquadrat $
+ *  @version $Id: CurrencyValue.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.0.4
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1135 2024-05-28 21:32:48Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>, Formattable, Serializable
 {
@@ -452,7 +452,7 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
      *  tag; the first takes the numerical value, the second the unit.</p>
      *  <p>The provided
      *  {@link Locale}
-     *  determines the decimal separator and the optional thousands
+     *  determines the decimal separator and the optional thousands'
      *  separator.</p>
      *
      *  @param  locale  The locale to use.

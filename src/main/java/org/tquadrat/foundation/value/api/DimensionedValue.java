@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -59,7 +59,7 @@ import org.tquadrat.foundation.exception.UnexpectedExceptionError;
  *  {@code final}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DimensionedValue.java 1072 2023-09-30 20:44:38Z tquadrat $
+ *  @version $Id: DimensionedValue.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.1.0
  *
  *  @param  <D> The dimension.
@@ -67,7 +67,7 @@ import org.tquadrat.foundation.exception.UnexpectedExceptionError;
  *  @UMLGraph.link
  */
 @SuppressWarnings( "ClassWithTooManyMethods" )
-@ClassVersion( sourceVersion = "$Id: DimensionedValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DimensionedValue.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public sealed interface DimensionedValue<D extends Dimension> extends Cloneable, Comparable<DimensionedValue<D>>, Formattable, Serializable
     permits ValueBase
@@ -560,7 +560,7 @@ public sealed interface DimensionedValue<D extends Dimension> extends Cloneable,
      *  tag; the first takes the numerical value, the second the unit.</p>
      *  <p>The provided
      *  {@link Locale}
-     *  determines the decimal separator and the optional thousands
+     *  determines the decimal separator and the optional thousands'
      *  separator.</p>
      *
      *  @param  locale  The locale to use.

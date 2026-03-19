@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -47,13 +47,13 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  wherever possible.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Time.java 1073 2023-10-01 11:08:51Z tquadrat $
+ *  @version $Id: Time.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "NewClassNamingConvention" )
-@ClassVersion( sourceVersion = "$Id: Time.java 1073 2023-10-01 11:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Time.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Time implements DimensionWithLinearConversion
 {
@@ -126,7 +126,6 @@ public enum Time implements DimensionWithLinearConversion
             final var retValue = new TemporalUnitImpl( "Fortnights" );
 
             //---* Done *------------------------------------------------------
-            //noinspection ReturnOfInnerClass
             return retValue;
         }   //  asTemporalUnit
     },
@@ -146,7 +145,6 @@ public enum Time implements DimensionWithLinearConversion
             final var retValue = new TemporalUnitImpl( "BankMonths" );
 
             //---* Done *------------------------------------------------------
-            //noinspection ReturnOfInnerClass
             return retValue;
         }   //  asTemporalUnit
     },
@@ -173,7 +171,6 @@ public enum Time implements DimensionWithLinearConversion
             final var retValue = new TemporalUnitImpl( "BankYears" );
 
             //---* Done *------------------------------------------------------
-            //noinspection ReturnOfInnerClass
             return retValue;
         }   //  asTemporalUnit
     },
@@ -194,7 +191,6 @@ public enum Time implements DimensionWithLinearConversion
             final var retValue = new TemporalUnitImpl( "TropicalYears" );
 
             //---* Done *------------------------------------------------------
-            //noinspection ReturnOfInnerClass
             return retValue;
         }   //  asTemporalUnit
     },
@@ -233,12 +229,12 @@ public enum Time implements DimensionWithLinearConversion
      *  based on the settings for the {@code Time} instance.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: Time.java 1073 2023-10-01 11:08:51Z tquadrat $
+     *  @version $Id: Time.java 1151 2025-10-01 21:32:15Z tquadrat $
      *  @since 0.1.0
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: Time.java 1073 2023-10-01 11:08:51Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: Time.java 1151 2025-10-01 21:32:15Z tquadrat $" )
     @API( status = STABLE, since = "0.1.0" )
     private class TemporalUnitImpl implements TemporalUnit
     {
