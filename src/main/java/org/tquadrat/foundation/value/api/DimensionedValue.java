@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2025 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -103,7 +103,7 @@ public sealed interface DimensionedValue<D extends Dimension> extends Cloneable,
      *  <p>{@summary Returns the base value (this value, converted to the base
      *  unit).}</p>
      *  <p>According to the result, this is the same as calling</p>
-     *  <pre><code>convert( baseUnit() );</code></pre>.
+     *  <div class="source-container"><pre>convert( baseUnit() );</pre></div>
      *
      *  @return The numerical value as for the base unit.
      *
