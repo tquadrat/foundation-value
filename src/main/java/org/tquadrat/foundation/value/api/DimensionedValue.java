@@ -17,14 +17,9 @@
 
 package org.tquadrat.foundation.value.api;
 
-import static java.lang.String.format;
-import static java.math.RoundingMode.HALF_EVEN;
-import static java.util.FormattableFlags.LEFT_JUSTIFY;
-import static org.apiguardian.api.API.Status.STABLE;
-import static org.tquadrat.foundation.lang.Objects.isNull;
-import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
-import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-import static org.tquadrat.foundation.util.StringUtils.padRight;
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.exception.UnexpectedExceptionError;
 
 import java.io.Serializable;
 import java.lang.reflect.Constructor;
@@ -36,9 +31,14 @@ import java.util.Formatter;
 import java.util.IllegalFormatException;
 import java.util.Locale;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.exception.UnexpectedExceptionError;
+import static java.lang.String.format;
+import static java.math.RoundingMode.HALF_EVEN;
+import static java.util.FormattableFlags.LEFT_JUSTIFY;
+import static org.apiguardian.api.API.Status.STABLE;
+import static org.tquadrat.foundation.lang.Objects.isNull;
+import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
+import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
+import static org.tquadrat.foundation.util.StringUtils.padRight;
 
 /**
  *  <p>{@summary The definition for a value with a dimension.}</p>
@@ -59,7 +59,7 @@ import org.tquadrat.foundation.exception.UnexpectedExceptionError;
  *  {@code final}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DimensionedValue.java 1151 2025-10-01 21:32:15Z tquadrat $
+ *  @version $Id: DimensionedValue.java 1163 2026-03-20 15:28:33Z tquadrat $
  *  @since 0.1.0
  *
  *  @param  <D> The dimension.
@@ -67,7 +67,7 @@ import org.tquadrat.foundation.exception.UnexpectedExceptionError;
  *  @UMLGraph.link
  */
 @SuppressWarnings( "ClassWithTooManyMethods" )
-@ClassVersion( sourceVersion = "$Id: DimensionedValue.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DimensionedValue.java 1163 2026-03-20 15:28:33Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public sealed interface DimensionedValue<D extends Dimension> extends Cloneable, Comparable<DimensionedValue<D>>, Formattable, Serializable
     permits ValueBase
