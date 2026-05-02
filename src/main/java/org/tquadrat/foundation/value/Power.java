@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,28 +17,28 @@
 
 package org.tquadrat.foundation.value;
 
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.lang.value.DimensionWithLinearConversion;
+
+import java.math.BigDecimal;
+
 import static java.lang.String.format;
 import static java.util.Arrays.stream;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
 
-import java.math.BigDecimal;
-
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
-
 /**
  *  The various instances of power &hellip;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Power.java 1073 2023-10-01 11:08:51Z tquadrat $
+ *  @version $Id: Power.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.3.0
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "NewClassNamingConvention" )
-@ClassVersion( sourceVersion = "$Id: Power.java 1073 2023-10-01 11:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Power.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.3.0" )
 public enum Power implements DimensionWithLinearConversion
 {

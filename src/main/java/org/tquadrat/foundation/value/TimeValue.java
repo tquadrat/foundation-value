@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,6 +17,17 @@
 
 package org.tquadrat.foundation.value;
 
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.lang.value.ValueBase;
+
+import java.io.Serial;
+import java.math.BigDecimal;
+import java.time.Duration;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
+import java.util.Formatter;
+
 import static java.lang.String.format;
 import static java.util.FormattableFlags.ALTERNATE;
 import static java.util.FormattableFlags.LEFT_JUSTIFY;
@@ -32,28 +43,17 @@ import static org.tquadrat.foundation.value.Time.NANOSECOND;
 import static org.tquadrat.foundation.value.Time.WEEK;
 import static org.tquadrat.foundation.value.Time.YEAR;
 
-import java.io.Serial;
-import java.math.BigDecimal;
-import java.time.Duration;
-import java.time.Period;
-import java.time.temporal.ChronoUnit;
-import java.util.Formatter;
-
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.ValueBase;
-
 /**
  *  A value class for <i>times</i>, what means <i>periods of time</i> in this
  *  case, opposite to the time displayed on the wall-clock.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TimeValue.java 1073 2023-10-01 11:08:51Z tquadrat $
+ *  @version $Id: TimeValue.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: TimeValue.java 1073 2023-10-01 11:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TimeValue.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class TimeValue extends ValueBase<Time,TimeValue>
 {
@@ -165,7 +165,7 @@ public final class TimeValue extends ValueBase<Time,TimeValue>
     @Override
     public final TimeValue clone()
     {
-        final var retValue = (TimeValue) super.clone();
+        final var retValue = super.clone();
 
         //---* Done *----------------------------------------------------------
         return retValue;

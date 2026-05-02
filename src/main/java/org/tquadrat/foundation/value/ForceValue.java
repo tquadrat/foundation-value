@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,25 +17,25 @@
 
 package org.tquadrat.foundation.value;
 
-import static org.apiguardian.api.API.Status.STABLE;
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.lang.value.ValueBase;
 
 import java.io.Serial;
 import java.math.BigDecimal;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.ValueBase;
+import static org.apiguardian.api.API.Status.STABLE;
 
 /**
  *  A value class for forces.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: ForceValue.java 1073 2023-10-01 11:08:51Z tquadrat $
+ *  @version $Id: ForceValue.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.3.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: ForceValue.java 1073 2023-10-01 11:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: ForceValue.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.3.0" )
 public final class ForceValue extends ValueBase<Force,ForceValue>
 {

@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2025 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,28 +17,28 @@
 
 package org.tquadrat.foundation.value;
 
-import static org.apiguardian.api.API.Status.STABLE;
-import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
-import static org.tquadrat.foundation.value.Area.SQUARE_METER;
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.lang.value.ValueBase;
 
 import java.io.Serial;
 import java.math.BigDecimal;
 import java.util.function.BiPredicate;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.ValueBase;
+import static org.apiguardian.api.API.Status.STABLE;
+import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
+import static org.tquadrat.foundation.value.Area.SQUARE_METER;
 
 /**
  *  A value class for areas.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: AreaValue.java 1151 2025-10-01 21:32:15Z tquadrat $
+ *  @version $Id: AreaValue.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: AreaValue.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: AreaValue.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class AreaValue extends ValueBase<Area, AreaValue>
 {

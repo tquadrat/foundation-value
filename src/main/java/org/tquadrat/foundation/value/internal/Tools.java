@@ -17,33 +17,33 @@
 
 package org.tquadrat.foundation.value.internal;
 
-import static org.apiguardian.api.API.Status.STABLE;
-import static org.tquadrat.foundation.i18n.I18nUtil.loadResourceBundle;
-import static org.tquadrat.foundation.i18n.I18nUtil.retrieveText;
-import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
-import static org.tquadrat.foundation.value.api.DimensionedValue.MATH_CONTEXT;
-
-import java.math.BigDecimal;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
-
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.annotation.UtilityClass;
 import org.tquadrat.foundation.exception.PrivateConstructorForStaticClassCalledError;
 import org.tquadrat.foundation.i18n.BaseBundleName;
 
+import java.math.BigDecimal;
+import java.util.MissingResourceException;
+import java.util.ResourceBundle;
+
+import static org.apiguardian.api.API.Status.STABLE;
+import static org.tquadrat.foundation.i18n.I18nUtil.loadResourceBundle;
+import static org.tquadrat.foundation.i18n.I18nUtil.retrieveText;
+import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
+import static org.tquadrat.foundation.lang.value.DimensionedValue.MATH_CONTEXT;
+
 /**
  *  Internal utilities for the value module.
  *
- *  @version $Id: Tools.java 1072 2023-09-30 20:44:38Z tquadrat $
+ *  @version $Id: Tools.java 1196 2026-04-18 14:31:50Z tquadrat $
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  *  @UMLGraph.link
  *  @since 0.1.0
  */
 @SuppressWarnings( "NewClassNamingConvention" )
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: Tools.java 1072 2023-09-30 20:44:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Tools.java 1196 2026-04-18 14:31:50Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class Tools
 {

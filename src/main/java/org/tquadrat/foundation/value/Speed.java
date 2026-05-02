@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,6 +17,12 @@
 
 package org.tquadrat.foundation.value;
 
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.lang.value.DimensionWithLinearConversion;
+
+import java.math.BigDecimal;
+
 import static java.lang.String.format;
 import static java.math.MathContext.DECIMAL128;
 import static java.util.Arrays.stream;
@@ -30,12 +36,6 @@ import static org.tquadrat.foundation.value.Time.HOUR;
 import static org.tquadrat.foundation.value.Time.SECOND;
 import static org.tquadrat.foundation.value.Time.WEEK;
 
-import java.math.BigDecimal;
-
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
-
 /**
  *  <p>{@summary The various instances of speed &hellip;}</p>
  *  <p>Because speed is distance per time, the values for
@@ -46,13 +46,13 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  {@link Time#factor()}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Speed.java 1072 2023-09-30 20:44:38Z tquadrat $
+ *  @version $Id: Speed.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.0.4
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "NewClassNamingConvention" )
-@ClassVersion( sourceVersion = "$Id: Speed.java 1072 2023-09-30 20:44:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Speed.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public enum Speed implements DimensionWithLinearConversion
 {

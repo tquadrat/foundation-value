@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -18,13 +18,13 @@
 
 package org.tquadrat.foundation.value;
 
-import static org.apiguardian.api.API.Status.STABLE;
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.util.stringconverter.DimensionedValueStringConverter;
 
 import java.math.BigDecimal;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
+import static org.apiguardian.api.API.Status.STABLE;
 
 /**
  *  The implementation of
@@ -34,12 +34,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TimeValueStringConverter.java 1073 2023-10-01 11:08:51Z tquadrat $
+ *  @version $Id: TimeValueStringConverter.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: TimeValueStringConverter.java 1073 2023-10-01 11:08:51Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TimeValueStringConverter.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class TimeValueStringConverter extends DimensionedValueStringConverter<Time,TimeValue>
 {

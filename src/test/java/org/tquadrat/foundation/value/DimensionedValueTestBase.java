@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- *  Copyright © 2002-2021 by Thomas Thrien.
+ *  Copyright © 2002-2026 by Thomas Thrien.
  *  All Rights Reserved.
  * ============================================================================
  *  Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,6 +17,20 @@
 
 package org.tquadrat.foundation.value;
 
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.lang.StringConverter;
+import org.tquadrat.foundation.lang.value.Dimension;
+import org.tquadrat.foundation.lang.value.DimensionWithLinearConversion;
+import org.tquadrat.foundation.lang.value.DimensionedValue;
+import org.tquadrat.foundation.testutil.TestBaseClass;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collection;
+
 import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -27,31 +41,17 @@ import static org.junit.jupiter.api.Assertions.fail;
 import static org.junit.jupiter.api.Assumptions.assumeFalse;
 import static org.tquadrat.foundation.lang.Objects.isNull;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collection;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.lang.StringConverter;
-import org.tquadrat.foundation.testutil.TestBaseClass;
-import org.tquadrat.foundation.value.api.Dimension;
-import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
-import org.tquadrat.foundation.value.api.DimensionedValue;
-
 /**
  *  The abstract base class for tests of classes that are derived from
  *  {@link DimensionedValue}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: DimensionedValueTestBase.java 1076 2023-10-03 18:36:07Z tquadrat $
+ *  @version $Id: DimensionedValueTestBase.java 1195 2026-04-15 21:33:40Z tquadrat $
  *
  *  @param  <D> The type for the dimension.
  *  @param  <T> The type for the dimensioned value.
  */
-@ClassVersion( sourceVersion = "$Id: DimensionedValueTestBase.java 1076 2023-10-03 18:36:07Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: DimensionedValueTestBase.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 public abstract class DimensionedValueTestBase<D extends Dimension, T extends DimensionedValue<D>> extends TestBaseClass
 {
         /*---------*\
@@ -67,7 +67,7 @@ public abstract class DimensionedValueTestBase<D extends Dimension, T extends Di
     {
         Class<D> retValue = null;
         final var dimensions = new ArrayList<>( getDimensions() );
-        if( dimensions.get( 0 ) instanceof Enum<?> enumConstant )
+        if( dimensions.getFirst() instanceof Enum<?> enumConstant )
         {
             retValue = (Class<D>) enumConstant.getDeclaringClass();
         }

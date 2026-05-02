@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -18,13 +18,12 @@
 
 package org.tquadrat.foundation.value;
 
-import static java.lang.String.format;
-import static java.lang.System.out;
-import static java.util.Arrays.asList;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
-import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.exception.EmptyArgumentException;
+import org.tquadrat.foundation.exception.NullArgumentException;
+import org.tquadrat.foundation.lang.StringConverter;
 
 import java.math.BigDecimal;
 import java.util.Collection;
@@ -32,12 +31,17 @@ import java.util.List;
 import java.util.stream.Stream;
 import java.util.stream.Stream.Builder;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.exception.EmptyArgumentException;
-import org.tquadrat.foundation.exception.NullArgumentException;
-import org.tquadrat.foundation.lang.StringConverter;
+import static java.lang.String.format;
+import static java.lang.System.out;
+import static java.util.Arrays.asList;
+import static java.util.Locale.GERMANY;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
+import static org.tquadrat.foundation.value.Length.KILOMETER;
+import static org.tquadrat.foundation.value.Length.MILLIMETER;
 
 /**
  *  Tests for the classes
@@ -47,9 +51,9 @@ import org.tquadrat.foundation.lang.StringConverter;
  *  {@link LengthValueStringConverter}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestLength.java 1076 2023-10-03 18:36:07Z tquadrat $
+ *  @version $Id: TestLength.java 1183 2026-04-03 18:05:55Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestLength.java 1076 2023-10-03 18:36:07Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestLength.java 1183 2026-04-03 18:05:55Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestLength" )
 public class TestLength extends DimensionedValueTestBase<Length,LengthValue>
 {
@@ -78,6 +82,26 @@ public class TestLength extends DimensionedValueTestBase<Length,LengthValue>
         //---* Done *----------------------------------------------------------
         return retValue;
     }   //  getStringConverter()
+
+    /**
+     *  Some tests for the formatting.
+     *
+     *  @throws Exception   Something went awfully wrong.
+     */
+    @Test
+    final void testFormatting() throws Exception
+    {
+        skipThreadTest();
+
+        var candidate = new LengthValue( KILOMETER, "22.4456789" );
+
+        assertEquals( "22,445679 km", format( GERMANY, "%#s", candidate ) );
+
+        candidate = new LengthValue( MILLIMETER, "10" );
+        assertEquals( "10,000000 mm", format( GERMANY, "%#s", candidate ) );
+
+        assertEquals( "10,00 mm", format( GERMANY, "%6.2s", candidate ) );
+    }   //  testFormatting()
 
     /**
      *  {@inheritDoc}

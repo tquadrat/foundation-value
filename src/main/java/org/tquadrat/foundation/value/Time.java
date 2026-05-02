@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2025 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,13 +17,10 @@
 
 package org.tquadrat.foundation.value;
 
-import static java.lang.String.format;
-import static java.math.BigDecimal.TEN;
-import static java.util.Arrays.stream;
-import static org.apiguardian.api.API.Status.STABLE;
-import static org.tquadrat.foundation.lang.CommonConstants.TROPICAL_YEAR;
-import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
-import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.lang.CommonConstants;
+import org.tquadrat.foundation.lang.value.DimensionWithLinearConversion;
 
 import java.math.BigDecimal;
 import java.time.Duration;
@@ -33,10 +30,13 @@ import java.time.temporal.TemporalUnit;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.lang.CommonConstants;
-import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
+import static java.lang.String.format;
+import static java.math.BigDecimal.TEN;
+import static java.util.Arrays.stream;
+import static org.apiguardian.api.API.Status.STABLE;
+import static org.tquadrat.foundation.lang.CommonConstants.TROPICAL_YEAR;
+import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
+import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
 
 /**
  *  <p>{@summary The various instances of time periods &hellip;}</p>
@@ -47,13 +47,13 @@ import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
  *  wherever possible.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Time.java 1151 2025-10-01 21:32:15Z tquadrat $
+ *  @version $Id: Time.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "NewClassNamingConvention" )
-@ClassVersion( sourceVersion = "$Id: Time.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Time.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Time implements DimensionWithLinearConversion
 {
@@ -229,12 +229,12 @@ public enum Time implements DimensionWithLinearConversion
      *  based on the settings for the {@code Time} instance.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: Time.java 1151 2025-10-01 21:32:15Z tquadrat $
+     *  @version $Id: Time.java 1195 2026-04-15 21:33:40Z tquadrat $
      *  @since 0.1.0
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: Time.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: Time.java 1195 2026-04-15 21:33:40Z tquadrat $" )
     @API( status = STABLE, since = "0.1.0" )
     private class TemporalUnitImpl implements TemporalUnit
     {

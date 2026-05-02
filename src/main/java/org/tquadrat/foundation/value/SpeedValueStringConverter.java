@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -18,13 +18,13 @@
 
 package org.tquadrat.foundation.value;
 
-import static org.apiguardian.api.API.Status.STABLE;
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.util.stringconverter.DimensionedValueStringConverter;
 
 import java.math.BigDecimal;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
+import static org.apiguardian.api.API.Status.STABLE;
 
 /**
  *  The implementation of
@@ -34,12 +34,12 @@ import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
  *  instances.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SpeedValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $
+ *  @version $Id: SpeedValueStringConverter.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SpeedValueStringConverter.java 1072 2023-09-30 20:44:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SpeedValueStringConverter.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class SpeedValueStringConverter extends DimensionedValueStringConverter<Speed,SpeedValue>
 {

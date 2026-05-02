@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,27 +17,27 @@
 
 package org.tquadrat.foundation.value;
 
-import static java.math.MathContext.DECIMAL128;
-import static org.apiguardian.api.API.Status.STABLE;
-import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.lang.value.ValueBase;
 
 import java.io.Serial;
 import java.math.BigDecimal;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.ValueBase;
+import static java.math.MathContext.DECIMAL128;
+import static org.apiguardian.api.API.Status.STABLE;
+import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 
 /**
  *  A value class for speeds.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: SpeedValue.java 1072 2023-09-30 20:44:38Z tquadrat $
+ *  @version $Id: SpeedValue.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: SpeedValue.java 1072 2023-09-30 20:44:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: SpeedValue.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class SpeedValue extends ValueBase<Speed,SpeedValue>
 {

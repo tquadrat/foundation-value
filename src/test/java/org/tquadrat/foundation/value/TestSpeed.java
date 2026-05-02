@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -18,6 +18,19 @@
 
 package org.tquadrat.foundation.value;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.exception.EmptyArgumentException;
+import org.tquadrat.foundation.exception.NullArgumentException;
+import org.tquadrat.foundation.util.stringconverter.DimensionedValueStringConverter;
+
+import java.math.BigDecimal;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Stream;
+import java.util.stream.Stream.Builder;
+
 import static java.lang.String.format;
 import static java.lang.System.out;
 import static java.util.Arrays.asList;
@@ -26,31 +39,16 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
 
-import java.math.BigDecimal;
-import java.util.Collection;
-import java.util.List;
-import java.util.stream.Stream;
-import java.util.stream.Stream.Builder;
-
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.exception.EmptyArgumentException;
-import org.tquadrat.foundation.exception.NullArgumentException;
-import org.tquadrat.foundation.value.api.DimensionedValueStringConverter;
-
 /**
  *  Tests for the classes
  *  {@link Speed},
- *  {@link SpeedValue},
- *  {@link SpeedValueHandler}
  *  and
- *  {@link SpeedValueAccessor}.
+ *  {@link SpeedValue}.
  *
  *  @author Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TestSpeed.java 1076 2023-10-03 18:36:07Z tquadrat $
+ *  @version $Id: TestSpeed.java 1195 2026-04-15 21:33:40Z tquadrat $
  */
-@ClassVersion( sourceVersion = "$Id: TestSpeed.java 1076 2023-10-03 18:36:07Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestSpeed.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.value.TestSpeed" )
 public class TestSpeed extends DimensionedValueTestBase<Speed,SpeedValue>
 {
@@ -194,7 +192,7 @@ public class TestSpeed extends DimensionedValueTestBase<Speed,SpeedValue>
 
     /**
      *  Provides test values for
-     *  {@link DimensionedValueTestBase#testValueConversion(org.tquadrat.foundation.value.api.DimensionedValue)}.
+     *  {@link DimensionedValueTestBase#testValueConversion(org.tquadrat.foundation.lang.value.DimensionedValue)}.
      *
      *  @return The test values.
      *  @throws Exception   Something unexpected went wrong.

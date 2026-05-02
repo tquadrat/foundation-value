@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2025 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,17 +17,10 @@
 
 package org.tquadrat.foundation.value;
 
-import static java.lang.String.format;
-import static java.util.FormattableFlags.ALTERNATE;
-import static java.util.FormattableFlags.LEFT_JUSTIFY;
-import static java.util.Locale.ROOT;
-import static org.apiguardian.api.API.Status.STABLE;
-import static org.tquadrat.foundation.lang.Objects.hash;
-import static org.tquadrat.foundation.lang.Objects.isNull;
-import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
-import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-import static org.tquadrat.foundation.util.StringUtils.padRight;
-import static org.tquadrat.foundation.value.api.DimensionedValue.MATH_CONTEXT;
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.exception.UnexpectedExceptionError;
+import org.tquadrat.foundation.lang.Objects;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -38,26 +31,31 @@ import java.util.Formatter;
 import java.util.IllegalFormatException;
 import java.util.Locale;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.exception.UnexpectedExceptionError;
-import org.tquadrat.foundation.lang.Objects;
-import org.tquadrat.foundation.value.api.Dimension;
-import org.tquadrat.foundation.value.api.DimensionedValue;
+import static java.lang.String.format;
+import static java.util.FormattableFlags.ALTERNATE;
+import static java.util.FormattableFlags.LEFT_JUSTIFY;
+import static java.util.Locale.ROOT;
+import static org.apiguardian.api.API.Status.STABLE;
+import static org.tquadrat.foundation.lang.Objects.hash;
+import static org.tquadrat.foundation.lang.Objects.isNull;
+import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
+import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
+import static org.tquadrat.foundation.lang.value.DimensionedValue.MATH_CONTEXT;
+import static org.tquadrat.foundation.util.StringUtils.padRight;
 
 /**
  *  <p>{@summary A value type for currency values.}</p>
  *  <p>As there is no constant conversion between currencies, this value type
  *  is not implementing the interface
- *  {@link DimensionedValue}.</p>
+ *  {@link org.tquadrat.foundation.lang.value.DimensionedValue}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: CurrencyValue.java 1151 2025-10-01 21:32:15Z tquadrat $
+ *  @version $Id: CurrencyValue.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.0.4
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>, Formattable, Serializable
 {
@@ -410,7 +408,7 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
      *  vs. &quot;{@code 4,50 €}&quot;.</p>
      *  <p>The precision is applied to the numerical part only. The width
      *  includes the
-     *  {@linkplain Dimension#unitSymbol() unit symbol}, too.</p>
+     *  {@linkplain org.tquadrat.foundation.lang.value.Dimension#unitSymbol() unit symbol}, too.</p>
      *
      *  @param  locale  The locale to use.
      *  @param  width   The minimum number of characters to be written to the
@@ -423,7 +421,7 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
      *      If {@code precision} is -1 then there is no explicit limit on the
      *      size of the mantissa.
      *  @param  useNiceUnit {@code true} if the method
-     *      {@link Dimension#unitSymbolForPrinting() unitSymbolForPrinting()}
+     *      {@link org.tquadrat.foundation.lang.value.Dimension#unitSymbolForPrinting() unitSymbolForPrinting()}
      *      should be used to retrieve the unit symbol, {@code false} if the
      *      usual one is sufficient.
      *  @return The String representation for this value.
@@ -458,7 +456,7 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
      *  @param  locale  The locale to use.
      *  @param  format  The format String.
      *  @param  useNiceUnit {@code true} if the method
-     *      {@link Dimension#unitSymbolForPrinting() unitSymbolForPrinting()}
+     *      {@link org.tquadrat.foundation.lang.value.Dimension#unitSymbolForPrinting() unitSymbolForPrinting()}
      *      should be used to retrieve the unit symbol, {@code false} if the
      *      usual one is sufficient.
      *  @return The String representation for this value.

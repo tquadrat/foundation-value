@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,29 +17,29 @@
 
 package org.tquadrat.foundation.value;
 
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.lang.value.DimensionWithLinearConversion;
+
+import java.math.BigDecimal;
+
 import static java.lang.String.format;
 import static java.util.Arrays.stream;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-
-import java.math.BigDecimal;
-
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.value.api.DimensionWithLinearConversion;
 
 /**
  *  The various instances of masses and weights (although this is not really
  *  the same, from a physical or scientific point of view ...).
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Mass.java 1077 2023-10-14 23:00:23Z tquadrat $
+ *  @version $Id: Mass.java 1195 2026-04-15 21:33:40Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "NewClassNamingConvention" )
-@ClassVersion( sourceVersion = "$Id: Mass.java 1077 2023-10-14 23:00:23Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Mass.java 1195 2026-04-15 21:33:40Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Mass implements DimensionWithLinearConversion
 {
@@ -84,7 +84,7 @@ public enum Mass implements DimensionWithLinearConversion
 
     /**
      *  A troy ounce (same as <i>Apothecaries Ounce</i>, as used for precious
-     *  metal.
+     *  metals).
      */
     TROY_OUNCE( new BigDecimal( "0.0311034768" ), "oz.tr." ),
 
