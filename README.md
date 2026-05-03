@@ -8,6 +8,8 @@ This library defines numbers with units as *values*.
     <dependency>
       <groupId>org.tquadrat.library</groupId>
       <artifactId>org.tquadrat.foundation.value</artifactId>
-      <version>0.1.0</version>
+      <version>0.25.3</version>
     </dependency>
     ```
+---  
+Last updated: 2026-05-03T17:34:36.920063015+02:00[Europe/Berlin]
