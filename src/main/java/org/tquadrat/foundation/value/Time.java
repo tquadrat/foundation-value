@@ -47,13 +47,13 @@ import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
  *  wherever possible.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Time.java 1195 2026-04-15 21:33:40Z tquadrat $
+ *  @version $Id: Time.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "NewClassNamingConvention" )
-@ClassVersion( sourceVersion = "$Id: Time.java 1195 2026-04-15 21:33:40Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Time.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Time implements DimensionWithLinearConversion
 {
@@ -229,12 +229,12 @@ public enum Time implements DimensionWithLinearConversion
      *  based on the settings for the {@code Time} instance.
      *
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
-     *  @version $Id: Time.java 1195 2026-04-15 21:33:40Z tquadrat $
+     *  @version $Id: Time.java 1258 2026-06-04 18:33:06Z tquadrat $
      *  @since 0.1.0
      *
      *  @UMLGraph.link
      */
-    @ClassVersion( sourceVersion = "$Id: Time.java 1195 2026-04-15 21:33:40Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: Time.java 1258 2026-06-04 18:33:06Z tquadrat $" )
     @API( status = STABLE, since = "0.1.0" )
     private class TemporalUnitImpl implements TemporalUnit
     {
@@ -352,9 +352,9 @@ public enum Time implements DimensionWithLinearConversion
      *  @param  factor  The factor.
      *  @param  unitSymbol  The unit symbol.
      *  @param  timeUnit    The time unit as for the
-     *      {@code java.util.concurrent} package; may be {@code null}.
+     *      {@code java.util.concurrent} package; may be {@null}.
      *  @param  temporalUnit    The time unit as for the {@code java.time}
-     *      package; may be {@code null}.
+     *      package; may be {@null}.
      */
     private Time( final BigDecimal factor, final String unitSymbol, final TimeUnit timeUnit, final TemporalUnit temporalUnit )
     {
@@ -477,9 +477,9 @@ public enum Time implements DimensionWithLinearConversion
      *  {@link TemporalUnit}
      *  for this instance, as used by the {@code java.time}
      *  package. Because  we define here more units as in that package, the
-     *  return value may be {@code null}.
+     *  return value may be {@null}.
      *
-     *  @return The corresponding temporal unit instance, or {@code null} if
+     *  @return The corresponding temporal unit instance, or {@null} if
      *      there is no corresponding time unit.
      */
     @SuppressWarnings( "PublicMethodNotExposedInInterface" )
@@ -490,9 +490,9 @@ public enum Time implements DimensionWithLinearConversion
      *  {@link TimeUnit}
      *  for this instance, as used by the {@code java.util.concurrent}
      *  package. Because  we define here more units as in that package, the
-     *  return value may be {@code null}.
+     *  return value may be {@null}.
      *
-     *  @return The corresponding time unit instance, or {@code null} if
+     *  @return The corresponding time unit instance, or {@null} if
      *      there is no corresponding time unit.
      */
     @SuppressWarnings( "PublicMethodNotExposedInInterface" )

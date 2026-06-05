@@ -50,12 +50,12 @@ import static org.tquadrat.foundation.util.StringUtils.padRight;
  *  {@link org.tquadrat.foundation.lang.value.DimensionedValue}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: CurrencyValue.java 1195 2026-04-15 21:33:40Z tquadrat $
+ *  @version $Id: CurrencyValue.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.4
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1195 2026-04-15 21:33:40Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>, Formattable, Serializable
 {
@@ -230,14 +230,14 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
      *  {@linkplain Currency#getSymbol(Locale) currency symbol},
      *  too.</p>
      *
-     *  @note In case the {@code formatter} argument is {@code null}, this
+     *  @note In case the {@code formatter} argument is {@null}, this
      *      method throws a {@code NullPointerException} and <i>not</i> the
      *      usual {@code NullArgumentException}, because this method is usually
      *      called by instances of {@code java.util.Formatter}, and those do
      *      not know about our special exceptions.
      *
      *  @throws NullPointerException    The {@code formatter} argument is
-     *      {@code null}.
+     *      {@null}.
      *
      *  @see java.util.Formatter
      */
@@ -420,9 +420,9 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
      *  @param  precision – The number of digits for the mantissa of the value.
      *      If {@code precision} is -1 then there is no explicit limit on the
      *      size of the mantissa.
-     *  @param  useNiceUnit {@code true} if the method
+     *  @param  useNiceUnit {@true} if the method
      *      {@link org.tquadrat.foundation.lang.value.Dimension#unitSymbolForPrinting() unitSymbolForPrinting()}
-     *      should be used to retrieve the unit symbol, {@code false} if the
+     *      should be used to retrieve the unit symbol, {@false} if the
      *      usual one is sufficient.
      *  @return The String representation for this value.
      */
@@ -455,9 +455,9 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
      *
      *  @param  locale  The locale to use.
      *  @param  format  The format String.
-     *  @param  useNiceUnit {@code true} if the method
+     *  @param  useNiceUnit {@true} if the method
      *      {@link org.tquadrat.foundation.lang.value.Dimension#unitSymbolForPrinting() unitSymbolForPrinting()}
-     *      should be used to retrieve the unit symbol, {@code false} if the
+     *      should be used to retrieve the unit symbol, {@false} if the
      *      usual one is sufficient.
      *  @return The String representation for this value.
      *  @throws IllegalFormatException  The provided format String is invalid.
