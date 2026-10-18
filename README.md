@@ -12,4 +12,4 @@ This library defines numbers with units as *values*.
     </dependency>
     ```
 ---  
-Last updated: 2026-10-17T17:25:55.19754681+02:00[Europe/Berlin]
+Last updated: 2026-10-18T13:03:08.881681443+02:00[Europe/Berlin]
