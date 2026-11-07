@@ -17,20 +17,6 @@
 
 package org.tquadrat.foundation.value;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
-import org.tquadrat.foundation.exception.UnexpectedExceptionError;
-import org.tquadrat.foundation.lang.Objects;
-
-import java.io.Serial;
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.Currency;
-import java.util.Formattable;
-import java.util.Formatter;
-import java.util.IllegalFormatException;
-import java.util.Locale;
-
 import static java.lang.String.format;
 import static java.util.FormattableFlags.ALTERNATE;
 import static java.util.FormattableFlags.LEFT_JUSTIFY;
@@ -42,6 +28,20 @@ import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
 import static org.tquadrat.foundation.lang.value.DimensionedValue.MATH_CONTEXT;
 import static org.tquadrat.foundation.util.StringUtils.padRight;
+
+import java.io.Serial;
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Currency;
+import java.util.Formattable;
+import java.util.Formatter;
+import java.util.IllegalFormatException;
+import java.util.Locale;
+
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.exception.UnlikelyExceptionError;
+import org.tquadrat.foundation.lang.Objects;
 
 /**
  *  <p>{@summary A value type for currency values.}</p>
@@ -55,6 +55,7 @@ import static org.tquadrat.foundation.util.StringUtils.padRight;
  *
  *  @UMLGraph.link
  */
+@SuppressWarnings( "SerializableDeserializableClassInSecureContext" )
 @ClassVersion( sourceVersion = "$Id: CurrencyValue.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.4" )
 public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>, Formattable, Serializable
@@ -89,7 +90,7 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
     ====** Constructors **=====================================================
         \*--------------*/
     /**
-     *  Creates a new {@code CurrencyValue} instance.
+     *  <p>{@summary {@constructor}}</p>
      *
      *  @param  unit   The unit.
      *  @param  value   The value; only absolute (positive) values are allowed,
@@ -102,7 +103,7 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
     }   //  CurrencyValue()
 
     /**
-     *  Creates a new {@code CurrencyValue} instance.
+     *  <p>{@summary {@constructor}}</p>
      *
      *  @param  unit   The unit.
      *  @param  value   The value; it must be possible to parse the given
@@ -117,7 +118,7 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
     }   //  CurrencyValue()
 
     /**
-     *  Creates a new {@code CurrencyValue} instance.
+     *  <p>{@summary {@constructor}}</p>
      *
      *  @param  <N> The type of {@code value}.
      *  @param  unit   The unit.
@@ -151,7 +152,7 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
         }
         catch( final CloneNotSupportedException e )
         {
-            throw new UnexpectedExceptionError( e );
+            throw new UnlikelyExceptionError( e );
         }
 
         //---* Done *----------------------------------------------------------
@@ -247,11 +248,11 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
     {
         if( isNull( formatter ) ) throw new NullPointerException( "formatter is null" );
 
-        var string = toString( formatter.locale(), width, precision < 0 ? m_Unit.getDefaultFractionDigits() : precision, (flags & ALTERNATE) == ALTERNATE );
+        var s = toString( formatter.locale(), width, precision < 0 ? m_Unit.getDefaultFractionDigits() : precision, (flags & ALTERNATE) == ALTERNATE );
 
-        if( ((flags & LEFT_JUSTIFY) == LEFT_JUSTIFY) && (width > string.trim().length()) )
+        if( ((flags & LEFT_JUSTIFY) == LEFT_JUSTIFY) && (width > s.trim().length()) )
         {
-            string = padRight( string.trim(), width );
+            s = padRight( s.trim(), width );
         }
 
         /*
@@ -260,7 +261,7 @@ public final class CurrencyValue implements Cloneable, Comparable<CurrencyValue>
          * Appendable.append(). Using Formatter.format() assumes that Formatter
          * knows ...
          */
-        formatter.format( "%s", string );
+        formatter.format( "%s", s );
     }   //  formatTo()
 
     /**
